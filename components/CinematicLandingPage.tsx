@@ -356,7 +356,7 @@ export function CinematicLandingPage({
           </p>
 
           <p className="text-sm md:text-base text-blue-100/90 max-w-xl mx-auto leading-relaxed">
-            Grounded strictly in University of Makati official knowledge sources. Zero hallucinations, verifiable citations, and real-time campus guidance.
+            Grounded strictly in University of Makati official knowledge sources, with verifiable citations and real-time campus guidance.
           </p>
         </div>
 

@@ -1,0 +1,46 @@
+{
+  "width": 1024,
+  "height": 819,
+  "bounds": {
+    "heron": {
+      "minX": 605,
+      "maxX": 994,
+      "minY": 74,
+      "maxY": 702,
+      "centerX": 799.5,
+      "centerY": 388
+    },
+    "taga": {
+      "minX": 27,
+      "maxX": 767,
+      "minY": 281,
+      "maxY": 472,
+      "centerX": 397,
+      "centerY": 376.5
+    },
+    "as": {
+      "minX": 55,
+      "maxX": 278,
+      "minY": 554,
+      "maxY": 662,
+      "centerX": 166.5,
+      "centerY": 608
+    },
+    "k": {
+      "minX": 295,
+      "maxX": 444,
+      "minY": 495,
+      "maxY": 659,
+      "centerX": 369.5,
+      "centerY": 577
+    },
+    "ai": {
+      "minX": 473,
+      "maxX": 685,
+      "minY": 493,
+      "maxY": 657,
+      "centerX": 579,
+      "centerY": 575
+    }
+  }
+}

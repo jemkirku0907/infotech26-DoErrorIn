@@ -1,1991 +1,1313 @@
 {
   "fps": 30,
-  "totalDurationFrames": 1520,
-  "totalDurationSeconds": 50.666666666666664,
+  "voiceDurationSeconds": 45.19,
+  "totalDurationSeconds": 47.69,
+  "totalDurationFrames": 1431,
   "voiceoverFile": "voiceover.mp3",
   "scenes": [
     {
       "id": "scene1",
       "name": "Intro",
-      "label": "01 // TAGA",
       "words": [
         {
-          "word": "Introducing",
-          "startSec": 0,
-          "endSec": 0.65,
-          "startFrame": 0,
-          "endFrame": 20,
-          "localStartFrame": 0,
-          "localEndFrame": 20
+          "word": "Campus",
+          "startSec": 0.25,
+          "endSec": 0.796,
+          "startFrame": 8,
+          "endFrame": 24,
+          "localStartFrame": 8,
+          "localEndFrame": 24
+        },
+        {
+          "word": "life",
+          "startSec": 0.865,
+          "endSec": 1.202,
+          "startFrame": 26,
+          "endFrame": 36,
+          "localStartFrame": 26,
+          "localEndFrame": 36
+        },
+        {
+          "word": "moves",
+          "startSec": 1.272,
+          "endSec": 1.597,
+          "startFrame": 38,
+          "endFrame": 48,
+          "localStartFrame": 38,
+          "localEndFrame": 48
+        },
+        {
+          "word": "fast.",
+          "startSec": 1.666,
+          "endSec": 2.259,
+          "startFrame": 50,
+          "endFrame": 68,
+          "localStartFrame": 50,
+          "localEndFrame": 68
+        },
+        {
+          "word": "Too",
+          "startSec": 2.709,
+          "endSec": 2.894,
+          "startFrame": 81,
+          "endFrame": 87,
+          "localStartFrame": 81,
+          "localEndFrame": 87
+        },
+        {
+          "word": "fast",
+          "startSec": 2.952,
+          "endSec": 3.219,
+          "startFrame": 89,
+          "endFrame": 97,
+          "localStartFrame": 89,
+          "localEndFrame": 97
+        },
+        {
+          "word": "to",
+          "startSec": 3.254,
+          "endSec": 3.312,
+          "startFrame": 98,
+          "endFrame": 99,
+          "localStartFrame": 98,
+          "localEndFrame": 99
+        },
+        {
+          "word": "follow.",
+          "startSec": 3.37,
+          "endSec": 3.939,
+          "startFrame": 101,
+          "endFrame": 118,
+          "localStartFrame": 101,
+          "localEndFrame": 118
+        },
+        {
+          "word": "Meet",
+          "startSec": 4.839,
+          "endSec": 5.083,
+          "startFrame": 145,
+          "endFrame": 152,
+          "localStartFrame": 145,
+          "localEndFrame": 152
         },
         {
           "word": "TAGA-asK",
-          "startSec": 0.731,
-          "endSec": 1.405,
-          "startFrame": 22,
-          "endFrame": 42,
-          "localStartFrame": 22,
-          "localEndFrame": 42
+          "startSec": 5.141,
+          "endSec": 5.826,
+          "startFrame": 154,
+          "endFrame": 175,
+          "localStartFrame": 154,
+          "localEndFrame": 175
         },
         {
-          "word": "AI,",
-          "startSec": 1.474,
-          "endSec": 2.101,
-          "startFrame": 44,
-          "endFrame": 63,
-          "localStartFrame": 44,
-          "localEndFrame": 63
-        },
-        {
-          "word": "your",
-          "startSec": 2.276,
-          "endSec": 2.426,
-          "startFrame": 68,
-          "endFrame": 73,
-          "localStartFrame": 68,
-          "localEndFrame": 73
-        },
-        {
-          "word": "UMak",
-          "startSec": 2.508,
-          "endSec": 2.821,
-          "startFrame": 75,
-          "endFrame": 85,
-          "localStartFrame": 75,
-          "localEndFrame": 85
-        },
-        {
-          "word": "AI",
-          "startSec": 2.891,
-          "endSec": 3.262,
-          "startFrame": 87,
-          "endFrame": 98,
-          "localStartFrame": 87,
-          "localEndFrame": 98
-        },
-        {
-          "word": "companion.",
-          "startSec": 3.297,
-          "endSec": 4.029,
-          "startFrame": 99,
-          "endFrame": 121,
-          "localStartFrame": 99,
-          "localEndFrame": 121
+          "word": "AI.",
+          "startSec": 5.895,
+          "endSec": 6.604,
+          "startFrame": 177,
+          "endFrame": 198,
+          "localStartFrame": 177,
+          "localEndFrame": 198
         }
       ],
       "startFrame": 0,
-      "endFrame": 137,
-      "durationInFrames": 137,
-      "fullText": "Introducing TAGA-asK AI, your UMak AI companion."
+      "endFrame": 215,
+      "durationInFrames": 215,
+      "fullText": "Campus life moves fast. Too fast to follow. Meet TAGA-asK AI."
     },
     {
       "id": "scene2",
       "name": "Problem",
-      "label": "02 // PROBLEM",
       "words": [
         {
-          "word": "May",
-          "startSec": 4.412,
-          "endSec": 4.528,
-          "startFrame": 132,
-          "endFrame": 136,
-          "localStartFrame": 0,
-          "localEndFrame": 0
+          "word": "Schedules,",
+          "startSec": 7.254,
+          "endSec": 7.823,
+          "startFrame": 218,
+          "endFrame": 235,
+          "localStartFrame": 3,
+          "localEndFrame": 20
         },
         {
-          "word": "tanong",
-          "startSec": 4.563,
-          "endSec": 4.795,
-          "startFrame": 137,
-          "endFrame": 144,
-          "localStartFrame": 0,
-          "localEndFrame": 7
-        },
-        {
-          "word": "ka,",
-          "startSec": 4.83,
-          "endSec": 5.166,
-          "startFrame": 145,
-          "endFrame": 155,
-          "localStartFrame": 8,
-          "localEndFrame": 18
-        },
-        {
-          "word": "pero",
-          "startSec": 5.283,
-          "endSec": 5.48,
-          "startFrame": 158,
-          "endFrame": 164,
+          "word": "rooms,",
+          "startSec": 7.869,
+          "endSec": 8.264,
+          "startFrame": 236,
+          "endFrame": 248,
           "localStartFrame": 21,
-          "localEndFrame": 27
+          "localEndFrame": 33
         },
         {
-          "word": "sino",
-          "startSec": 5.515,
-          "endSec": 5.7,
-          "startFrame": 165,
-          "endFrame": 171,
-          "localStartFrame": 28,
-          "localEndFrame": 34
+          "word": "policies...",
+          "startSec": 8.299,
+          "endSec": 8.949,
+          "startFrame": 249,
+          "endFrame": 268,
+          "localStartFrame": 34,
+          "localEndFrame": 53
         },
         {
-          "word": "ang",
-          "startSec": 5.724,
-          "endSec": 5.793,
-          "startFrame": 172,
-          "endFrame": 174,
-          "localStartFrame": 35,
-          "localEndFrame": 37
-        },
-        {
-          "word": "sasagot?",
-          "startSec": 5.84,
-          "endSec": 6.444,
-          "startFrame": 175,
-          "endFrame": 193,
-          "localStartFrame": 38,
-          "localEndFrame": 56
-        },
-        {
-          "word": "Waiting",
-          "startSec": 6.687,
-          "endSec": 7.024,
-          "startFrame": 201,
-          "endFrame": 211,
-          "localStartFrame": 64,
-          "localEndFrame": 74
-        },
-        {
-          "word": "hours",
-          "startSec": 7.082,
-          "endSec": 7.384,
-          "startFrame": 212,
-          "endFrame": 222,
-          "localStartFrame": 75,
-          "localEndFrame": 85
-        },
-        {
-          "word": "in",
-          "startSec": 7.442,
-          "endSec": 7.512,
-          "startFrame": 223,
-          "endFrame": 225,
-          "localStartFrame": 86,
-          "localEndFrame": 88
-        },
-        {
-          "word": "Facebook",
-          "startSec": 7.581,
-          "endSec": 7.988,
-          "startFrame": 227,
-          "endFrame": 240,
-          "localStartFrame": 90,
-          "localEndFrame": 103
-        },
-        {
-          "word": "groups",
-          "startSec": 8.022,
-          "endSec": 8.359,
-          "startFrame": 241,
-          "endFrame": 251,
-          "localStartFrame": 104,
-          "localEndFrame": 114
-        },
-        {
-          "word": "with",
-          "startSec": 8.406,
-          "endSec": 8.545,
-          "startFrame": 252,
-          "endFrame": 256,
-          "localStartFrame": 115,
-          "localEndFrame": 119
-        },
-        {
-          "word": "zero",
-          "startSec": 8.603,
-          "endSec": 8.916,
-          "startFrame": 258,
-          "endFrame": 267,
-          "localStartFrame": 121,
-          "localEndFrame": 130
-        },
-        {
-          "word": "replies.",
-          "startSec": 8.986,
-          "endSec": 9.706,
-          "startFrame": 270,
+          "word": "all",
+          "startSec": 9.399,
+          "endSec": 9.689,
+          "startFrame": 282,
           "endFrame": 291,
-          "localStartFrame": 133,
-          "localEndFrame": 154
+          "localStartFrame": 67,
+          "localEndFrame": 76
+        },
+        {
+          "word": "scattered.",
+          "startSec": 9.759,
+          "endSec": 10.328,
+          "startFrame": 293,
+          "endFrame": 310,
+          "localStartFrame": 78,
+          "localEndFrame": 95
+        },
+        {
+          "word": "All",
+          "startSec": 10.878,
+          "endSec": 11.11,
+          "startFrame": 326,
+          "endFrame": 333,
+          "localStartFrame": 111,
+          "localEndFrame": 118
+        },
+        {
+          "word": "unclear.",
+          "startSec": 11.203,
+          "endSec": 11.9,
+          "startFrame": 336,
+          "endFrame": 357,
+          "localStartFrame": 121,
+          "localEndFrame": 142
         }
       ],
-      "startFrame": 137,
-      "endFrame": 307,
-      "durationInFrames": 170,
-      "fullText": "May tanong ka, pero sino ang sasagot? Waiting hours in Facebook groups with zero replies."
+      "startFrame": 215,
+      "endFrame": 380,
+      "durationInFrames": 165,
+      "fullText": "Schedules, rooms, policies... all scattered. All unclear."
     },
     {
       "id": "scene3",
       "name": "Solution",
-      "label": "03 // SOLUTION",
       "words": [
         {
-          "word": "Meet",
-          "startSec": 10.031,
-          "endSec": 10.275,
-          "startFrame": 301,
-          "endFrame": 308,
-          "localStartFrame": 0,
-          "localEndFrame": 1
-        },
-        {
-          "word": "TAGA-asK",
-          "startSec": 10.368,
-          "endSec": 10.971,
-          "startFrame": 311,
-          "endFrame": 329,
-          "localStartFrame": 4,
-          "localEndFrame": 22
-        },
-        {
-          "word": "AI",
-          "startSec": 11.041,
-          "endSec": 11.459,
-          "startFrame": 331,
-          "endFrame": 344,
-          "localStartFrame": 24,
-          "localEndFrame": 37
-        },
-        {
-          "word": "Ask",
-          "startSec": 11.482,
-          "endSec": 11.726,
-          "startFrame": 344,
-          "endFrame": 352,
-          "localStartFrame": 37,
-          "localEndFrame": 45
-        },
-        {
-          "word": "a",
-          "startSec": 11.761,
-          "endSec": 11.784,
-          "startFrame": 353,
-          "endFrame": 354,
-          "localStartFrame": 46,
-          "localEndFrame": 47
-        },
-        {
-          "word": "question,",
-          "startSec": 11.842,
-          "endSec": 12.469,
-          "startFrame": 355,
-          "endFrame": 374,
-          "localStartFrame": 48,
-          "localEndFrame": 67
-        },
-        {
-          "word": "and",
-          "startSec": 12.585,
-          "endSec": 12.736,
-          "startFrame": 378,
-          "endFrame": 382,
-          "localStartFrame": 71,
-          "localEndFrame": 75
-        },
-        {
-          "word": "get",
-          "startSec": 12.806,
-          "endSec": 12.957,
-          "startFrame": 384,
-          "endFrame": 389,
-          "localStartFrame": 77,
-          "localEndFrame": 82
-        },
-        {
-          "word": "answers",
-          "startSec": 13.015,
-          "endSec": 13.386,
-          "startFrame": 390,
-          "endFrame": 402,
-          "localStartFrame": 83,
-          "localEndFrame": 95
-        },
-        {
-          "word": "grounded",
-          "startSec": 13.444,
-          "endSec": 13.827,
-          "startFrame": 403,
-          "endFrame": 415,
-          "localStartFrame": 96,
-          "localEndFrame": 108
-        },
-        {
-          "word": "in",
-          "startSec": 13.874,
-          "endSec": 13.932,
-          "startFrame": 416,
-          "endFrame": 418,
-          "localStartFrame": 109,
-          "localEndFrame": 111
-        },
-        {
-          "word": "UMak",
-          "startSec": 14.048,
-          "endSec": 14.35,
-          "startFrame": 421,
-          "endFrame": 431,
-          "localStartFrame": 114,
-          "localEndFrame": 124
-        },
-        {
-          "word": "documents,",
-          "startSec": 14.42,
-          "endSec": 15.058,
-          "startFrame": 433,
-          "endFrame": 452,
-          "localStartFrame": 126,
-          "localEndFrame": 145
-        },
-        {
-          "word": "with",
-          "startSec": 15.093,
-          "endSec": 15.267,
-          "startFrame": 453,
-          "endFrame": 458,
-          "localStartFrame": 146,
-          "localEndFrame": 151
-        },
-        {
-          "word": "sources.",
-          "startSec": 15.313,
-          "endSec": 15.998,
-          "startFrame": 459,
-          "endFrame": 480,
-          "localStartFrame": 152,
-          "localEndFrame": 173
-        }
-      ],
-      "startFrame": 307,
-      "endFrame": 496,
-      "durationInFrames": 189,
-      "fullText": "Meet TAGA-asK AI Ask a question, and get answers grounded in UMak documents, with sources."
-    },
-    {
-      "id": "scene4",
-      "name": "CitationDemo",
-      "label": "04 // VERIFIED CITATION",
-      "words": [
-        {
-          "word": "Ask",
-          "startSec": 16.381,
-          "endSec": 16.706,
-          "startFrame": 491,
-          "endFrame": 501,
-          "localStartFrame": 0,
-          "localEndFrame": 5
-        },
-        {
-          "word": "where",
-          "startSec": 16.765,
-          "endSec": 16.927,
-          "startFrame": 503,
-          "endFrame": 508,
-          "localStartFrame": 7,
-          "localEndFrame": 12
-        },
-        {
-          "word": "the",
-          "startSec": 16.962,
-          "endSec": 17.032,
-          "startFrame": 509,
-          "endFrame": 511,
-          "localStartFrame": 13,
-          "localEndFrame": 15
-        },
-        {
-          "word": "CIT",
-          "startSec": 17.078,
-          "endSec": 17.508,
-          "startFrame": 512,
-          "endFrame": 525,
-          "localStartFrame": 16,
-          "localEndFrame": 29
-        },
-        {
-          "word": "is",
-          "startSec": 17.658,
-          "endSec": 17.798,
-          "startFrame": 530,
-          "endFrame": 534,
-          "localStartFrame": 34,
-          "localEndFrame": 38
-        },
-        {
-          "word": "in",
-          "startSec": 17.867,
-          "endSec": 17.937,
-          "startFrame": 536,
-          "endFrame": 538,
-          "localStartFrame": 40,
-          "localEndFrame": 42
-        },
-        {
-          "word": "the",
-          "startSec": 17.984,
-          "endSec": 18.053,
-          "startFrame": 540,
-          "endFrame": 542,
-          "localStartFrame": 44,
-          "localEndFrame": 46
-        },
-        {
-          "word": "Admin",
-          "startSec": 18.123,
-          "endSec": 18.471,
-          "startFrame": 544,
-          "endFrame": 554,
-          "localStartFrame": 48,
-          "localEndFrame": 58
-        },
-        {
-          "word": "Building.",
-          "startSec": 18.529,
-          "endSec": 19.063,
-          "startFrame": 556,
-          "endFrame": 572,
-          "localStartFrame": 60,
-          "localEndFrame": 76
-        },
-        {
-          "word": "TAGA-asK",
-          "startSec": 19.388,
-          "endSec": 20.155,
-          "startFrame": 582,
-          "endFrame": 605,
-          "localStartFrame": 86,
-          "localEndFrame": 109
-        },
-        {
-          "word": "AI",
-          "startSec": 20.224,
-          "endSec": 20.654,
-          "startFrame": 607,
-          "endFrame": 620,
-          "localStartFrame": 111,
-          "localEndFrame": 124
-        },
-        {
-          "word": "answers:",
-          "startSec": 20.677,
-          "endSec": 21.269,
-          "startFrame": 620,
-          "endFrame": 638,
-          "localStartFrame": 124,
-          "localEndFrame": 142
-        },
-        {
-          "word": "Second",
-          "startSec": 21.478,
-          "endSec": 21.78,
-          "startFrame": 644,
-          "endFrame": 653,
-          "localStartFrame": 148,
-          "localEndFrame": 157
-        },
-        {
-          "word": "Floor,",
-          "startSec": 21.838,
-          "endSec": 22.128,
-          "startFrame": 655,
-          "endFrame": 664,
-          "localStartFrame": 159,
-          "localEndFrame": 168
-        },
-        {
-          "word": "South",
-          "startSec": 22.163,
-          "endSec": 22.407,
-          "startFrame": 665,
-          "endFrame": 672,
-          "localStartFrame": 169,
-          "localEndFrame": 176
-        },
-        {
-          "word": "Wing.",
-          "startSec": 22.465,
-          "endSec": 22.883,
-          "startFrame": 674,
-          "endFrame": 686,
-          "localStartFrame": 178,
-          "localEndFrame": 190
-        },
-        {
-          "word": "And",
-          "startSec": 23.057,
-          "endSec": 23.196,
-          "startFrame": 692,
-          "endFrame": 696,
-          "localStartFrame": 196,
-          "localEndFrame": 200
-        },
-        {
-          "word": "it",
-          "startSec": 23.254,
-          "endSec": 23.313,
-          "startFrame": 698,
-          "endFrame": 699,
-          "localStartFrame": 202,
-          "localEndFrame": 203
-        },
-        {
-          "word": "shows",
-          "startSec": 23.371,
-          "endSec": 23.672,
-          "startFrame": 701,
-          "endFrame": 710,
-          "localStartFrame": 205,
-          "localEndFrame": 214
-        },
-        {
-          "word": "where",
-          "startSec": 23.719,
-          "endSec": 23.893,
-          "startFrame": 712,
-          "endFrame": 717,
-          "localStartFrame": 216,
-          "localEndFrame": 221
-        },
-        {
-          "word": "that",
-          "startSec": 23.939,
-          "endSec": 24.102,
-          "startFrame": 718,
-          "endFrame": 723,
-          "localStartFrame": 222,
-          "localEndFrame": 227
-        },
-        {
-          "word": "answer",
-          "startSec": 24.16,
-          "endSec": 24.427,
-          "startFrame": 725,
-          "endFrame": 733,
-          "localStartFrame": 229,
-          "localEndFrame": 237
-        },
-        {
-          "word": "came",
-          "startSec": 24.485,
-          "endSec": 24.694,
-          "startFrame": 735,
-          "endFrame": 741,
-          "localStartFrame": 239,
-          "localEndFrame": 245
-        },
-        {
-          "word": "from:",
-          "startSec": 24.729,
-          "endSec": 25.135,
-          "startFrame": 742,
-          "endFrame": 754,
-          "localStartFrame": 246,
-          "localEndFrame": 258
-        },
-        {
-          "word": "Source",
-          "startSec": 25.46,
-          "endSec": 25.785,
-          "startFrame": 764,
-          "endFrame": 774,
-          "localStartFrame": 268,
-          "localEndFrame": 278
-        },
-        {
-          "word": "zero",
-          "startSec": 25.855,
-          "endSec": 26.203,
-          "startFrame": 776,
-          "endFrame": 786,
-          "localStartFrame": 280,
-          "localEndFrame": 290
-        },
-        {
-          "word": "three,",
-          "startSec": 26.273,
-          "endSec": 26.598,
-          "startFrame": 788,
-          "endFrame": 798,
-          "localStartFrame": 292,
-          "localEndFrame": 302
-        },
-        {
-          "word": "page",
-          "startSec": 26.645,
-          "endSec": 26.958,
-          "startFrame": 799,
-          "endFrame": 809,
-          "localStartFrame": 303,
-          "localEndFrame": 313
-        },
-        {
-          "word": "one.",
-          "startSec": 27.016,
-          "endSec": 27.422,
-          "startFrame": 810,
-          "endFrame": 823,
-          "localStartFrame": 314,
-          "localEndFrame": 327
-        }
-      ],
-      "startFrame": 496,
-      "endFrame": 839,
-      "durationInFrames": 343,
-      "fullText": "Ask where the CIT is in the Admin Building. TAGA-asK AI answers: Second Floor, South Wing. And it shows where that answer came from: Source zero three, page one."
-    },
-    {
-      "id": "scene5",
-      "name": "CampusTools",
-      "label": "05 // MULTIMODAL & MAP",
-      "words": [
-        {
-          "word": "Attach",
-          "startSec": 27.701,
-          "endSec": 28.119,
-          "startFrame": 831,
-          "endFrame": 844,
-          "localStartFrame": 0,
-          "localEndFrame": 5
-        },
-        {
-          "word": "an",
-          "startSec": 28.166,
-          "endSec": 28.235,
-          "startFrame": 845,
-          "endFrame": 847,
-          "localStartFrame": 6,
+          "word": "But",
+          "startSec": 12.75,
+          "endSec": 12.935,
+          "startFrame": 383,
+          "endFrame": 388,
+          "localStartFrame": 3,
           "localEndFrame": 8
         },
         {
-          "word": "image",
-          "startSec": 28.305,
-          "endSec": 28.63,
-          "startFrame": 849,
-          "endFrame": 859,
-          "localStartFrame": 10,
-          "localEndFrame": 20
+          "word": "what",
+          "startSec": 12.982,
+          "endSec": 13.156,
+          "startFrame": 389,
+          "endFrame": 395,
+          "localStartFrame": 9,
+          "localEndFrame": 15
         },
         {
-          "word": "or",
-          "startSec": 28.665,
-          "endSec": 28.746,
-          "startFrame": 860,
-          "endFrame": 862,
-          "localStartFrame": 21,
-          "localEndFrame": 23
+          "word": "if",
+          "startSec": 13.203,
+          "endSec": 13.272,
+          "startFrame": 396,
+          "endFrame": 398,
+          "localStartFrame": 16,
+          "localEndFrame": 18
         },
         {
-          "word": "a",
-          "startSec": 28.792,
-          "endSec": 28.816,
-          "startFrame": 864,
-          "endFrame": 864,
-          "localStartFrame": 25,
-          "localEndFrame": 25
+          "word": "every",
+          "startSec": 13.33,
+          "endSec": 13.539,
+          "startFrame": 400,
+          "endFrame": 406,
+          "localStartFrame": 20,
+          "localEndFrame": 26
         },
         {
-          "word": "PDF",
-          "startSec": 28.862,
-          "endSec": 29.419,
-          "startFrame": 866,
-          "endFrame": 883,
-          "localStartFrame": 27,
+          "word": "answer...",
+          "startSec": 13.597,
+          "endSec": 14.131,
+          "startFrame": 408,
+          "endFrame": 424,
+          "localStartFrame": 28,
           "localEndFrame": 44
         },
         {
-          "word": "and",
-          "startSec": 29.466,
-          "endSec": 29.559,
-          "startFrame": 884,
-          "endFrame": 887,
-          "localStartFrame": 45,
-          "localEndFrame": 48
+          "word": "just",
+          "startSec": 14.511,
+          "endSec": 14.709,
+          "startFrame": 435,
+          "endFrame": 441,
+          "localStartFrame": 55,
+          "localEndFrame": 61
         },
         {
-          "word": "ask",
-          "startSec": 29.628,
-          "endSec": 29.849,
-          "startFrame": 889,
-          "endFrame": 895,
-          "localStartFrame": 50,
-          "localEndFrame": 56
+          "word": "made",
+          "startSec": 14.755,
+          "endSec": 14.929,
+          "startFrame": 443,
+          "endFrame": 448,
+          "localStartFrame": 63,
+          "localEndFrame": 68
         },
         {
-          "word": "about",
-          "startSec": 29.895,
-          "endSec": 30.128,
-          "startFrame": 897,
-          "endFrame": 904,
-          "localStartFrame": 58,
-          "localEndFrame": 65
+          "word": "sense?",
+          "startSec": 14.964,
+          "endSec": 15.44,
+          "startFrame": 449,
+          "endFrame": 463,
+          "localStartFrame": 69,
+          "localEndFrame": 83
         },
         {
-          "word": "it.",
-          "startSec": 30.174,
-          "endSec": 30.453,
-          "startFrame": 905,
-          "endFrame": 914,
-          "localStartFrame": 66,
-          "localEndFrame": 75
+          "word": "One",
+          "startSec": 16.09,
+          "endSec": 16.322,
+          "startFrame": 483,
+          "endFrame": 490,
+          "localStartFrame": 103,
+          "localEndFrame": 110
         },
         {
-          "word": "Or",
-          "startSec": 30.662,
-          "endSec": 30.813,
-          "startFrame": 920,
-          "endFrame": 924,
-          "localStartFrame": 81,
-          "localEndFrame": 85
-        },
-        {
-          "word": "open",
-          "startSec": 30.882,
-          "endSec": 31.114,
-          "startFrame": 926,
-          "endFrame": 933,
-          "localStartFrame": 87,
-          "localEndFrame": 94
-        },
-        {
-          "word": "the",
-          "startSec": 31.161,
-          "endSec": 31.23,
-          "startFrame": 935,
-          "endFrame": 937,
-          "localStartFrame": 96,
-          "localEndFrame": 98
-        },
-        {
-          "word": "campus",
-          "startSec": 31.265,
-          "endSec": 31.613,
-          "startFrame": 938,
-          "endFrame": 948,
-          "localStartFrame": 99,
-          "localEndFrame": 109
-        },
-        {
-          "word": "map",
-          "startSec": 31.695,
-          "endSec": 31.927,
-          "startFrame": 951,
-          "endFrame": 958,
-          "localStartFrame": 112,
+          "word": "place",
+          "startSec": 16.357,
+          "endSec": 16.624,
+          "startFrame": 491,
+          "endFrame": 499,
+          "localStartFrame": 111,
           "localEndFrame": 119
         },
         {
           "word": "to",
-          "startSec": 31.985,
-          "endSec": 32.043,
-          "startFrame": 960,
-          "endFrame": 961,
-          "localStartFrame": 121,
+          "startSec": 16.659,
+          "endSec": 16.729,
+          "startFrame": 500,
+          "endFrame": 502,
+          "localStartFrame": 120,
           "localEndFrame": 122
         },
         {
-          "word": "find",
-          "startSec": 32.101,
-          "endSec": 32.298,
-          "startFrame": 963,
-          "endFrame": 969,
-          "localStartFrame": 124,
-          "localEndFrame": 130
-        },
-        {
-          "word": "the",
-          "startSec": 32.345,
-          "endSec": 32.414,
-          "startFrame": 970,
-          "endFrame": 972,
-          "localStartFrame": 131,
-          "localEndFrame": 133
-        },
-        {
-          "word": "right",
-          "startSec": 32.472,
-          "endSec": 32.67,
-          "startFrame": 974,
-          "endFrame": 980,
-          "localStartFrame": 135,
-          "localEndFrame": 141
-        },
-        {
-          "word": "building,",
-          "startSec": 32.728,
-          "endSec": 33.157,
-          "startFrame": 982,
-          "endFrame": 995,
-          "localStartFrame": 143,
-          "localEndFrame": 156
-        },
-        {
-          "word": "floor,",
-          "startSec": 33.204,
-          "endSec": 33.587,
-          "startFrame": 996,
-          "endFrame": 1008,
-          "localStartFrame": 157,
-          "localEndFrame": 169
-        },
-        {
-          "word": "and",
-          "startSec": 33.61,
-          "endSec": 33.715,
-          "startFrame": 1008,
-          "endFrame": 1011,
-          "localStartFrame": 169,
-          "localEndFrame": 172
-        },
-        {
-          "word": "wing.",
-          "startSec": 33.796,
-          "endSec": 34.295,
-          "startFrame": 1014,
-          "endFrame": 1029,
-          "localStartFrame": 175,
-          "localEndFrame": 190
-        }
-      ],
-      "startFrame": 839,
-      "endFrame": 1045,
-      "durationInFrames": 206,
-      "fullText": "Attach an image or a PDF and ask about it. Or open the campus map to find the right building, floor, and wing."
-    },
-    {
-      "id": "scene6",
-      "name": "SecurityGate",
-      "label": "06 // RATE LIMIT & ACCESS",
-      "words": [
-        {
-          "word": "Built-in",
-          "startSec": 34.678,
-          "endSec": 35.154,
-          "startFrame": 1040,
-          "endFrame": 1055,
-          "localStartFrame": 0,
-          "localEndFrame": 10
-        },
-        {
-          "word": "rate",
-          "startSec": 35.247,
-          "endSec": 35.456,
-          "startFrame": 1057,
-          "endFrame": 1064,
-          "localStartFrame": 12,
-          "localEndFrame": 19
-        },
-        {
-          "word": "limiting",
-          "startSec": 35.491,
-          "endSec": 35.839,
-          "startFrame": 1065,
-          "endFrame": 1075,
-          "localStartFrame": 20,
-          "localEndFrame": 30
-        },
-        {
-          "word": "helps",
-          "startSec": 35.932,
-          "endSec": 36.164,
-          "startFrame": 1078,
-          "endFrame": 1085,
-          "localStartFrame": 33,
-          "localEndFrame": 40
-        },
-        {
-          "word": "reduce",
-          "startSec": 36.234,
-          "endSec": 36.548,
-          "startFrame": 1087,
-          "endFrame": 1096,
-          "localStartFrame": 42,
-          "localEndFrame": 51
-        },
-        {
-          "word": "excessive",
-          "startSec": 36.594,
-          "endSec": 37.07,
-          "startFrame": 1098,
-          "endFrame": 1112,
-          "localStartFrame": 53,
-          "localEndFrame": 67
-        },
-        {
-          "word": "requests",
-          "startSec": 37.105,
-          "endSec": 37.662,
-          "startFrame": 1113,
-          "endFrame": 1130,
-          "localStartFrame": 68,
-          "localEndFrame": 85
-        },
-        {
-          "word": "and",
-          "startSec": 37.709,
-          "endSec": 37.825,
-          "startFrame": 1131,
-          "endFrame": 1135,
-          "localStartFrame": 86,
-          "localEndFrame": 90
-        },
-        {
-          "word": "bot",
-          "startSec": 37.906,
-          "endSec": 38.15,
-          "startFrame": 1137,
-          "endFrame": 1145,
-          "localStartFrame": 92,
-          "localEndFrame": 100
-        },
-        {
-          "word": "spam.",
-          "startSec": 38.196,
-          "endSec": 38.719,
-          "startFrame": 1146,
-          "endFrame": 1162,
-          "localStartFrame": 101,
-          "localEndFrame": 117
-        },
-        {
-          "word": "And",
-          "startSec": 39.044,
-          "endSec": 39.183,
-          "startFrame": 1171,
-          "endFrame": 1175,
-          "localStartFrame": 126,
-          "localEndFrame": 130
-        },
-        {
-          "word": "sign-in",
-          "startSec": 39.264,
-          "endSec": 39.682,
-          "startFrame": 1178,
-          "endFrame": 1190,
-          "localStartFrame": 133,
-          "localEndFrame": 145
-        },
-        {
-          "word": "is",
-          "startSec": 39.764,
-          "endSec": 39.856,
-          "startFrame": 1193,
-          "endFrame": 1196,
-          "localStartFrame": 148,
-          "localEndFrame": 151
-        },
-        {
-          "word": "limited",
-          "startSec": 39.938,
-          "endSec": 40.263,
-          "startFrame": 1198,
-          "endFrame": 1208,
-          "localStartFrame": 153,
-          "localEndFrame": 163
+          "word": "ask,",
+          "startSec": 16.845,
+          "endSec": 17.286,
+          "startFrame": 505,
+          "endFrame": 519,
+          "localStartFrame": 125,
+          "localEndFrame": 139
         },
         {
           "word": "to",
-          "startSec": 40.309,
-          "endSec": 40.379,
-          "startFrame": 1209,
-          "endFrame": 1211,
-          "localStartFrame": 164,
-          "localEndFrame": 166
+          "startSec": 17.321,
+          "endSec": 17.425,
+          "startFrame": 520,
+          "endFrame": 523,
+          "localStartFrame": 140,
+          "localEndFrame": 143
         },
         {
-          "word": "UMak",
-          "startSec": 40.507,
-          "endSec": 40.948,
-          "startFrame": 1215,
-          "endFrame": 1228,
+          "word": "verify,",
+          "startSec": 17.495,
+          "endSec": 18.122,
+          "startFrame": 525,
+          "endFrame": 544,
+          "localStartFrame": 145,
+          "localEndFrame": 164
+        },
+        {
+          "word": "to",
+          "startSec": 18.157,
+          "endSec": 18.238,
+          "startFrame": 545,
+          "endFrame": 547,
+          "localStartFrame": 165,
+          "localEndFrame": 167
+        },
+        {
+          "word": "understand.",
+          "startSec": 18.319,
+          "endSec": 19.213,
+          "startFrame": 550,
+          "endFrame": 576,
           "localStartFrame": 170,
-          "localEndFrame": 183
-        },
-        {
-          "word": "email",
-          "startSec": 41.029,
-          "endSec": 41.354,
-          "startFrame": 1231,
-          "endFrame": 1241,
-          "localStartFrame": 186,
           "localEndFrame": 196
-        },
-        {
-          "word": "accounts.",
-          "startSec": 41.401,
-          "endSec": 42.004,
-          "startFrame": 1242,
-          "endFrame": 1260,
-          "localStartFrame": 197,
-          "localEndFrame": 215
         }
       ],
-      "startFrame": 1045,
-      "endFrame": 1276,
-      "durationInFrames": 231,
-      "fullText": "Built-in rate limiting helps reduce excessive requests and bot spam. And sign-in is limited to UMak email accounts."
+      "startFrame": 380,
+      "endFrame": 596,
+      "durationInFrames": 216,
+      "fullText": "But what if every answer... just made sense? One place to ask, to verify, to understand."
+    },
+    {
+      "id": "scene4",
+      "name": "HeroCIT",
+      "words": [
+        {
+          "word": "Ask:",
+          "startSec": 19.963,
+          "endSec": 20.497,
+          "startFrame": 599,
+          "endFrame": 615,
+          "localStartFrame": 3,
+          "localEndFrame": 19
+        },
+        {
+          "word": "Where",
+          "startSec": 20.671,
+          "endSec": 20.926,
+          "startFrame": 620,
+          "endFrame": 628,
+          "localStartFrame": 24,
+          "localEndFrame": 32
+        },
+        {
+          "word": "is",
+          "startSec": 20.973,
+          "endSec": 21.054,
+          "startFrame": 629,
+          "endFrame": 632,
+          "localStartFrame": 33,
+          "localEndFrame": 36
+        },
+        {
+          "word": "the",
+          "startSec": 21.112,
+          "endSec": 21.182,
+          "startFrame": 633,
+          "endFrame": 635,
+          "localStartFrame": 37,
+          "localEndFrame": 39
+        },
+        {
+          "word": "CIT?",
+          "startSec": 21.229,
+          "endSec": 22.007,
+          "startFrame": 637,
+          "endFrame": 660,
+          "localStartFrame": 41,
+          "localEndFrame": 64
+        },
+        {
+          "word": "Second",
+          "startSec": 22.657,
+          "endSec": 22.97,
+          "startFrame": 680,
+          "endFrame": 689,
+          "localStartFrame": 84,
+          "localEndFrame": 93
+        },
+        {
+          "word": "Floor,",
+          "startSec": 23.017,
+          "endSec": 23.434,
+          "startFrame": 691,
+          "endFrame": 703,
+          "localStartFrame": 95,
+          "localEndFrame": 107
+        },
+        {
+          "word": "South",
+          "startSec": 23.516,
+          "endSec": 23.806,
+          "startFrame": 705,
+          "endFrame": 714,
+          "localStartFrame": 109,
+          "localEndFrame": 118
+        },
+        {
+          "word": "Wing,",
+          "startSec": 23.864,
+          "endSec": 24.166,
+          "startFrame": 716,
+          "endFrame": 725,
+          "localStartFrame": 120,
+          "localEndFrame": 129
+        },
+        {
+          "word": "Admin",
+          "startSec": 24.224,
+          "endSec": 24.63,
+          "startFrame": 727,
+          "endFrame": 739,
+          "localStartFrame": 131,
+          "localEndFrame": 143
+        },
+        {
+          "word": "Building.",
+          "startSec": 24.688,
+          "endSec": 25.222,
+          "startFrame": 741,
+          "endFrame": 757,
+          "localStartFrame": 145,
+          "localEndFrame": 161
+        },
+        {
+          "word": "Source",
+          "startSec": 25.672,
+          "endSec": 26.009,
+          "startFrame": 770,
+          "endFrame": 780,
+          "localStartFrame": 174,
+          "localEndFrame": 184
+        },
+        {
+          "word": "03,",
+          "startSec": 26.079,
+          "endSec": 26.833,
+          "startFrame": 782,
+          "endFrame": 805,
+          "localStartFrame": 186,
+          "localEndFrame": 209
+        },
+        {
+          "word": "page",
+          "startSec": 26.88,
+          "endSec": 27.182,
+          "startFrame": 806,
+          "endFrame": 815,
+          "localStartFrame": 210,
+          "localEndFrame": 219
+        },
+        {
+          "word": "1.",
+          "startSec": 27.228,
+          "endSec": 27.658,
+          "startFrame": 817,
+          "endFrame": 830,
+          "localStartFrame": 221,
+          "localEndFrame": 234
+        }
+      ],
+      "startFrame": 596,
+      "endFrame": 851,
+      "durationInFrames": 255,
+      "fullText": "Ask: Where is the CIT? Second Floor, South Wing, Admin Building. Source 03, page 1."
+    },
+    {
+      "id": "scene5",
+      "name": "UploadsAndMap",
+      "words": [
+        {
+          "word": "Upload",
+          "startSec": 28.458,
+          "endSec": 28.795,
+          "startFrame": 854,
+          "endFrame": 864,
+          "localStartFrame": 3,
+          "localEndFrame": 13
+        },
+        {
+          "word": "a",
+          "startSec": 28.83,
+          "endSec": 28.853,
+          "startFrame": 865,
+          "endFrame": 866,
+          "localStartFrame": 14,
+          "localEndFrame": 15
+        },
+        {
+          "word": "schedule,",
+          "startSec": 28.888,
+          "endSec": 29.387,
+          "startFrame": 867,
+          "endFrame": 882,
+          "localStartFrame": 16,
+          "localEndFrame": 31
+        },
+        {
+          "word": "or",
+          "startSec": 29.434,
+          "endSec": 29.596,
+          "startFrame": 883,
+          "endFrame": 888,
+          "localStartFrame": 32,
+          "localEndFrame": 37
+        },
+        {
+          "word": "a",
+          "startSec": 29.643,
+          "endSec": 29.666,
+          "startFrame": 889,
+          "endFrame": 890,
+          "localStartFrame": 38,
+          "localEndFrame": 39
+        },
+        {
+          "word": "photo.",
+          "startSec": 29.701,
+          "endSec": 30.223,
+          "startFrame": 891,
+          "endFrame": 907,
+          "localStartFrame": 40,
+          "localEndFrame": 56
+        },
+        {
+          "word": "Need",
+          "startSec": 30.773,
+          "endSec": 30.982,
+          "startFrame": 923,
+          "endFrame": 929,
+          "localStartFrame": 72,
+          "localEndFrame": 78
+        },
+        {
+          "word": "directions?",
+          "startSec": 31.017,
+          "endSec": 31.76,
+          "startFrame": 931,
+          "endFrame": 953,
+          "localStartFrame": 80,
+          "localEndFrame": 102
+        },
+        {
+          "word": "Open",
+          "startSec": 31.934,
+          "endSec": 32.201,
+          "startFrame": 958,
+          "endFrame": 966,
+          "localStartFrame": 107,
+          "localEndFrame": 115
+        },
+        {
+          "word": "the",
+          "startSec": 32.236,
+          "endSec": 32.306,
+          "startFrame": 967,
+          "endFrame": 969,
+          "localStartFrame": 116,
+          "localEndFrame": 118
+        },
+        {
+          "word": "campus",
+          "startSec": 32.329,
+          "endSec": 32.665,
+          "startFrame": 970,
+          "endFrame": 980,
+          "localStartFrame": 119,
+          "localEndFrame": 129
+        },
+        {
+          "word": "map.",
+          "startSec": 32.724,
+          "endSec": 33.072,
+          "startFrame": 982,
+          "endFrame": 992,
+          "localStartFrame": 131,
+          "localEndFrame": 141
+        }
+      ],
+      "startFrame": 851,
+      "endFrame": 1015,
+      "durationInFrames": 164,
+      "fullText": "Upload a schedule, or a photo. Need directions? Open the campus map."
+    },
+    {
+      "id": "scene6",
+      "name": "Security",
+      "words": [
+        {
+          "word": "UMak",
+          "startSec": 33.922,
+          "endSec": 34.328,
+          "startFrame": 1018,
+          "endFrame": 1030,
+          "localStartFrame": 3,
+          "localEndFrame": 15
+        },
+        {
+          "word": "accounts",
+          "startSec": 34.386,
+          "endSec": 34.746,
+          "startFrame": 1032,
+          "endFrame": 1042,
+          "localStartFrame": 17,
+          "localEndFrame": 27
+        },
+        {
+          "word": "only.",
+          "startSec": 34.816,
+          "endSec": 35.257,
+          "startFrame": 1044,
+          "endFrame": 1058,
+          "localStartFrame": 29,
+          "localEndFrame": 43
+        },
+        {
+          "word": "Protected",
+          "startSec": 35.707,
+          "endSec": 36.195,
+          "startFrame": 1071,
+          "endFrame": 1086,
+          "localStartFrame": 56,
+          "localEndFrame": 71
+        },
+        {
+          "word": "from",
+          "startSec": 36.23,
+          "endSec": 36.369,
+          "startFrame": 1087,
+          "endFrame": 1091,
+          "localStartFrame": 72,
+          "localEndFrame": 76
+        },
+        {
+          "word": "spam.",
+          "startSec": 36.427,
+          "endSec": 36.973,
+          "startFrame": 1093,
+          "endFrame": 1109,
+          "localStartFrame": 78,
+          "localEndFrame": 94
+        },
+        {
+          "word": "No",
+          "startSec": 37.523,
+          "endSec": 37.697,
+          "startFrame": 1126,
+          "endFrame": 1131,
+          "localStartFrame": 111,
+          "localEndFrame": 116
+        },
+        {
+          "word": "noise,",
+          "startSec": 37.79,
+          "endSec": 38.196,
+          "startFrame": 1134,
+          "endFrame": 1146,
+          "localStartFrame": 119,
+          "localEndFrame": 131
+        },
+        {
+          "word": "no",
+          "startSec": 38.266,
+          "endSec": 38.417,
+          "startFrame": 1148,
+          "endFrame": 1153,
+          "localStartFrame": 133,
+          "localEndFrame": 138
+        },
+        {
+          "word": "waiting...",
+          "startSec": 38.498,
+          "endSec": 39.067,
+          "startFrame": 1155,
+          "endFrame": 1172,
+          "localStartFrame": 140,
+          "localEndFrame": 157
+        }
+      ],
+      "startFrame": 1015,
+      "endFrame": 1198,
+      "durationInFrames": 183,
+      "fullText": "UMak accounts only. Protected from spam. No noise, no waiting..."
     },
     {
       "id": "scene7",
       "name": "Outro",
-      "label": "07 // OUTRO",
       "words": [
         {
-          "word": "Less",
-          "startSec": 42.329,
-          "endSec": 42.562,
-          "startFrame": 1270,
-          "endFrame": 1277,
-          "localStartFrame": 0,
-          "localEndFrame": 1
-        },
-        {
-          "word": "waiting,",
-          "startSec": 42.62,
-          "endSec": 43.13,
-          "startFrame": 1279,
-          "endFrame": 1294,
+          "word": "just",
+          "startSec": 40.017,
+          "endSec": 40.284,
+          "startFrame": 1201,
+          "endFrame": 1209,
           "localStartFrame": 3,
-          "localEndFrame": 18
+          "localEndFrame": 11
         },
         {
-          "word": "easier",
-          "startSec": 43.305,
-          "endSec": 43.653,
-          "startFrame": 1299,
-          "endFrame": 1310,
-          "localStartFrame": 23,
-          "localEndFrame": 34
+          "word": "clarity.",
+          "startSec": 40.331,
+          "endSec": 41.039,
+          "startFrame": 1210,
+          "endFrame": 1231,
+          "localStartFrame": 12,
+          "localEndFrame": 33
         },
         {
-          "word": "access",
-          "startSec": 43.723,
-          "endSec": 44.082,
-          "startFrame": 1312,
-          "endFrame": 1322,
-          "localStartFrame": 36,
-          "localEndFrame": 46
+          "word": "TAGA-asK",
+          "startSec": 41.739,
+          "endSec": 42.807,
+          "startFrame": 1252,
+          "endFrame": 1284,
+          "localStartFrame": 54,
+          "localEndFrame": 86
         },
         {
-          "word": "to",
-          "startSec": 44.117,
-          "endSec": 44.175,
-          "startFrame": 1324,
-          "endFrame": 1325,
-          "localStartFrame": 48,
-          "localEndFrame": 49
-        },
-        {
-          "word": "information.",
-          "startSec": 44.245,
-          "endSec": 45.069,
-          "startFrame": 1327,
-          "endFrame": 1352,
-          "localStartFrame": 51,
-          "localEndFrame": 76
+          "word": "AI.",
+          "startSec": 42.888,
+          "endSec": 43.422,
+          "startFrame": 1287,
+          "endFrame": 1303,
+          "localStartFrame": 89,
+          "localEndFrame": 105
         },
         {
           "word": "Ask",
-          "startSec": 45.313,
-          "endSec": 45.592,
-          "startFrame": 1359,
-          "endFrame": 1368,
-          "localStartFrame": 83,
-          "localEndFrame": 92
-        },
-        {
-          "word": "smarter,",
-          "startSec": 45.673,
-          "endSec": 46.265,
-          "startFrame": 1370,
-          "endFrame": 1388,
-          "localStartFrame": 94,
-          "localEndFrame": 112
-        },
-        {
-          "word": "stay",
-          "startSec": 46.474,
-          "endSec": 46.695,
-          "startFrame": 1394,
-          "endFrame": 1401,
+          "startSec": 43.872,
+          "endSec": 44.15,
+          "startFrame": 1316,
+          "endFrame": 1325,
           "localStartFrame": 118,
-          "localEndFrame": 125
+          "localEndFrame": 127
         },
         {
-          "word": "connected",
-          "startSec": 46.741,
-          "endSec": 47.136,
-          "startFrame": 1402,
-          "endFrame": 1414,
-          "localStartFrame": 126,
-          "localEndFrame": 138
-        },
-        {
-          "word": "with",
-          "startSec": 47.171,
-          "endSec": 47.298,
-          "startFrame": 1415,
-          "endFrame": 1419,
-          "localStartFrame": 139,
-          "localEndFrame": 143
-        },
-        {
-          "word": "UMak.",
-          "startSec": 47.38,
-          "endSec": 48.158,
-          "startFrame": 1421,
-          "endFrame": 1445,
-          "localStartFrame": 145,
-          "localEndFrame": 169
+          "word": "smarter.",
+          "startSec": 44.208,
+          "endSec": 45.1896,
+          "startFrame": 1326,
+          "endFrame": 1356,
+          "localStartFrame": 128,
+          "localEndFrame": 158
         }
       ],
-      "startFrame": 1276,
-      "endFrame": 1520,
-      "durationInFrames": 244,
-      "fullText": "Less waiting, easier access to information. Ask smarter, stay connected with UMak."
+      "startFrame": 1198,
+      "endFrame": 1431,
+      "durationInFrames": 233,
+      "fullText": "just clarity. TAGA-asK AI. Ask smarter."
     }
   ],
   "allWords": [
     {
-      "word": "Introducing",
-      "startSec": 0,
-      "endSec": 0.65,
-      "startFrame": 0,
-      "endFrame": 20
+      "word": "Campus",
+      "startSec": 0.25,
+      "endSec": 0.796,
+      "startFrame": 8,
+      "endFrame": 24
     },
     {
-      "word": "TAGA-asK",
-      "startSec": 0.731,
-      "endSec": 1.405,
-      "startFrame": 22,
-      "endFrame": 42
+      "word": "life",
+      "startSec": 0.865,
+      "endSec": 1.202,
+      "startFrame": 26,
+      "endFrame": 36
     },
     {
-      "word": "AI,",
-      "startSec": 1.474,
-      "endSec": 2.101,
-      "startFrame": 44,
-      "endFrame": 63
+      "word": "moves",
+      "startSec": 1.272,
+      "endSec": 1.597,
+      "startFrame": 38,
+      "endFrame": 48
     },
     {
-      "word": "your",
-      "startSec": 2.276,
-      "endSec": 2.426,
-      "startFrame": 68,
-      "endFrame": 73
+      "word": "fast.",
+      "startSec": 1.666,
+      "endSec": 2.259,
+      "startFrame": 50,
+      "endFrame": 68
     },
     {
-      "word": "UMak",
-      "startSec": 2.508,
-      "endSec": 2.821,
-      "startFrame": 75,
-      "endFrame": 85
+      "word": "Too",
+      "startSec": 2.709,
+      "endSec": 2.894,
+      "startFrame": 81,
+      "endFrame": 87
     },
     {
-      "word": "AI",
-      "startSec": 2.891,
-      "endSec": 3.262,
-      "startFrame": 87,
-      "endFrame": 98
+      "word": "fast",
+      "startSec": 2.952,
+      "endSec": 3.219,
+      "startFrame": 89,
+      "endFrame": 97
     },
     {
-      "word": "companion.",
-      "startSec": 3.297,
-      "endSec": 4.029,
-      "startFrame": 99,
-      "endFrame": 121
+      "word": "to",
+      "startSec": 3.254,
+      "endSec": 3.312,
+      "startFrame": 98,
+      "endFrame": 99
     },
     {
-      "word": "May",
-      "startSec": 4.412,
-      "endSec": 4.528,
-      "startFrame": 132,
-      "endFrame": 136
-    },
-    {
-      "word": "tanong",
-      "startSec": 4.563,
-      "endSec": 4.795,
-      "startFrame": 137,
-      "endFrame": 144
-    },
-    {
-      "word": "ka,",
-      "startSec": 4.83,
-      "endSec": 5.166,
-      "startFrame": 145,
-      "endFrame": 155
-    },
-    {
-      "word": "pero",
-      "startSec": 5.283,
-      "endSec": 5.48,
-      "startFrame": 158,
-      "endFrame": 164
-    },
-    {
-      "word": "sino",
-      "startSec": 5.515,
-      "endSec": 5.7,
-      "startFrame": 165,
-      "endFrame": 171
-    },
-    {
-      "word": "ang",
-      "startSec": 5.724,
-      "endSec": 5.793,
-      "startFrame": 172,
-      "endFrame": 174
-    },
-    {
-      "word": "sasagot?",
-      "startSec": 5.84,
-      "endSec": 6.444,
-      "startFrame": 175,
-      "endFrame": 193
-    },
-    {
-      "word": "Waiting",
-      "startSec": 6.687,
-      "endSec": 7.024,
-      "startFrame": 201,
-      "endFrame": 211
-    },
-    {
-      "word": "hours",
-      "startSec": 7.082,
-      "endSec": 7.384,
-      "startFrame": 212,
-      "endFrame": 222
-    },
-    {
-      "word": "in",
-      "startSec": 7.442,
-      "endSec": 7.512,
-      "startFrame": 223,
-      "endFrame": 225
-    },
-    {
-      "word": "Facebook",
-      "startSec": 7.581,
-      "endSec": 7.988,
-      "startFrame": 227,
-      "endFrame": 240
-    },
-    {
-      "word": "groups",
-      "startSec": 8.022,
-      "endSec": 8.359,
-      "startFrame": 241,
-      "endFrame": 251
-    },
-    {
-      "word": "with",
-      "startSec": 8.406,
-      "endSec": 8.545,
-      "startFrame": 252,
-      "endFrame": 256
-    },
-    {
-      "word": "zero",
-      "startSec": 8.603,
-      "endSec": 8.916,
-      "startFrame": 258,
-      "endFrame": 267
-    },
-    {
-      "word": "replies.",
-      "startSec": 8.986,
-      "endSec": 9.706,
-      "startFrame": 270,
-      "endFrame": 291
+      "word": "follow.",
+      "startSec": 3.37,
+      "endSec": 3.939,
+      "startFrame": 101,
+      "endFrame": 118
     },
     {
       "word": "Meet",
-      "startSec": 10.031,
-      "endSec": 10.275,
-      "startFrame": 301,
-      "endFrame": 308
+      "startSec": 4.839,
+      "endSec": 5.083,
+      "startFrame": 145,
+      "endFrame": 152
     },
     {
       "word": "TAGA-asK",
-      "startSec": 10.368,
-      "endSec": 10.971,
-      "startFrame": 311,
-      "endFrame": 329
+      "startSec": 5.141,
+      "endSec": 5.826,
+      "startFrame": 154,
+      "endFrame": 175
     },
     {
-      "word": "AI",
-      "startSec": 11.041,
-      "endSec": 11.459,
-      "startFrame": 331,
-      "endFrame": 344
+      "word": "AI.",
+      "startSec": 5.895,
+      "endSec": 6.604,
+      "startFrame": 177,
+      "endFrame": 198
     },
     {
-      "word": "Ask",
-      "startSec": 11.482,
-      "endSec": 11.726,
-      "startFrame": 344,
-      "endFrame": 352
+      "word": "Schedules,",
+      "startSec": 7.254,
+      "endSec": 7.823,
+      "startFrame": 218,
+      "endFrame": 235
     },
     {
-      "word": "a",
-      "startSec": 11.761,
-      "endSec": 11.784,
-      "startFrame": 353,
-      "endFrame": 354
+      "word": "rooms,",
+      "startSec": 7.869,
+      "endSec": 8.264,
+      "startFrame": 236,
+      "endFrame": 248
     },
     {
-      "word": "question,",
-      "startSec": 11.842,
-      "endSec": 12.469,
-      "startFrame": 355,
-      "endFrame": 374
+      "word": "policies...",
+      "startSec": 8.299,
+      "endSec": 8.949,
+      "startFrame": 249,
+      "endFrame": 268
     },
     {
-      "word": "and",
-      "startSec": 12.585,
-      "endSec": 12.736,
-      "startFrame": 378,
-      "endFrame": 382
+      "word": "all",
+      "startSec": 9.399,
+      "endSec": 9.689,
+      "startFrame": 282,
+      "endFrame": 291
     },
     {
-      "word": "get",
-      "startSec": 12.806,
-      "endSec": 12.957,
-      "startFrame": 384,
-      "endFrame": 389
+      "word": "scattered.",
+      "startSec": 9.759,
+      "endSec": 10.328,
+      "startFrame": 293,
+      "endFrame": 310
     },
     {
-      "word": "answers",
-      "startSec": 13.015,
-      "endSec": 13.386,
-      "startFrame": 390,
-      "endFrame": 402
+      "word": "All",
+      "startSec": 10.878,
+      "endSec": 11.11,
+      "startFrame": 326,
+      "endFrame": 333
     },
     {
-      "word": "grounded",
-      "startSec": 13.444,
-      "endSec": 13.827,
-      "startFrame": 403,
-      "endFrame": 415
+      "word": "unclear.",
+      "startSec": 11.203,
+      "endSec": 11.9,
+      "startFrame": 336,
+      "endFrame": 357
     },
     {
-      "word": "in",
-      "startSec": 13.874,
-      "endSec": 13.932,
-      "startFrame": 416,
-      "endFrame": 418
+      "word": "But",
+      "startSec": 12.75,
+      "endSec": 12.935,
+      "startFrame": 383,
+      "endFrame": 388
     },
     {
-      "word": "UMak",
-      "startSec": 14.048,
-      "endSec": 14.35,
-      "startFrame": 421,
-      "endFrame": 431
+      "word": "what",
+      "startSec": 12.982,
+      "endSec": 13.156,
+      "startFrame": 389,
+      "endFrame": 395
     },
     {
-      "word": "documents,",
-      "startSec": 14.42,
-      "endSec": 15.058,
-      "startFrame": 433,
-      "endFrame": 452
+      "word": "if",
+      "startSec": 13.203,
+      "endSec": 13.272,
+      "startFrame": 396,
+      "endFrame": 398
     },
     {
-      "word": "with",
-      "startSec": 15.093,
-      "endSec": 15.267,
-      "startFrame": 453,
-      "endFrame": 458
+      "word": "every",
+      "startSec": 13.33,
+      "endSec": 13.539,
+      "startFrame": 400,
+      "endFrame": 406
     },
     {
-      "word": "sources.",
-      "startSec": 15.313,
-      "endSec": 15.998,
-      "startFrame": 459,
-      "endFrame": 480
+      "word": "answer...",
+      "startSec": 13.597,
+      "endSec": 14.131,
+      "startFrame": 408,
+      "endFrame": 424
     },
     {
-      "word": "Ask",
-      "startSec": 16.381,
-      "endSec": 16.706,
+      "word": "just",
+      "startSec": 14.511,
+      "endSec": 14.709,
+      "startFrame": 435,
+      "endFrame": 441
+    },
+    {
+      "word": "made",
+      "startSec": 14.755,
+      "endSec": 14.929,
+      "startFrame": 443,
+      "endFrame": 448
+    },
+    {
+      "word": "sense?",
+      "startSec": 14.964,
+      "endSec": 15.44,
+      "startFrame": 449,
+      "endFrame": 463
+    },
+    {
+      "word": "One",
+      "startSec": 16.09,
+      "endSec": 16.322,
+      "startFrame": 483,
+      "endFrame": 490
+    },
+    {
+      "word": "place",
+      "startSec": 16.357,
+      "endSec": 16.624,
       "startFrame": 491,
-      "endFrame": 501
+      "endFrame": 499
     },
     {
-      "word": "where",
-      "startSec": 16.765,
-      "endSec": 16.927,
-      "startFrame": 503,
-      "endFrame": 508
+      "word": "to",
+      "startSec": 16.659,
+      "endSec": 16.729,
+      "startFrame": 500,
+      "endFrame": 502
     },
     {
-      "word": "the",
-      "startSec": 16.962,
-      "endSec": 17.032,
-      "startFrame": 509,
-      "endFrame": 511
+      "word": "ask,",
+      "startSec": 16.845,
+      "endSec": 17.286,
+      "startFrame": 505,
+      "endFrame": 519
     },
     {
-      "word": "CIT",
-      "startSec": 17.078,
-      "endSec": 17.508,
-      "startFrame": 512,
-      "endFrame": 525
+      "word": "to",
+      "startSec": 17.321,
+      "endSec": 17.425,
+      "startFrame": 520,
+      "endFrame": 523
+    },
+    {
+      "word": "verify,",
+      "startSec": 17.495,
+      "endSec": 18.122,
+      "startFrame": 525,
+      "endFrame": 544
+    },
+    {
+      "word": "to",
+      "startSec": 18.157,
+      "endSec": 18.238,
+      "startFrame": 545,
+      "endFrame": 547
+    },
+    {
+      "word": "understand.",
+      "startSec": 18.319,
+      "endSec": 19.213,
+      "startFrame": 550,
+      "endFrame": 576
+    },
+    {
+      "word": "Ask:",
+      "startSec": 19.963,
+      "endSec": 20.497,
+      "startFrame": 599,
+      "endFrame": 615
+    },
+    {
+      "word": "Where",
+      "startSec": 20.671,
+      "endSec": 20.926,
+      "startFrame": 620,
+      "endFrame": 628
     },
     {
       "word": "is",
-      "startSec": 17.658,
-      "endSec": 17.798,
-      "startFrame": 530,
-      "endFrame": 534
-    },
-    {
-      "word": "in",
-      "startSec": 17.867,
-      "endSec": 17.937,
-      "startFrame": 536,
-      "endFrame": 538
+      "startSec": 20.973,
+      "endSec": 21.054,
+      "startFrame": 629,
+      "endFrame": 632
     },
     {
       "word": "the",
-      "startSec": 17.984,
-      "endSec": 18.053,
-      "startFrame": 540,
-      "endFrame": 542
+      "startSec": 21.112,
+      "endSec": 21.182,
+      "startFrame": 633,
+      "endFrame": 635
     },
     {
-      "word": "Admin",
-      "startSec": 18.123,
-      "endSec": 18.471,
-      "startFrame": 544,
-      "endFrame": 554
-    },
-    {
-      "word": "Building.",
-      "startSec": 18.529,
-      "endSec": 19.063,
-      "startFrame": 556,
-      "endFrame": 572
-    },
-    {
-      "word": "TAGA-asK",
-      "startSec": 19.388,
-      "endSec": 20.155,
-      "startFrame": 582,
-      "endFrame": 605
-    },
-    {
-      "word": "AI",
-      "startSec": 20.224,
-      "endSec": 20.654,
-      "startFrame": 607,
-      "endFrame": 620
-    },
-    {
-      "word": "answers:",
-      "startSec": 20.677,
-      "endSec": 21.269,
-      "startFrame": 620,
-      "endFrame": 638
+      "word": "CIT?",
+      "startSec": 21.229,
+      "endSec": 22.007,
+      "startFrame": 637,
+      "endFrame": 660
     },
     {
       "word": "Second",
-      "startSec": 21.478,
-      "endSec": 21.78,
-      "startFrame": 644,
-      "endFrame": 653
+      "startSec": 22.657,
+      "endSec": 22.97,
+      "startFrame": 680,
+      "endFrame": 689
     },
     {
       "word": "Floor,",
-      "startSec": 21.838,
-      "endSec": 22.128,
-      "startFrame": 655,
-      "endFrame": 664
+      "startSec": 23.017,
+      "endSec": 23.434,
+      "startFrame": 691,
+      "endFrame": 703
     },
     {
       "word": "South",
-      "startSec": 22.163,
-      "endSec": 22.407,
-      "startFrame": 665,
-      "endFrame": 672
+      "startSec": 23.516,
+      "endSec": 23.806,
+      "startFrame": 705,
+      "endFrame": 714
     },
     {
-      "word": "Wing.",
-      "startSec": 22.465,
-      "endSec": 22.883,
-      "startFrame": 674,
-      "endFrame": 686
+      "word": "Wing,",
+      "startSec": 23.864,
+      "endSec": 24.166,
+      "startFrame": 716,
+      "endFrame": 725
     },
     {
-      "word": "And",
-      "startSec": 23.057,
-      "endSec": 23.196,
-      "startFrame": 692,
-      "endFrame": 696
+      "word": "Admin",
+      "startSec": 24.224,
+      "endSec": 24.63,
+      "startFrame": 727,
+      "endFrame": 739
     },
     {
-      "word": "it",
-      "startSec": 23.254,
-      "endSec": 23.313,
-      "startFrame": 698,
-      "endFrame": 699
-    },
-    {
-      "word": "shows",
-      "startSec": 23.371,
-      "endSec": 23.672,
-      "startFrame": 701,
-      "endFrame": 710
-    },
-    {
-      "word": "where",
-      "startSec": 23.719,
-      "endSec": 23.893,
-      "startFrame": 712,
-      "endFrame": 717
-    },
-    {
-      "word": "that",
-      "startSec": 23.939,
-      "endSec": 24.102,
-      "startFrame": 718,
-      "endFrame": 723
-    },
-    {
-      "word": "answer",
-      "startSec": 24.16,
-      "endSec": 24.427,
-      "startFrame": 725,
-      "endFrame": 733
-    },
-    {
-      "word": "came",
-      "startSec": 24.485,
-      "endSec": 24.694,
-      "startFrame": 735,
-      "endFrame": 741
-    },
-    {
-      "word": "from:",
-      "startSec": 24.729,
-      "endSec": 25.135,
-      "startFrame": 742,
-      "endFrame": 754
+      "word": "Building.",
+      "startSec": 24.688,
+      "endSec": 25.222,
+      "startFrame": 741,
+      "endFrame": 757
     },
     {
       "word": "Source",
-      "startSec": 25.46,
-      "endSec": 25.785,
-      "startFrame": 764,
-      "endFrame": 774
+      "startSec": 25.672,
+      "endSec": 26.009,
+      "startFrame": 770,
+      "endFrame": 780
     },
     {
-      "word": "zero",
-      "startSec": 25.855,
-      "endSec": 26.203,
-      "startFrame": 776,
-      "endFrame": 786
-    },
-    {
-      "word": "three,",
-      "startSec": 26.273,
-      "endSec": 26.598,
-      "startFrame": 788,
-      "endFrame": 798
+      "word": "03,",
+      "startSec": 26.079,
+      "endSec": 26.833,
+      "startFrame": 782,
+      "endFrame": 805
     },
     {
       "word": "page",
-      "startSec": 26.645,
-      "endSec": 26.958,
-      "startFrame": 799,
-      "endFrame": 809
+      "startSec": 26.88,
+      "endSec": 27.182,
+      "startFrame": 806,
+      "endFrame": 815
     },
     {
-      "word": "one.",
-      "startSec": 27.016,
-      "endSec": 27.422,
-      "startFrame": 810,
-      "endFrame": 823
+      "word": "1.",
+      "startSec": 27.228,
+      "endSec": 27.658,
+      "startFrame": 817,
+      "endFrame": 830
     },
     {
-      "word": "Attach",
-      "startSec": 27.701,
-      "endSec": 28.119,
-      "startFrame": 831,
-      "endFrame": 844
-    },
-    {
-      "word": "an",
-      "startSec": 28.166,
-      "endSec": 28.235,
-      "startFrame": 845,
-      "endFrame": 847
-    },
-    {
-      "word": "image",
-      "startSec": 28.305,
-      "endSec": 28.63,
-      "startFrame": 849,
-      "endFrame": 859
-    },
-    {
-      "word": "or",
-      "startSec": 28.665,
-      "endSec": 28.746,
-      "startFrame": 860,
-      "endFrame": 862
-    },
-    {
-      "word": "a",
-      "startSec": 28.792,
-      "endSec": 28.816,
-      "startFrame": 864,
+      "word": "Upload",
+      "startSec": 28.458,
+      "endSec": 28.795,
+      "startFrame": 854,
       "endFrame": 864
     },
     {
-      "word": "PDF",
-      "startSec": 28.862,
-      "endSec": 29.419,
-      "startFrame": 866,
-      "endFrame": 883
+      "word": "a",
+      "startSec": 28.83,
+      "endSec": 28.853,
+      "startFrame": 865,
+      "endFrame": 866
     },
     {
-      "word": "and",
-      "startSec": 29.466,
-      "endSec": 29.559,
-      "startFrame": 884,
-      "endFrame": 887
+      "word": "schedule,",
+      "startSec": 28.888,
+      "endSec": 29.387,
+      "startFrame": 867,
+      "endFrame": 882
     },
     {
-      "word": "ask",
-      "startSec": 29.628,
-      "endSec": 29.849,
+      "word": "or",
+      "startSec": 29.434,
+      "endSec": 29.596,
+      "startFrame": 883,
+      "endFrame": 888
+    },
+    {
+      "word": "a",
+      "startSec": 29.643,
+      "endSec": 29.666,
       "startFrame": 889,
-      "endFrame": 895
+      "endFrame": 890
     },
     {
-      "word": "about",
-      "startSec": 29.895,
-      "endSec": 30.128,
-      "startFrame": 897,
-      "endFrame": 904
+      "word": "photo.",
+      "startSec": 29.701,
+      "endSec": 30.223,
+      "startFrame": 891,
+      "endFrame": 907
     },
     {
-      "word": "it.",
-      "startSec": 30.174,
-      "endSec": 30.453,
-      "startFrame": 905,
-      "endFrame": 914
+      "word": "Need",
+      "startSec": 30.773,
+      "endSec": 30.982,
+      "startFrame": 923,
+      "endFrame": 929
     },
     {
-      "word": "Or",
-      "startSec": 30.662,
-      "endSec": 30.813,
-      "startFrame": 920,
-      "endFrame": 924
+      "word": "directions?",
+      "startSec": 31.017,
+      "endSec": 31.76,
+      "startFrame": 931,
+      "endFrame": 953
     },
     {
-      "word": "open",
-      "startSec": 30.882,
-      "endSec": 31.114,
-      "startFrame": 926,
-      "endFrame": 933
+      "word": "Open",
+      "startSec": 31.934,
+      "endSec": 32.201,
+      "startFrame": 958,
+      "endFrame": 966
     },
     {
       "word": "the",
-      "startSec": 31.161,
-      "endSec": 31.23,
-      "startFrame": 935,
-      "endFrame": 937
-    },
-    {
-      "word": "campus",
-      "startSec": 31.265,
-      "endSec": 31.613,
-      "startFrame": 938,
-      "endFrame": 948
-    },
-    {
-      "word": "map",
-      "startSec": 31.695,
-      "endSec": 31.927,
-      "startFrame": 951,
-      "endFrame": 958
-    },
-    {
-      "word": "to",
-      "startSec": 31.985,
-      "endSec": 32.043,
-      "startFrame": 960,
-      "endFrame": 961
-    },
-    {
-      "word": "find",
-      "startSec": 32.101,
-      "endSec": 32.298,
-      "startFrame": 963,
+      "startSec": 32.236,
+      "endSec": 32.306,
+      "startFrame": 967,
       "endFrame": 969
     },
     {
-      "word": "the",
-      "startSec": 32.345,
-      "endSec": 32.414,
+      "word": "campus",
+      "startSec": 32.329,
+      "endSec": 32.665,
       "startFrame": 970,
-      "endFrame": 972
-    },
-    {
-      "word": "right",
-      "startSec": 32.472,
-      "endSec": 32.67,
-      "startFrame": 974,
       "endFrame": 980
     },
     {
-      "word": "building,",
-      "startSec": 32.728,
-      "endSec": 33.157,
+      "word": "map.",
+      "startSec": 32.724,
+      "endSec": 33.072,
       "startFrame": 982,
-      "endFrame": 995
-    },
-    {
-      "word": "floor,",
-      "startSec": 33.204,
-      "endSec": 33.587,
-      "startFrame": 996,
-      "endFrame": 1008
-    },
-    {
-      "word": "and",
-      "startSec": 33.61,
-      "endSec": 33.715,
-      "startFrame": 1008,
-      "endFrame": 1011
-    },
-    {
-      "word": "wing.",
-      "startSec": 33.796,
-      "endSec": 34.295,
-      "startFrame": 1014,
-      "endFrame": 1029
-    },
-    {
-      "word": "Built-in",
-      "startSec": 34.678,
-      "endSec": 35.154,
-      "startFrame": 1040,
-      "endFrame": 1055
-    },
-    {
-      "word": "rate",
-      "startSec": 35.247,
-      "endSec": 35.456,
-      "startFrame": 1057,
-      "endFrame": 1064
-    },
-    {
-      "word": "limiting",
-      "startSec": 35.491,
-      "endSec": 35.839,
-      "startFrame": 1065,
-      "endFrame": 1075
-    },
-    {
-      "word": "helps",
-      "startSec": 35.932,
-      "endSec": 36.164,
-      "startFrame": 1078,
-      "endFrame": 1085
-    },
-    {
-      "word": "reduce",
-      "startSec": 36.234,
-      "endSec": 36.548,
-      "startFrame": 1087,
-      "endFrame": 1096
-    },
-    {
-      "word": "excessive",
-      "startSec": 36.594,
-      "endSec": 37.07,
-      "startFrame": 1098,
-      "endFrame": 1112
-    },
-    {
-      "word": "requests",
-      "startSec": 37.105,
-      "endSec": 37.662,
-      "startFrame": 1113,
-      "endFrame": 1130
-    },
-    {
-      "word": "and",
-      "startSec": 37.709,
-      "endSec": 37.825,
-      "startFrame": 1131,
-      "endFrame": 1135
-    },
-    {
-      "word": "bot",
-      "startSec": 37.906,
-      "endSec": 38.15,
-      "startFrame": 1137,
-      "endFrame": 1145
-    },
-    {
-      "word": "spam.",
-      "startSec": 38.196,
-      "endSec": 38.719,
-      "startFrame": 1146,
-      "endFrame": 1162
-    },
-    {
-      "word": "And",
-      "startSec": 39.044,
-      "endSec": 39.183,
-      "startFrame": 1171,
-      "endFrame": 1175
-    },
-    {
-      "word": "sign-in",
-      "startSec": 39.264,
-      "endSec": 39.682,
-      "startFrame": 1178,
-      "endFrame": 1190
-    },
-    {
-      "word": "is",
-      "startSec": 39.764,
-      "endSec": 39.856,
-      "startFrame": 1193,
-      "endFrame": 1196
-    },
-    {
-      "word": "limited",
-      "startSec": 39.938,
-      "endSec": 40.263,
-      "startFrame": 1198,
-      "endFrame": 1208
-    },
-    {
-      "word": "to",
-      "startSec": 40.309,
-      "endSec": 40.379,
-      "startFrame": 1209,
-      "endFrame": 1211
+      "endFrame": 992
     },
     {
       "word": "UMak",
-      "startSec": 40.507,
-      "endSec": 40.948,
-      "startFrame": 1215,
-      "endFrame": 1228
+      "startSec": 33.922,
+      "endSec": 34.328,
+      "startFrame": 1018,
+      "endFrame": 1030
     },
     {
-      "word": "email",
-      "startSec": 41.029,
-      "endSec": 41.354,
-      "startFrame": 1231,
-      "endFrame": 1241
+      "word": "accounts",
+      "startSec": 34.386,
+      "endSec": 34.746,
+      "startFrame": 1032,
+      "endFrame": 1042
     },
     {
-      "word": "accounts.",
-      "startSec": 41.401,
-      "endSec": 42.004,
-      "startFrame": 1242,
-      "endFrame": 1260
+      "word": "only.",
+      "startSec": 34.816,
+      "endSec": 35.257,
+      "startFrame": 1044,
+      "endFrame": 1058
     },
     {
-      "word": "Less",
-      "startSec": 42.329,
-      "endSec": 42.562,
-      "startFrame": 1270,
-      "endFrame": 1277
+      "word": "Protected",
+      "startSec": 35.707,
+      "endSec": 36.195,
+      "startFrame": 1071,
+      "endFrame": 1086
     },
     {
-      "word": "waiting,",
-      "startSec": 42.62,
-      "endSec": 43.13,
-      "startFrame": 1279,
-      "endFrame": 1294
+      "word": "from",
+      "startSec": 36.23,
+      "endSec": 36.369,
+      "startFrame": 1087,
+      "endFrame": 1091
     },
     {
-      "word": "easier",
-      "startSec": 43.305,
-      "endSec": 43.653,
-      "startFrame": 1299,
-      "endFrame": 1310
+      "word": "spam.",
+      "startSec": 36.427,
+      "endSec": 36.973,
+      "startFrame": 1093,
+      "endFrame": 1109
     },
     {
-      "word": "access",
-      "startSec": 43.723,
-      "endSec": 44.082,
-      "startFrame": 1312,
-      "endFrame": 1322
+      "word": "No",
+      "startSec": 37.523,
+      "endSec": 37.697,
+      "startFrame": 1126,
+      "endFrame": 1131
     },
     {
-      "word": "to",
-      "startSec": 44.117,
-      "endSec": 44.175,
-      "startFrame": 1324,
-      "endFrame": 1325
+      "word": "noise,",
+      "startSec": 37.79,
+      "endSec": 38.196,
+      "startFrame": 1134,
+      "endFrame": 1146
     },
     {
-      "word": "information.",
-      "startSec": 44.245,
-      "endSec": 45.069,
-      "startFrame": 1327,
-      "endFrame": 1352
+      "word": "no",
+      "startSec": 38.266,
+      "endSec": 38.417,
+      "startFrame": 1148,
+      "endFrame": 1153
+    },
+    {
+      "word": "waiting...",
+      "startSec": 38.498,
+      "endSec": 39.067,
+      "startFrame": 1155,
+      "endFrame": 1172
+    },
+    {
+      "word": "just",
+      "startSec": 40.017,
+      "endSec": 40.284,
+      "startFrame": 1201,
+      "endFrame": 1209
+    },
+    {
+      "word": "clarity.",
+      "startSec": 40.331,
+      "endSec": 41.039,
+      "startFrame": 1210,
+      "endFrame": 1231
+    },
+    {
+      "word": "TAGA-asK",
+      "startSec": 41.739,
+      "endSec": 42.807,
+      "startFrame": 1252,
+      "endFrame": 1284
+    },
+    {
+      "word": "AI.",
+      "startSec": 42.888,
+      "endSec": 43.422,
+      "startFrame": 1287,
+      "endFrame": 1303
     },
     {
       "word": "Ask",
-      "startSec": 45.313,
-      "endSec": 45.592,
-      "startFrame": 1359,
-      "endFrame": 1368
+      "startSec": 43.872,
+      "endSec": 44.15,
+      "startFrame": 1316,
+      "endFrame": 1325
     },
     {
-      "word": "smarter,",
-      "startSec": 45.673,
-      "endSec": 46.265,
-      "startFrame": 1370,
-      "endFrame": 1388
-    },
-    {
-      "word": "stay",
-      "startSec": 46.474,
-      "endSec": 46.695,
-      "startFrame": 1394,
-      "endFrame": 1401
-    },
-    {
-      "word": "connected",
-      "startSec": 46.741,
-      "endSec": 47.136,
-      "startFrame": 1402,
-      "endFrame": 1414
-    },
-    {
-      "word": "with",
-      "startSec": 47.171,
-      "endSec": 47.298,
-      "startFrame": 1415,
-      "endFrame": 1419
-    },
-    {
-      "word": "UMak.",
-      "startSec": 47.38,
-      "endSec": 48.158,
-      "startFrame": 1421,
-      "endFrame": 1445
+      "word": "smarter.",
+      "startSec": 44.208,
+      "endSec": 45.1896,
+      "startFrame": 1326,
+      "endFrame": 1356
     }
   ]
 }

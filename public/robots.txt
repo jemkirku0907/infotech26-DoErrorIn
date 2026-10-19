@@ -1,0 +1,7 @@
+# TAGA-asK AI robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://taga-askai.vercel.app/sitemap.xml

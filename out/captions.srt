@@ -1,0 +1,123 @@
+1
+00:00:00,200 --> 00:00:03,683
+Introducing TAGA-asK AI, your UMak AI
+
+2
+00:00:03,706 --> 00:00:04,438
+companion.
+
+3
+00:00:04,716 --> 00:00:05,401
+May tanong ka?
+
+4
+00:00:05,842 --> 00:00:07,015
+Pero sino ang sasagot?
+
+5
+00:00:07,294 --> 00:00:09,337
+Hours of waiting in Facebook groups,
+
+6
+00:00:09,511 --> 00:00:10,986
+still zero replies.
+
+7
+00:00:11,160 --> 00:00:12,623
+Meet TAGA-asK AI.
+
+8
+00:00:12,948 --> 00:00:14,445
+Ask any campus question,
+
+9
+00:00:14,515 --> 00:00:16,373
+and get instant answers grounded in
+
+10
+00:00:16,431 --> 00:00:18,079
+official UMak documents.
+
+11
+00:00:18,358 --> 00:00:19,914
+Where is the CIT?
+
+12
+00:00:20,518 --> 00:00:22,445
+The Center for Information Technology is
+
+13
+00:00:22,503 --> 00:00:23,583
+on the Second Floor,
+
+14
+00:00:23,792 --> 00:00:25,603
+South Wing, Admin Building.
+
+15
+00:00:25,847 --> 00:00:27,693
+And it shows the exact source:
+
+16
+00:00:27,936 --> 00:00:29,991
+Source 03, page 1.
+
+17
+00:00:30,200 --> 00:00:31,234
+Have a class schedule,
+
+18
+00:00:31,268 --> 00:00:32,743
+a form, or a notice?
+
+19
+00:00:33,126 --> 00:00:34,845
+Upload an image or a PDF
+
+20
+00:00:34,914 --> 00:00:36,087
+and ask right about it.
+
+21
+00:00:36,470 --> 00:00:37,410
+Need directions?
+
+22
+00:00:37,794 --> 00:00:39,686
+Open the interactive campus map.
+
+23
+00:00:39,895 --> 00:00:41,149
+Built-in security.
+
+24
+00:00:41,474 --> 00:00:43,645
+Sign-in is strictly limited to UMak
+
+25
+00:00:43,738 --> 00:00:45,816
+Google accounts, and smart rate limiting
+
+26
+00:00:45,897 --> 00:00:47,395
+keeps it safe from spam and
+
+27
+00:00:47,442 --> 00:00:48,115
+abuse.
+
+28
+00:00:48,498 --> 00:00:49,299
+Less waiting.
+
+29
+00:00:49,683 --> 00:00:51,424
+Easier access to information.
+
+30
+00:00:52,028 --> 00:00:52,922
+Ask smarter.
+
+31
+00:00:53,247 --> 00:00:54,953
+Stay connected with UMak.

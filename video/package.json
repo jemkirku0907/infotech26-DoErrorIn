@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "remotion preview src/index.ts",
+    "dev": "remotion preview src/index.ts",
     "build": "remotion render src/index.ts PromoVideo out/taga-ask-ai-promo.mp4",
     "render": "remotion render src/index.ts PromoVideo out/taga-ask-ai-promo.mp4",
     "render-landscape": "remotion render src/index.ts PromoVideoLandscape out/taga-ask-ai-promo-landscape.mp4",
@@ -11,10 +12,17 @@
     "render-v3": "remotion render src/index.ts PromoVideoV3Landscape out/taga-ask-ai-promo-v3.mp4"
   },
   "dependencies": {
+    "@remotion/captions": "^4.0.260",
     "@remotion/cli": "^4.0.260",
-    "@remotion/google-fonts": "^4.0.535",
+    "@remotion/google-fonts": "^4.0.260",
+    "@remotion/lottie": "^4.0.260",
     "@remotion/media-utils": "^4.0.260",
-    "@remotion/motion-blur": "^4.0.535",
+    "@remotion/motion-blur": "^4.0.260",
+    "@remotion/noise": "^4.0.260",
+    "@remotion/paths": "^4.0.260",
+    "@remotion/shapes": "^4.0.260",
+    "@remotion/transitions": "^4.0.260",
+    "lottie-web": "^5.13.0",
     "lucide-react": "^0.475.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

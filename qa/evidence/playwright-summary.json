@@ -1,0 +1,46 @@
+{
+  "targetUrl": "https://taga-askai.vercel.app",
+  "timestamp": "2026-10-19T13:35:13.465Z",
+  "tests": [
+    {
+      "name": "Landing Screen (Desktop 1440x900)",
+      "status": "PASS",
+      "evidence": "landing-desktop-1440.png"
+    },
+    {
+      "name": "Email Domain Restriction (@gmail.com blocked)",
+      "status": "PASS",
+      "evidence": "login-rejected-domain.png"
+    },
+    {
+      "name": "Authenticated Chat Interface (Desktop)",
+      "status": "PASS",
+      "evidence": "chat-home-desktop.png"
+    },
+    {
+      "name": "In-App PDF Viewer (Source01.pdf)",
+      "status": "PASS",
+      "evidence": "pdf-viewer-source01.png"
+    },
+    {
+      "name": "Grounded Query (\"Where is CIT?\") with Citation & Map deep-link",
+      "status": "PASS",
+      "evidence": "chat-cit-location.png"
+    },
+    {
+      "name": "Landing Screen (Mobile 390x844)",
+      "status": "PASS",
+      "evidence": "landing-mobile-390.png"
+    },
+    {
+      "name": "Landing Screen (Mobile 360x740)",
+      "status": "PASS",
+      "evidence": "landing-mobile-360.png"
+    },
+    {
+      "name": "WebKit Safari Engine (Desktop 1440x900)",
+      "status": "PASS",
+      "evidence": "webkit-landing-desktop.png"
+    }
+  ]
+}

@@ -252,7 +252,7 @@ export function InteractiveCampusMapModal({
     <div 
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-3 md:p-6 animate-in fade-in duration-200"
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/75 backdrop-blur-md p-3 md:p-6 animate-in fade-in duration-200"
     >
       <div className="w-full max-w-5xl h-[90vh] max-h-[850px] rounded-2xl bg-white dark:bg-[#0B132B] shadow-2xl border border-slate-200 dark:border-[#1C2541] overflow-hidden flex flex-col">
         {/* Header */}

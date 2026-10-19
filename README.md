@@ -1,72 +1,53 @@
-# UMak Assistant — Official AI Knowledge Assistant
+# TAGA-asK AI — 16:9 Product-Launch Motion Graphics Film (Remotion)
 
-AI-powered knowledge assistant for **University of Makati (UMak)** students, engineered for accuracy, strict source-grounding, prompt-injection defense, and zero hallucinations.
+Premium dark-glassmorphism (`1920x1080`, `30fps`, `46.80s` / `1404 frames`, `100 BPM`) product-launch film for **TAGA-asK AI** (University of Makati Verified AI Knowledge Companion).
 
----
-
-## 🏛️ Grounded Exclusively in 4 Official Sources
-
-UMak Assistant answers factual queries using **exclusively** the four approved University of Makati documents:
-
-1. **`Source01.pdf`** — Scholarships & Token Fee Exemptions (14 pages)
-2. **`Source02.pdf`** — College Requirements (CCIS and other colleges, 2 pages)
-3. **`Source03.pdf`** — Campus Map & Building Directory (6 pages)
-4. **`Source04.pdf`** — Administrative & Academic Offices (14 pages)
-
-If information is not explicitly documented in these sources, the assistant transparently responds:
-> *"The requested information is not stated in the provided official University of Makati sources."*
+## Highlights
+- **Visual-First Storytelling (No Continuous Narrator / No Lower-Third Subtitle Bar):** Carried by giant gradient kinetic typography, authentic `taga-askai.vercel.app` 3D glass UI choreography, a `100 BPM` dark ambient electronic score, and `70` frame-accurate tactile sound effects (`0.00ms` transient drift).
+- **Macro 3D Camera Rig (`MacroCameraRig`):** Deep `1.15x–1.72x` 3D camera zooms, steep perspective tilts (`rotateX: 14°–30°`, `rotateY: -20°–18°`), horizontal camera pans following live input typing, full-screen neon shockwave rings on Send clicks, and optical edge-vignette depth of field.
 
 ---
 
-## 🚀 Key Features
-
-- **Lexical BM25/TF-IDF Retrieval**: Fast, precise, and deterministic retrieval across 38 page-level provenance chunks.
-- **Server-Side Citation Verification**: Validates every cited document, page number, and verifies that quotations exist verbatim in the official text.
-- **Quote Inspector Modal**: Interactive chips allow users to click any citation and view the exact excerpt from the source PDF.
-- **Discrepancy / Source Conflict Flagging**: Automatically flags conflicting records across official guidelines.
-- **Security & Prompt-Injection Defense**: Treats documents and user inputs as untrusted data; enforces boundaries server-side.
-- **Cloudflare Turnstile Integration**: Bot protection enabled via server-side Siteverify checks.
-- **Configurable Rate Limiting**: Enforces max 5 requests/min and 20 requests/hour per client with HTTP 429 status and `Retry-After` headers.
-- **Polished UMak Theme**: Authentic UMak Blue (`#1E3A8A`), Yellow (`#FACC15`), and White responsive UI.
+## Deliverables
+- **Primary 16:9 Master (`1920x1080`, 30fps, H.264 High CRF 16, BT.709, `-14 LUFS`):**
+  - `out/taga-ask-ai-promo-v1-16x9.mp4`
+- **Music + SFX No-Voice Master (`1920x1080`, 30fps):**
+  - `out/taga-ask-ai-promo-v1-16x9-no-voice.mp4`
+- **High-Res Logo Lockup Thumbnail (`1920x1080` PNG):**
+  - `out/thumbnail.png`
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript (Strict mode)
-- **Styling**: Tailwind CSS & Lucide React
-- **AI/LLM**: Google Generative AI SDK (`@google/generative-ai`)
-- **Bot Protection**: Cloudflare Turnstile
-- **Deployment Target**: Vercel
-
----
-
-## ⚙️ Environment Variables
-
-Create `.env.local` based on `.env.example`:
+## Render & QA Commands
 
 ```bash
-GOOGLE_AI_API_KEY=your_gemini_api_key_here
-TURNSTILE_SECRET_KEY=your_turnstile_secret_here
-NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_turnstile_site_key_here
+# 1. Synthesize all 19 stereo 48kHz SFX WAVs + 100 BPM music bed + -14 LUFS master soundtrack
+node scripts/build-music-sfx-master.cjs
+
+# 2. Run zero-HUD / forbidden-label source scan
+node scripts/qa-text-scan.cjs
+
+# 3. Render & master 16:9 MP4 + no-voice copy + thumbnail.png
+node scripts/render-and-master.cjs
+
+# 4. Run full ffprobe, EBU R128 loudness, frame-diff motion, and contact-sheet QA suite
+node scripts/qa-full-suite.cjs
 ```
 
 ---
 
-## 🧪 Testing Commands
+## Documentation & Scripts
+- `/notes/analysis.md` — Visual + audio spectrogram analysis of the reference edits
+- `/notes/plan.md` — 7-scene structure, `100 BPM` beat grid, transition map, and asset list
+- `/notes/decisions.md` — Architecture and design decision log
+- `/script/onscreen.md` — Complete scene-by-scene on-screen text script
+- `/audio/sound-map.md` — Frame-accurate sound map (`70` sound events across `1404` frames)
+- `/audio/timeline.ts` — TypeScript source of truth for scene ranges and sound events
 
-Run the full RAG verification and citation test suite:
-```bash
-npm run test:rag
-```
+---
 
-Run production build:
-```bash
-npm run build
-```
-
-Run local development server:
-```bash
-npm run dev
-```
+## Assets & Licenses
+- **Brand Assets (`./logo-white-bg.png`, `./logo-badge.png`, `video/public/logo-layers/layer_*.png`, `public/images/umak-building.jpg`, `public/images/ui-chat-real.png`, `public/images/ui-map-real.png`):** First-party University of Makati / TAGA-asK AI project assets.
+- **Fonts (`@remotion/google-fonts/PlusJakartaSans`):** SIL Open Font License (OFL 1.1).
+- **SFX & Music (`public/sfx/*.wav`, `public/audio/music-100bpm.wav`):** Procedurally synthesized in-project (`scripts/build-music-sfx-master.cjs`), CC0 / 100% commercial-use cleared. See `public/sfx/LICENSES.md`.
+- **Animated Vector Icons (`video/src/presets.tsx` & `public/lottie/LICENSES.md`):** Deterministic frame-driven SVG vector icons + CC0 Lottie assets.

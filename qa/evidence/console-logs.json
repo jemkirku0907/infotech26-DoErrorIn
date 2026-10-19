@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2026-10-19T13:35:14.555Z",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "location": "https://taga-askai.vercel.app/api/auth/session"
+  },
+  {
+    "timestamp": "2026-10-19T13:35:15.839Z",
+    "type": "warning",
+    "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+    "location": "https://taga-askai.vercel.app/_next/static/chunks/app/page-8487722b78ed628d.js"
+  },
+  {
+    "timestamp": "2026-10-19T13:35:18.509Z",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "location": "https://taga-askai.vercel.app/api/auth/session"
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-10-18T16:22:16.995Z",
+  "video16x9": {
+    "path": "out/taga-ask-ai-promo-v1-16x9.mp4",
+    "sizeMB": 34.26,
+    "durationSec": 46.9,
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "color_space": "bt709",
+      "r_frame_rate": "30/1",
+      "nb_frames": "1404"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "bit_rate": "197269"
+    },
+    "loudness": {
+      "integratedLufs": -14.1,
+      "truePeakDbtp": -1.1,
+      "lraLu": 5
+    }
+  },
+  "video9x16": {
+    "path": "out/taga-ask-ai-promo-v1-9x16.mp4",
+    "sizeMB": 42.07,
+    "durationSec": 56.2,
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1080,
+      "height": 1920,
+      "pix_fmt": "yuv420p",
+      "color_space": "bt709",
+      "r_frame_rate": "30/1",
+      "nb_frames": "1685"
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": "48000",
+      "channels": 2,
+      "bit_rate": "194114"
+    },
+    "loudness": {
+      "integratedLufs": -14.3,
+      "truePeakDbtp": -1.2,
+      "lraLu": 2.6
+    }
+  },
+  "motionDiffCheck": {
+    "sampledFramesCount": 280,
+    "minYAvgDiff": 0.344,
+    "avgYAvgDiff": 6.113,
+    "maxYAvgDiff": 57.902,
+    "maxStaticStreakSamples": 0,
+    "maxStaticDurationSec": 0,
+    "passedNoStaticStretchOverHalfSec": true
+  }
+}

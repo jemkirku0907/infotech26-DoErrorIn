@@ -106,20 +106,20 @@ export function classifyIntent(query: string): QueryIntent {
 export function isQueryInScope(query: string): boolean {
   const q = query.toLowerCase().trim();
 
-  // 1. Explicit non-UMak external leaders & countries (e.g. US President, POTUS, etc.)
+  // 1. Explicit non-UMak external leaders & countries (e.g. US President, POTUS, etc.) with word boundaries
   const externalLeadershipPatterns = [
-    'united states', 'u.s.', 'usa', 'us president', 'potus', 'white house',
-    'philippines', 'bongbong', 'marcos', 'duterte', 'biden', 'trump', 'obama',
-    'france', 'macron', 'russia', 'putin', 'china', 'xi jinping', 'uk', 'prime minister'
+    /\bunited states\b/i, /\bu\.s\.\b/i, /\busa\b/i, /\bus president\b/i, /\bpotus\b/i, /\bwhite house\b/i,
+    /\bphilippines\b/i, /\bbongbong\b/i, /\bmarcos\b/i, /\bduterte\b/i, /\bbiden\b/i, /\btrump\b/i, /\bobama\b/i,
+    /\bfrance\b/i, /\bmacron\b/i, /\brussia\b/i, /\bputin\b/i, /\bchina\b/i, /\bxi jinping\b/i, /\buk\b/i, /\bprime minister\b/i
   ];
-  if (externalLeadershipPatterns.some(pat => q.includes(pat))) {
+  if (externalLeadershipPatterns.some(pat => pat.test(q))) {
     return false;
   }
 
   // 2. Generic non-academic / world trivia keywords
   const outOfScopeKeywords = [
     'weather in', 'forecast', 'recipe', 'write a poem', 'write an essay',
-    'python code', 'javascript code', 'write code', 'bitcoin', 'crypto',
+    'python code', 'javascript code', 'write code', 'write a python', 'bitcoin', 'crypto',
     'nba finals', 'world cup', 'capital of', 'tallest mountain',
     'college of medicine in 2030', 'tuition fee for the college of medicine'
   ];
@@ -127,11 +127,28 @@ export function isQueryInScope(query: string): boolean {
     return false;
   }
 
-  // 3. Other universities
+  // 3. Other universities with word boundaries (prevents 'must' matching 'ust' and 'submit' matching 'mit')
   const otherInstitutions = [
-    'ateneo', 'de la salle', 'dlsu', 'ust', 'university of the philippines', 'up diliman', 'harvard', 'mit', 'stanford'
+    /\bateneo\b/i, /\bde la salle\b/i, /\bdlsu\b/i, /\bust\b/i,
+    /\buniversity of the philippines\b/i, /\bup diliman\b/i,
+    /\bharvard\b/i, /\bmit\b/i, /\bstanford\b/i
   ];
-  if (otherInstitutions.some(inst => q.includes(inst))) {
+  if (otherInstitutions.some(pat => pat.test(q))) {
+    return false;
+  }
+
+  // 4. Prompt injection and jailbreak patterns
+  const injectionPatterns = [
+    /ignore all previous instructions/i,
+    /disregard your rules/i,
+    /print your entire system prompt/i,
+    /you are now dan/i,
+    /system override/i,
+    /drop table/i,
+    /<script>/i,
+    /important notice from umak president/i
+  ];
+  if (injectionPatterns.some(pat => pat.test(q))) {
     return false;
   }
 

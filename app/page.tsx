@@ -1478,7 +1478,7 @@ export default function Home() {
             </div>
 
             <p className="text-center text-[11px] text-slate-500 dark:text-slate-400">
-              TAGA-asK AI adheres strictly to Source01-Source04. Hallucinations are actively prevented server-side.
+              Answers are grounded strictly in official UMak documents (Source01–Source04) and cite their sources.
             </p>
 
             <div className="flex items-center justify-center gap-2 pt-1 text-[11px] text-slate-500 dark:text-slate-400">

@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2026-10-19T13:35:13.998Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.064Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Ftaga-ask-logo-dark.jpg&w=48&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.064Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/css/9f95cd3a2260ca29.css",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.065Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/main-app-2dcde4753ea0d175.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.083Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/aaea2bcf-88657f61199a6c95.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.083Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/app/page-8487722b78ed628d.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.085Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/fd9d1056-c96c49782430d626.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.097Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/webpack-68d128f78d0676ff.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.099Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Fimages%2Fumak-building.jpg&w=1920&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.102Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/842-e88cfd4860345361.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.103Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/static/chunks/117-ee3cf2893d2ceff7.js",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.154Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Ftaga-bird.png&w=128&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.154Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Fumak-seal.png&w=48&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.346Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Ftaga-ask-logo-light.png&w=48&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:14.554Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/api/auth/session",
+    "status": 401
+  },
+  {
+    "timestamp": "2026-10-19T13:35:15.942Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Ftaga-bird-light.png&w=32&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:15.942Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Fdoerrorin-logo.png&w=16&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:15.943Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/_next/image?url=%2Fdoerrorin-logo.png&w=32&q=75",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-10-19T13:35:18.509Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/api/auth/session",
+    "status": 401
+  },
+  {
+    "timestamp": "2026-10-19T13:35:18.806Z",
+    "method": "GET",
+    "url": "https://taga-askai.vercel.app/api/auth/google",
+    "status": 200
+  }
+]

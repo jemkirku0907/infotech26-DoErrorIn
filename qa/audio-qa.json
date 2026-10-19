@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-10-19T02:09:01.169Z",
+  "voiceover": {
+    "durationSeconds": 45.19,
+    "totalVideoSeconds": 47.69,
+    "totalVideoFrames": 1431,
+    "loudness": {
+      "integratedLufs": null,
+      "lraLu": null,
+      "truePeakDbtp": null
+    },
+    "abruptCutCount": 6
+  },
+  "boundaryChecks": [
+    {
+      "boundary": "scene1 -> scene2",
+      "boundaryFrame": 215,
+      "lastWordEndFrame": 198,
+      "nextWordStartFrame": 218,
+      "clearanceAfterLastWordFrames": 17,
+      "clearanceBeforeNextWordFrames": 3,
+      "cutsWord": false
+    },
+    {
+      "boundary": "scene2 -> scene3",
+      "boundaryFrame": 380,
+      "lastWordEndFrame": 357,
+      "nextWordStartFrame": 383,
+      "clearanceAfterLastWordFrames": 23,
+      "clearanceBeforeNextWordFrames": 3,
+      "cutsWord": false
+    },
+    {
+      "boundary": "scene3 -> scene4",
+      "boundaryFrame": 596,
+      "lastWordEndFrame": 576,
+      "nextWordStartFrame": 599,
+      "clearanceAfterLastWordFrames": 20,
+      "clearanceBeforeNextWordFrames": 3,
+      "cutsWord": false
+    },
+    {
+      "boundary": "scene4 -> scene5",
+      "boundaryFrame": 851,
+      "lastWordEndFrame": 830,
+      "nextWordStartFrame": 854,
+      "clearanceAfterLastWordFrames": 21,
+      "clearanceBeforeNextWordFrames": 3,
+      "cutsWord": false
+    },
+    {
+      "boundary": "scene5 -> scene6",
+      "boundaryFrame": 1015,
+      "lastWordEndFrame": 992,
+      "nextWordStartFrame": 1018,
+      "clearanceAfterLastWordFrames": 23,
+      "clearanceBeforeNextWordFrames": 3,
+      "cutsWord": false
+    },
+    {
+      "boundary": "scene6 -> scene7",
+      "boundaryFrame": 1198,
+      "lastWordEndFrame": 1172,
+      "nextWordStartFrame": 1201,
+      "clearanceAfterLastWordFrames": 26,
+      "clearanceBeforeNextWordFrames": 3,
+      "cutsWord": false
+    }
+  ]
+}
