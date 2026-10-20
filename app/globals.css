@@ -30,12 +30,22 @@
   --text-muted: #94A3B8;
 }
 
-body {
+html, body {
   font-family: var(--font-sans);
   background-color: var(--bg-app);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Mobile App-Shell Hardening: prevent pull-to-refresh & browser rubber-banding */
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  height: 100%;
+  height: 100dvh;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Custom subtle scrollbar */
@@ -74,6 +84,53 @@ input[type="text"] {
 textarea:focus-visible,
 input[type="text"]:focus-visible {
   outline: none !important;
+}
+
+/* Prevent iOS Safari 100%+ auto-zoom when tapping inputs */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Isolated Chat Message Scroll Container */
+.chat-scroll-container {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safe Area Inset Support */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.safe-area-left {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+.safe-area-right {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Full body lock when mobile drawer/modal is active */
+body.drawer-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Minimum 44px mobile touch targets per Apple HIG & Material guidelines */
+.touch-min {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Horizontal scrollbar utility for mobile carousel chips */

@@ -62,7 +62,7 @@ interface ChatSession {
 const DEFAULT_WELCOME: Message = {
   id: 'welcome',
   sender: 'assistant',
-  text: "Mabuhay Herons! Welcome to TAGA-asK AI, your verified AI knowledge assistant grounded strictly in University of Makati's official documents:\n\n• Source01: Scholarships & Token Fee Exemption (14 pages)\n• Source02: College Requirements (CCIS & Colleges, 2 pages)\n• Source03: Campus Map & Building Directory (6 pages)\n• Source04: Administrative & Academic Offices (14 pages)\n\nAsk any question regarding admissions, scholarships, campus locations, or university offices.",
+  text: "Mabuhay Herons! Welcome to TAGA-asK AI, your verified AI knowledge assistant grounded strictly in University of Makati's official documents:\n\n• Source05: Student Handbook (Main Source, 287 pages) — rules, admission, enrollment, offenses, and student governance\n• Source01: Scholarships & Exemption Guidelines (14 pages)\n• Source02: CCIS Computer Science GWA Rules (2 pages)\n• Source03: UMak Campus Map & Navigation Guide (6 pages)\n• Source04: Admin Building & University Offices Directory (14 pages)\n\nAsk any question regarding admissions, enrollment, academic policies, dress code, scholarships, or campus office locations.",
   timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
 };
 
@@ -127,33 +127,29 @@ const INITIAL_SESSIONS: ChatSession[] = [
 
 const SUGGESTED_PROMPTS = [
   {
-    icon: GraduationCap,
-    label: "Automatic Scholar",
-    query: "Who is automatically a scholar at UMak?"
+    icon: BookOpen,
+    label: "Dress Code & Grooming",
+    query: "What is the dress code and grooming policy?"
   },
   {
-    icon: FileText,
-    label: "BS Computer Science",
-    query: "What are the GWA and Math grade requirements for BS Computer Science?"
+    icon: AlertTriangle,
+    label: "Probation & Dropping",
+    query: "What are the grounds for academic probation or dropping?"
+  },
+  {
+    icon: GraduationCap,
+    label: "Scholarships & Exemption",
+    query: "Who is eligible for token fee exemption and Dean's Lister scholarship?"
   },
   {
     icon: MapPin,
-    label: "CIT Location",
-    query: "Where is the Center for Information Technology located in the Admin building?"
-  },
-  {
-    icon: Building2,
-    label: "University President",
-    query: "Who is the University President and what is his alias?"
-  },
-  {
-    icon: HelpCircle,
-    label: "Missing Info Check",
-    query: "What is the tuition fee for the College of Medicine in 2030?"
+    label: "CIT Office Location",
+    query: "Where is the CIT office located?"
   }
 ];
 
 export default function Home() {
+
   const [sessions, setSessions] = useState<ChatSession[]>(INITIAL_SESSIONS);
   const [activeSessionId, setActiveSessionId] = useState<string>('1');
   const [sessionToDelete, setSessionToDelete] = useState<ChatSession | null>(null);
@@ -189,6 +185,51 @@ export default function Home() {
   // Multimodal File Attachment State
   const [attachment, setAttachment] = useState<FileAttachment | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Mobile drawer scroll lock
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('drawer-open');
+    } else {
+      document.body.classList.remove('drawer-open');
+    }
+    return () => {
+      document.body.classList.remove('drawer-open');
+    };
+  }, [isMobileMenuOpen]);
+
+  // Global ESC key dismiss listener
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+        if (isMapOpen) setIsMapOpen(false);
+        if (activePdfViewer) setActivePdfViewer(null);
+        if (activeCitation) setActiveCitation(null);
+        if (isLoginOpen) setIsLoginOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMobileMenuOpen, isMapOpen, activePdfViewer, activeCitation, isLoginOpen]);
+
+  // VisualViewport resize listener for mobile keyboards
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.visualViewport) return;
+    const viewport = window.visualViewport;
+    const handleResize = () => {
+      if (viewport) {
+        document.documentElement.style.setProperty('--vh', `${viewport.height}px`);
+      }
+    };
+    viewport.addEventListener('resize', handleResize);
+    viewport.addEventListener('scroll', handleResize);
+    handleResize();
+    return () => {
+      viewport.removeEventListener('resize', handleResize);
+      viewport.removeEventListener('scroll', handleResize);
+    };
+  }, []);
 
   // Check landing page skip preference on mount
   useEffect(() => {
@@ -500,7 +541,7 @@ export default function Home() {
   );
 
   return (
-    <div className="flex h-screen w-full bg-[#F8FAFC] dark:bg-[#090E1A] text-slate-900 dark:text-slate-100 font-sans overflow-hidden transition-colors duration-200">
+    <div className="flex h-[100dvh] max-h-[100dvh] w-full bg-[#F8FAFC] dark:bg-[#090E1A] text-slate-900 dark:text-slate-100 font-sans overflow-hidden transition-colors duration-200">
       
       {/* 
         1. MOBILE SLIDE-OVER DRAWER WITH BACKDROP (Visible only on mobile screens < md)
@@ -657,6 +698,28 @@ export default function Home() {
                   <Compass className="w-4 h-4 text-[#3F56CA] dark:text-[#21ADE3] shrink-0 animate-spin-slow" />
                   <span className="truncate">Interactive Map Visualizer</span>
                 </button>
+                {/* Main Source: Student Handbook */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActivePdfViewer({ source: 'Source05.pdf', page: 1 });
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-400/50 hover:border-amber-500 text-amber-900 dark:text-amber-200 font-semibold transition cursor-pointer text-left shadow-xs"
+                >
+                  <div className="flex items-center gap-2 truncate">
+                    <BookOpen className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                    <span className="truncate font-semibold">Source05: Student Handbook (287p)</span>
+                  </div>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-800 dark:text-amber-300 font-bold uppercase tracking-wider shrink-0">
+                    Main
+                  </span>
+                </button>
+
+                <div className="pt-2 pb-1 px-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                  Supporting Sources
+                </div>
+
                 <button
                   type="button"
                   onClick={() => {
@@ -730,10 +793,10 @@ export default function Home() {
               </div>
               <div className="text-left truncate">
                 <p className="text-xs font-semibold text-slate-800 dark:text-white truncate">
-                  {currentUser ? currentUser.fullName : 'UMak Student'}
+                  {currentUser ? currentUser.fullName : 'Guest Student'}
                 </p>
                 <p className="text-[10px] text-slate-500 dark:text-slate-400 truncate">
-                  {currentUser ? currentUser.studentId : 'Verified Student'}
+                  {currentUser ? `${currentUser.studentId} • Verified UMak account` : 'Guest • Sign-in required'}
                 </p>
               </div>
             </div>
@@ -924,6 +987,32 @@ export default function Home() {
                   <Compass className="w-4 h-4 text-[#3F56CA] dark:text-[#21ADE3] shrink-0 animate-spin-slow" />
                   {isSidebarOpen && <span className="truncate">Interactive Map Visualizer</span>}
                 </button>
+                {/* Main Source: Student Handbook */}
+                <button 
+                  type="button"
+                  onClick={() => setActivePdfViewer({ source: 'Source05.pdf', page: 1 })}
+                  title="Source05: Student Handbook (Main Source, 287p)"
+                  className={`w-full flex items-center rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-400/50 hover:border-amber-500 text-amber-900 dark:text-amber-200 font-semibold transition cursor-pointer text-left shadow-xs ${
+                    isSidebarOpen ? 'px-3 py-2 justify-between gap-2' : 'justify-center p-2.5'
+                  }`}
+                >
+                  <div className="flex items-center gap-2 truncate">
+                    <BookOpen className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                    {isSidebarOpen && <span className="truncate">Source05: Student Handbook (287p)</span>}
+                  </div>
+                  {isSidebarOpen && (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-800 dark:text-amber-300 font-bold uppercase tracking-wider shrink-0">
+                      Main
+                    </span>
+                  )}
+                </button>
+
+                {isSidebarOpen && (
+                  <div className="pt-2 pb-1 px-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                    Supporting Sources
+                  </div>
+                )}
+
                 <button 
                   type="button"
                   onClick={() => setActivePdfViewer({ source: 'Source01.pdf', page: 1 })}
@@ -1005,10 +1094,10 @@ export default function Home() {
               {isSidebarOpen && (
                 <div className="text-left truncate">
                   <p className="text-xs font-semibold text-slate-800 dark:text-white truncate">
-                    {currentUser ? currentUser.fullName : 'UMak Student'}
+                    {currentUser ? currentUser.fullName : 'Guest Student'}
                   </p>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400 truncate">
-                    {currentUser ? currentUser.studentId : 'Verified Student'}
+                    {currentUser ? `${currentUser.studentId} • Verified UMak account` : 'Guest • Sign-in required'}
                   </p>
                 </div>
               )}
@@ -1056,7 +1145,7 @@ export default function Home() {
       </div>
 
       {/* 2. MAIN WORKSPACE */}
-      <section className="flex-1 flex flex-col h-screen min-w-0 bg-[#F8FAFC] dark:bg-[#090E1A] transition-colors duration-200">
+      <section className="flex-1 flex flex-col h-[100dvh] max-h-[100dvh] min-w-0 bg-[#F8FAFC] dark:bg-[#090E1A] transition-colors duration-200">
         {/* Top Header: Mobile menu button, UMak Seal, Clean title, and single Theme Toggle */}
         <header className="h-16 px-3 md:px-8 bg-white dark:bg-[#111827] border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-2xs transition-colors duration-200">
           <div className="flex items-center gap-2.5 md:gap-3 min-w-0">
@@ -1084,7 +1173,7 @@ export default function Home() {
               <div className="flex items-center gap-1.5 md:gap-2">
                 <h1 className="font-bold text-slate-900 dark:text-white text-sm md:text-lg truncate">UMak Knowledge Base</h1>
               </div>
-              <p className="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400 truncate">Exclusively referencing Source01 to Source04</p>
+              <p className="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400 truncate">Grounded in the UMak Student Handbook (Main) & Official Sources 01–04</p>
             </div>
           </div>
 
@@ -1129,7 +1218,7 @@ export default function Home() {
         </header>
 
         {/* Message View Area */}
-        <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6 space-y-6 max-w-4xl w-full mx-auto">
+        <div className="flex-1 chat-scroll-container px-4 md:px-8 py-6 space-y-6 max-w-4xl w-full mx-auto">
           {/* Error Banner with Alert Red (#EC202B) */}
           {errorBanner && (
             <div 
@@ -1294,16 +1383,28 @@ export default function Home() {
                         Official Citations (Click to inspect exact quote):
                       </span>
                       <div className="flex flex-wrap gap-2">
-                        {msg.data.citations.map((c, i) => (
-                          <button
-                            key={i}
-                            onClick={() => setActiveCitation(c)}
-                            className="inline-flex items-center gap-1.5 bg-[#EEF2FC] dark:bg-[#1C2541] hover:bg-[#d8e0f8] dark:hover:bg-[#253358] border border-[#3F56CA]/30 text-[#3F56CA] dark:text-[#21ADE3] text-xs px-3 py-1.5 rounded-lg font-semibold transition group shadow-2xs focus-visible:outline-[#21ADE3]"
-                          >
-                            <BookOpen className="w-3.5 h-3.5 text-[#21ADE3] group-hover:scale-110 transition" />
-                            <span>{c.source} · Page {c.page}</span>
-                          </button>
-                        ))}
+                        {msg.data.citations.map((c, i) => {
+    const isSource05 = c.source.toLowerCase().includes('source05') || c.source.toLowerCase().includes('handbook');
+    return (
+      <button
+        key={i}
+        onClick={() => setActiveCitation(c)}
+        className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg font-semibold transition group shadow-2xs ${
+          isSource05
+            ? 'bg-amber-100/90 dark:bg-amber-950/60 hover:bg-amber-200 dark:hover:bg-amber-900 border border-amber-400 dark:border-amber-600/70 text-amber-900 dark:text-amber-200'
+            : 'bg-[#EEF2FC] dark:bg-[#1C2541] hover:bg-[#d8e0f8] dark:hover:bg-[#253358] border border-[#3F56CA]/30 text-[#3F56CA] dark:text-[#21ADE3]'
+        }`}
+      >
+        <BookOpen className={`w-3.5 h-3.5 transition group-hover:scale-110 ${isSource05 ? 'text-amber-600 dark:text-amber-400' : 'text-[#21ADE3]'}`} />
+        <span>{c.source.replace('.pdf', '')} · Page {c.page}</span>
+        {isSource05 && (
+          <span className="text-[9px] uppercase font-bold bg-amber-400 text-slate-900 px-1.5 py-0.2 rounded-full shrink-0 shadow-2xs">
+            Main
+          </span>
+        )}
+      </button>
+    );
+  })}
                       </div>
                     </div>
                   )}
@@ -1425,7 +1526,7 @@ export default function Home() {
                 maxLength={500}
                 rows={2}
                 disabled={isLoading}
-                className="w-full bg-transparent resize-none border-none outline-none focus:outline-none focus-visible:outline-none ring-0 focus:ring-0 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400"
+                className="w-full bg-transparent resize-none border-none outline-none focus:outline-none focus-visible:outline-none ring-0 focus:ring-0 text-base md:text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400"
               />
 
               <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
@@ -1478,7 +1579,7 @@ export default function Home() {
             </div>
 
             <p className="text-center text-[11px] text-slate-500 dark:text-slate-400">
-              Answers are grounded strictly in official UMak documents (Source01–Source04) and cite their sources.
+              Answers grounded in the UMak Student Handbook (Main) & Official Sources 01–04.
             </p>
 
             <div className="flex items-center justify-center gap-2 pt-1 text-[11px] text-slate-500 dark:text-slate-400">
