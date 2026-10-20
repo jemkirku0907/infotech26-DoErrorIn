@@ -37,3 +37,27 @@
      - Validated 100% pass rate (40/40) via `scripts/run-eval.cjs` and recorded in `eval/results.json`.
      - Integrated `npm run test` (running auth, rag, and eval suites) and `npm run e2e` (Playwright cross-browser).
 
+
+9. **Student Handbook as Primary Source & Mobile Experience Overhaul (October 20, 2026):**
+   - **Task 1: Student Handbook as Primary Source of Truth (`Source05`):**
+     - Assigned stable identifier `Source05` (display: "Student Handbook (Main Source)") with 287 pages (verified from document header: `Student-Handbook-2021Edition v2.pdf`, Page 33 / 287).
+     - Defined central configuration in `config/sources.ts` and `src/config/sources.ts` ensuring uniform metadata (id, display name, page count, priority, role, viewer URL) across the entire application.
+     - Ingestion & Retrieval Policy: Handbook chunks receive priority weighting and score boost of x1.3 (`lib/retrieval.ts`). Handbook prevails over supporting sources on any discrepancy, explicitly stating: "Based on the Student Handbook (main source)...". Exact numerical values, percentages, and sanctions are quoted verbatim.
+     - Embedded responsive Google Drive preview iframe (`/preview`) inside `components/PdfViewerModal.tsx` with external link fallback and a dedicated notification banner specifying the cited page number.
+     - Expanded evaluation dataset from 40 to 60 questions in `eval/questions.json` (35 handbook, 10 supporting, 5 conflict, 5 out-of-scope, 5 adversarial) achieving 100.0% pass rate.
+   - **Task 2: Mobile Scrolling & App-Shell Architectural Fix:**
+     - Replaced standard viewport heights with `100dvh` (`max-h-[100dvh]`) and `-webkit-fill-available` fallback to eliminate address-bar displacement on iOS Safari.
+     - Implemented fixed-height app shell layout: `html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }`.
+     - Confined vertical scrolling exclusively to the message area using `.chat-scroll-container` (`overflow-y: auto`, `overscroll-behavior: contain`, `-webkit-overflow-scrolling: touch`).
+     - Added `body.drawer-open` scroll lock, backdrop click dismissal, ESC key dismissal, and `visualViewport` dynamic keyboard resize handler.
+     - Set mobile input font size to `16px` (`text-base md:text-sm`) to stop iOS Safari auto-zoom on focus.
+   - **Task 3: Mobile Campus Map Visualizer Overhaul:**
+     - On screens `< 768px`, map modal opens in true full-viewport view (`h-[100dvh]`, `inset-0`) with bottom navigation hidden.
+     - Set `touch-action: none` on the SVG canvas container and implemented touch gesture engine supporting single-finger panning, two-finger pinch-to-zoom, double-tap zoom, and floating zoom controls (+, -, reset view).
+     - Integrated draggable bottom sheet with collapsed (`h-14`), half (`h-[45vh]`), and full (`h-[80vh]`) states.
+     - Ensured touch pins $\ge 44\text{px}$, building labels $\ge 14\text{px}$ bold, and deep-link auto-centering on target locations.
+   - **Task 4: Authentication Security Hardening:**
+     - Completely removed fake email/password form in `components/LoginModal.tsx`.
+     - Retired `/api/auth/login` password endpoint with HTTP 403 Forbidden directing users to Google OAuth.
+     - Enforced Google Workspace SSO exclusively for `@umak.edu.ph` accounts using configured `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
+     - Updated UI badges to show "Verified UMak account" only for confirmed authenticated sessions, preventing guest misrepresentation.
