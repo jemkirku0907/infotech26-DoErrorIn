@@ -3,6 +3,14 @@ import { checkRateLimit } from '@/lib/rate-limiter';
 import { verifyTurnstileToken } from '@/lib/turnstile';
 import { searchSources } from '@/lib/retrieval';
 import { generateGroundedAnswer } from '@/lib/generator';
+import {
+  isGreetingQuery,
+  getGreetingResponse,
+  isGradeComputationQuery,
+  parseGradeInput,
+  computeGWA,
+  formatGWAExplanation,
+} from '@/lib/grade-calculator';
 import { ChatResponse } from '@/lib/types';
 import { verifySession } from '@/lib/auth';
 
@@ -110,6 +118,40 @@ export async function POST(req: NextRequest) {
         } as ChatResponse,
         { status: 403 }
       );
+    }
+
+    // 3.5 Conversational Greetings & Pleasantries ("hi hello ganun")
+    if (isGreetingQuery(message)) {
+      return NextResponse.json(
+        {
+          answer: getGreetingResponse(message),
+          in_sources: true,
+          conflict: false,
+          citations: [],
+          verification_status: 'verified',
+        } as ChatResponse,
+        { status: 200 }
+      );
+    }
+
+    // 3.6 Official UMak GWA & Grade Computation Helper
+    if (isGradeComputationQuery(message)) {
+      const parsedGrades = parseGradeInput(message);
+      if (parsedGrades.length >= 1) {
+        const gwaResult = computeGWA(parsedGrades);
+        return NextResponse.json(
+          {
+            answer: gwaResult.markdownAnswer,
+            in_sources: true,
+            conflict: false,
+            citations: gwaResult.citations,
+            verification_status: 'verified',
+          } as ChatResponse,
+          { status: 200 }
+        );
+      } else {
+        return NextResponse.json(formatGWAExplanation(), { status: 200 });
+      }
     }
 
     // 4. Retrieve Grounded Sources with Intent Routing (Prioritizes Student Handbook Source05)

@@ -1,5 +1,6 @@
 import sourcesData from '../data/sources.json';
 import { SourceChunk } from './types';
+import { isGreetingQuery, isGradeComputationQuery } from './grade-calculator';
 
 const sources: SourceChunk[] = sourcesData as SourceChunk[];
 
@@ -40,6 +41,11 @@ export interface ScoredChunk {
  */
 export function classifyIntent(query: string): QueryIntent {
   const q = query.toLowerCase();
+
+  // Grade computation & GWA inquiries route directly to Student Handbook (Source05)
+  if (isGradeComputationQuery(query)) {
+    return 'handbook';
+  }
 
   // Location spatial queries ("where", "floor", "building", "wing")
   if (
@@ -207,6 +213,16 @@ export function isQueryInScope(query: string): boolean {
     return false;
   }
 
+  // Conversational greetings & pleasantries are in scope
+  if (isGreetingQuery(query)) {
+    return true;
+  }
+
+  // GWA & Grade computation requests are in scope
+  if (isGradeComputationQuery(query)) {
+    return true;
+  }
+
   const queryTokens = tokenize(query);
   if (queryTokens.length === 0) return false;
 
@@ -247,6 +263,12 @@ export function searchSources(query: string, maxResults: number = 4): SourceChun
     }
 
     // 1b. Specific Topic Page Boosts for Handbook (Aligned with official 2021 edition screenshots)
+    if (isGradeComputationQuery(query) && chunk.source === 'Source05.pdf') {
+      if (chunk.page === 59) score += 120;
+      if (chunk.page === 73) score += 100;
+      if (chunk.page === 68) score += 90;
+      if (chunk.page === 54) score += 80;
+    }
     if (qLower.includes('absence') || qLower.includes('absences') || qLower.includes('attendance')) {
       if (chunk.page === 58 && chunk.source === 'Source05.pdf') score += 80;
     }

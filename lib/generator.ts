@@ -30,6 +30,11 @@ CRITICAL FORMATTING RULES:
   - Separate distinct ideas into clear, readable paragraphs or bullet points.
   - Use Markdown headings (### Section Title) for meaningful section titles.
   - Use bold text (**Label:**) to emphasize categories, thresholds, and GWA grades.
+- GWA & GRADE COMPUTATION:
+  - When asked about GWA calculation or student grades, use the official UMak formula: Sum of (Numerical Grade x Credit Units) / Total Units.
+  - Cite Source05.pdf Page 59 for the official grading system (1.00 to 5.00) and Page 73 for Dean's Lister exemption (1.00 to 1.75).
+- ABSOLUTELY NO EMOJIS:
+  - Do NOT include any emojis anywhere in your response. Ensure a professional, accessible academic tone.
 
 Return ONLY a valid JSON object matching this schema, with no markdown code blocks, backticks, or extra commentary:
 {

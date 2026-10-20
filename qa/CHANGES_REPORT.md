@@ -118,6 +118,29 @@ All four required system enhancements have been implemented, tested, and validat
 
 ---
 
+### Task 5: Conversational Greetings & Official UMak GWA / Grade Computation Engine
+
+1. **Conversational Greetings ("hi hello ganun")**:
+   - Implemented `isGreetingQuery()` and `getGreetingResponse()` in `lib/grade-calculator.ts` and integrated into `app/api/chat/route.ts`.
+   - Welcomes students as TAGA-asK AI, outlines supported knowledge domains, and invites inquiries or grade calculations.
+   - Strictly zero emojis across all generated replies.
+   - Intelligent hybrid routing: questions containing university terms (e.g., "Hi, where is the CIT?", "Hello, ano ang dress code?") bypass pure greeting logic and route directly to the document RAG pipeline.
+
+2. **Official UMak GWA & Grade Computation Engine**:
+   - Implemented `computeGWA()` and `parseGradeInput()` in `lib/grade-calculator.ts` strictly grounded in the official Student Handbook (`Source05.pdf`):
+     - Article IV, Section 13 (Page 59): Numerical Grading System Scale (1.00 Excellent to 3.00 Passing, 4.00 Conditional, 5.00 Failure, INC, OD, UD).
+     - Article V, Section 1 (Page 73): Dean's Lister Token Fee Exemption (1.00–1.25 Full Exemption, 1.26–1.75 Partial Exemption; no academic grade below 2.00, no PE/NSTP below 2.50).
+     - Article IV, Section 2 (Pages 54–55): Academic Status & Probation (2 failing grades) and Academic Delinquency (3 failing grades / 9 units).
+     - Article IV, Section 21 (Page 68): Latin Honors Thresholds (Summa 1.00–1.15, Magna 1.16–1.30, Cum Laude 1.31–1.45).
+   - Weighted average formula: GWA = Sum of (Numerical Grade * Units) / Sum of Units.
+   - Outputs step-by-step Markdown tables with verified citations to `[Source05, p.59]` and `[Source05, p.73]`.
+   - General inquiries trigger `formatGWAExplanation()`.
+
+3. **Strict Academic Grounding**:
+   - Out-of-scope world trivia (capital of Australia, chocolate cake recipe, FIFA world cup, Ateneo admission, Apple stock price) and adversarial prompts continue to be strictly refused with: *"I couldn't find that in the official UMak sources. Please check with the concerned office."*
+
+---
+
 ## 3. Evidence Log (`/qa/evidence/`)
 
 | Screenshot File | Resolution / Browser | Verified Feature |
@@ -172,3 +195,5 @@ Please test the following on your physical iPhone 13:
   Open the mobile drawer and tap "Source05: Student Handbook (287p)". Verify that the Google Drive preview loads inside the modal with the page banner. If cross-site tracking blocks the iframe in Safari private browsing, tap "Open in Google Drive" to verify the external link.
 - [ ] **6. Authentication SSO:**
   Tap "Sign in" and confirm that only the Google Workspace button is displayed. Verify that logging in with your official `@umak.edu.ph` account completes successfully.
+- [ ] **7. Greetings & GWA Grade Calculator:**
+  Send "hello" or "kumusta" in chat and verify that TAGA-asK AI greets you professionally without emojis. Send "Compute my GWA: CS101 1.25 (3 units), Math 1.50 (3 units), Eng 1.75 (3 units)" and verify that the step-by-step breakdown table, 1.50 GWA, and Dean's Lister Partial Exemption appear with citations [Source05, p.59] and [Source05, p.73].

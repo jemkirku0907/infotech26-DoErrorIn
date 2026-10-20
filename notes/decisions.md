@@ -61,3 +61,28 @@
      - Retired `/api/auth/login` password endpoint with HTTP 403 Forbidden directing users to Google OAuth.
      - Enforced Google Workspace SSO exclusively for `@umak.edu.ph` accounts using configured `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
      - Updated UI badges to show "Verified UMak account" only for confirmed authenticated sessions, preventing guest misrepresentation.
+
+
+10. **Conversational Greetings & Official GWA / Grade Computation Helper (October 20, 2026):**
+    - **Conversational Greetings ("hi hello ganun"):**
+      - Implemented `isGreetingQuery()` and `getGreetingResponse()` in `lib/grade-calculator.ts` and integrated in `app/api/chat/route.ts`.
+      - Friendly, professional greeting identifies the bot as TAGA-asK AI, outlines supported topics (Handbook, campus map, scholarships, GWA computation), and invites the student to ask questions or submit grades.
+      - Zero emojis across all assistant responses, adhering to the strict no-emoji requirement.
+      - Hybrid routing: inquiries combining pleasantries with policy or location questions (e.g., "Hi, where is the CIT?", "Hello, ano ang dress code?") are automatically routed to the document RAG pipeline.
+    - **Official UMak GWA & Grade Computation Engine:**
+      - Implemented `computeGWA()` and `parseGradeInput()` in `lib/grade-calculator.ts` grounded strictly in the UMak Student Handbook (`Source05.pdf`):
+        - Article IV, Section 13 (Page 59): Official grading system (1.00 Excellent to 3.00 Passing, 4.00 Conditional, 5.00 Failure, INC, OD, UD).
+        - Article V, Section 1 (Page 73): Dean's Lister Token Fee Exemption (1.00–1.25 Full Exemption, 1.26–1.75 Partial Exemption; no academic grade below 2.00, no PE/NSTP grade below 2.50).
+        - Article IV, Section 2 (Pages 54–55): Good Standing vs. Probationary Status (2 failing grades) and Academic Delinquency (3 failing grades / 9 units).
+        - Article IV, Section 21 (Page 68): Latin Honors thresholds (Summa Cum Laude 1.00–1.15, Magna Cum Laude 1.16–1.30, Cum Laude 1.31–1.45).
+      - Mathematically verified weighted average formula: GWA = Sum of (Numerical Grade * Units) / Sum of Units.
+      - Generates clean markdown tables showing course, numerical grade, credit units, grade points, final GWA, academic standing, Dean's Lister qualification, and verified citations `[Source05, p.59]` and `[Source05, p.73]`.
+      - General GWA inquiries (without specific grades) trigger `formatGWAExplanation()`, presenting the formula, grading scale, Dean's Lister tiers, and a prompt for students to submit their grades.
+    - **Strict Academic Grounding Maintained:**
+      - Out-of-scope world trivia (capital of Australia, chocolate cake recipe, FIFA world cup, Ateneo admission, Apple stock price) and adversarial prompt injections continue to be strictly refused: *"I couldn't find that in the official UMak sources. Please check with the concerned office."*
+    - **Verification & Test Coverage:**
+      - 12/12 Authentication tests passing.
+      - 24/24 RAG regression tests passing.
+      - 7/7 Greeting & GWA Helper tests passing (`scripts/test-gwa-greetings.cjs`).
+      - 60/60 Comprehensive evaluation benchmark passing (100.0% in `scripts/run-eval.cjs`).
+      - Next.js production build (`next build`) compiles cleanly with 0 errors.

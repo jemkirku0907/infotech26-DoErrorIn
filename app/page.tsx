@@ -34,7 +34,8 @@ import {
   Trash2,
   Paperclip,
   Compass,
-  Sparkles
+  Sparkles,
+  Calculator
 } from 'lucide-react';
 import { ChatResponse, Citation, MapLocation, FileAttachment } from '@/lib/types';
 import { QuoteModal } from '@/components/QuoteModal';
@@ -62,7 +63,7 @@ interface ChatSession {
 const DEFAULT_WELCOME: Message = {
   id: 'welcome',
   sender: 'assistant',
-  text: "Mabuhay Herons! Welcome to TAGA-asK AI, your verified AI knowledge assistant grounded strictly in University of Makati's official documents:\n\n• Source05: Student Handbook (Main Source, 287 pages) — rules, admission, enrollment, offenses, and student governance\n• Source01: Scholarships & Exemption Guidelines (14 pages)\n• Source02: CCIS Computer Science GWA Rules (2 pages)\n• Source03: UMak Campus Map & Navigation Guide (6 pages)\n• Source04: Admin Building & University Offices Directory (14 pages)\n\nAsk any question regarding admissions, enrollment, academic policies, dress code, scholarships, or campus office locations.",
+  text: "Mabuhay Herons! Welcome to TAGA-asK AI, your verified AI knowledge assistant grounded strictly in University of Makati's official documents:\n\n• Source05: Student Handbook (Main Source, 287 pages) — rules, admission, enrollment, offenses, and student governance\n• Source01: Scholarships & Exemption Guidelines (14 pages)\n• Source02: CCIS Computer Science GWA Rules (2 pages)\n• Source03: UMak Campus Map & Navigation Guide (6 pages)\n• Source04: Admin Building & University Offices Directory (14 pages)\n\nAsk any question regarding admissions, enrollment, academic policies, dress code, scholarships, or campus office locations. You can also greet me or provide your grades and units to calculate your GWA and verify Dean's Lister eligibility.",
   timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
 };
 
@@ -130,7 +131,12 @@ const SUGGESTED_PROMPTS = [
     icon: BookOpen,
     label: "Dress Code & Grooming",
     query: "What is the dress code and grooming policy?"
+  },  {
+    icon: Calculator,
+    label: "GWA & Grade Computation",
+    query: "How do I compute my GWA and qualify for Dean's Lister?"
   },
+
   {
     icon: AlertTriangle,
     label: "Probation & Dropping",
