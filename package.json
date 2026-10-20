@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "node scripts/test-auth.cjs && node scripts/test-rag.cjs && node scripts/run-eval.cjs",
+    "eval": "node scripts/run-eval.cjs",
     "test:auth": "node scripts/test-auth.cjs",
     "test:rag": "node scripts/test-rag.cjs",
     "test:eval": "node scripts/run-eval.cjs",

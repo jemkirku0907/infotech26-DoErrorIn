@@ -1,37 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, ExternalLink, Download, ZoomIn, ZoomOut, RotateCcw, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ExternalLink, Download, ZoomIn, ZoomOut, RotateCcw, FileText, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
+import { getSourceById, SOURCES } from '@/config/sources';
 
 interface PdfViewerModalProps {
-  source: string | null; // e.g. "Source01.pdf"
+  source: string | null; // e.g. "Source01.pdf" or "Source05"
   initialPage?: number;
   highlightQuote?: string;
   onClose: () => void;
 }
-
-const SOURCE_DETAILS: Record<string, { title: string; pages: number; description: string }> = {
-  'Source01.pdf': {
-    title: 'Source01: Scholarships & Token Fee Exemption',
-    pages: 14,
-    description: 'Official university policies on entrance grants, Dean’s Lister exemptions, employee dependents, and application steps.',
-  },
-  'Source02.pdf': {
-    title: 'Source02: College Requirements (CCIS & Colleges)',
-    pages: 2,
-    description: 'Academic grade requirements, GWA standards, and course-specific retention policies for CCIS degrees.',
-  },
-  'Source03.pdf': {
-    title: 'Source03: Campus Map & Building Directory',
-    pages: 6,
-    description: 'Comprehensive directory of campus buildings (Admin Building, Academic 1-3, HPSB) floor plans and wings.',
-  },
-  'Source04.pdf': {
-    title: 'Source04: Administrative & Academic Offices',
-    pages: 14,
-    description: 'Directory of University President, Vice Presidents, Directors, office functions, and key performance indicators.',
-  },
-};
 
 export function PdfViewerModal({ source, initialPage = 1, highlightQuote, onClose }: PdfViewerModalProps) {
   const [currentPage, setCurrentPage] = useState<number>(initialPage || 1);
@@ -39,14 +17,26 @@ export function PdfViewerModal({ source, initialPage = 1, highlightQuote, onClos
 
   if (!source) return null;
 
-  const doc = SOURCE_DETAILS[source] || {
-    title: source,
-    pages: 14,
-    description: 'Official University of Makati document.',
-  };
+  const config = getSourceById(source);
+  const isHandbook = config?.id === 'Source05' || source.toLowerCase().includes('source05') || source.toLowerCase().includes('handbook');
 
-  const pdfUrl = `/sources/${source}`;
-  const pdfPageUrl = `${pdfUrl}#page=${currentPage}`;
+  const title = config ? `${config.id}: ${config.displayName}` : source;
+  const description = config?.description || 'Official University of Makati document.';
+  const totalPages = config?.pageCount || 14;
+
+  // For Source05, fallback to official Google Drive preview if self-hosted file not loaded
+  const isGoogleDrivePreview = isHandbook;
+  const pdfUrl = isHandbook && config?.googleDrivePreviewUrl
+    ? config.googleDrivePreviewUrl
+    : `/sources/${config?.fileName || source}`;
+
+  const externalLink = isHandbook && config?.googleDriveViewUrl
+    ? config.googleDriveViewUrl
+    : pdfUrl;
+
+  const iframeSrc = isHandbook && isGoogleDrivePreview
+    ? 'https://drive.google.com/file/d/1YKn5loiy3J33LoBZwwWYkQZDD_A-rSFt/preview'
+    : `${pdfUrl}#page=${currentPage}`;
 
   return (
     <div
@@ -56,44 +46,72 @@ export function PdfViewerModal({ source, initialPage = 1, highlightQuote, onClos
     >
       <div className="w-full max-w-5xl h-[92vh] rounded-2xl bg-white dark:bg-[#0B132B] shadow-2xl border border-slate-200 dark:border-[#1C2541] overflow-hidden flex flex-col">
         {/* Header Bar */}
-        <div className="flex items-center justify-between px-4 py-3 bg-[#3F56CA] text-white border-b border-blue-700">
+        <div className={`flex items-center justify-between px-4 py-3 text-white border-b ${
+          isHandbook ? 'bg-gradient-to-r from-[#D97706] to-[#B45309] border-amber-600' : 'bg-[#3F56CA] border-blue-700'
+        }`}>
           <div className="flex items-center gap-3 min-w-0">
             <div className="p-2 rounded-lg bg-white/10 shrink-0">
-              <FileText className="w-5 h-5 text-[#D1CA25]" />
+              {isHandbook ? (
+                <BookOpen className="w-5 h-5 text-amber-200" />
+              ) : (
+                <FileText className="w-5 h-5 text-[#D1CA25]" />
+              )}
             </div>
             <div className="min-w-0">
-              <h2 className="text-sm md:text-base font-bold truncate leading-tight">{doc.title}</h2>
-              <p className="text-[11px] text-blue-100 truncate">{doc.description}</p>
+              <div className="flex items-center gap-2">
+                <h2 className="text-sm md:text-base font-bold truncate leading-tight">{title}</h2>
+                {isHandbook && (
+                  <span className="text-[10px] uppercase font-extrabold bg-amber-400 text-slate-900 px-2 py-0.5 rounded-full shrink-0 shadow-xs">
+                    Main Source
+                  </span>
+                )}
+              </div>
+              <p className="text-[11px] text-amber-100/90 dark:text-blue-100 truncate">{description}</p>
             </div>
           </div>
 
           <div className="flex items-center gap-1.5 shrink-0">
             <a
-              href={pdfUrl}
+              href={externalLink}
               target="_blank"
               rel="noopener noreferrer"
-              title="Open original PDF in new tab"
-              className="p-1.5 rounded-lg text-blue-100 hover:text-white hover:bg-white/10 transition"
+              title="Open document in new tab"
+              className="p-1.5 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition"
             >
               <ExternalLink className="w-4 h-4" />
             </a>
-            <a
-              href={pdfUrl}
-              download={source}
-              title="Download official PDF"
-              className="p-1.5 rounded-lg text-blue-100 hover:text-white hover:bg-white/10 transition"
-            >
-              <Download className="w-4 h-4" />
-            </a>
+            {!isHandbook && (
+              <a
+                href={pdfUrl}
+                download={config?.fileName || source}
+                title="Download official PDF"
+                className="p-1.5 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition"
+              >
+                <Download className="w-4 h-4" />
+              </a>
+            )}
             <button
               onClick={onClose}
               aria-label="Close PDF Viewer"
-              className="p-1.5 rounded-lg text-blue-100 hover:text-white hover:bg-white/10 transition ml-1"
+              className="p-1.5 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition ml-1"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
         </div>
+
+        {/* Informative Banner for Google Drive Preview Mode */}
+        {isHandbook && (
+          <div className="bg-amber-500/15 dark:bg-amber-950/40 border-b border-amber-300 dark:border-amber-700/60 px-4 py-2 text-xs text-amber-950 dark:text-amber-200 flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-amber-700 dark:text-amber-400">Official Student Handbook:</span>
+              <span>Cited: <strong>Page {currentPage}</strong> of {totalPages}</span>
+            </div>
+            <div className="text-[11px] text-amber-800 dark:text-amber-300 italic">
+              Use the page navigation box in the viewer toolbar to jump directly to page {currentPage}
+            </div>
+          </div>
+        )}
 
         {/* Toolbar: Page navigation and Zoom */}
         <div className="flex flex-wrap items-center justify-between px-4 py-2 bg-slate-100 dark:bg-[#111827] border-b border-slate-200 dark:border-slate-800 text-xs">
@@ -107,11 +125,11 @@ export function PdfViewerModal({ source, initialPage = 1, highlightQuote, onClos
               <ChevronLeft className="w-4 h-4" />
             </button>
             <span className="font-semibold text-slate-700 dark:text-slate-200">
-              Page {currentPage} of {doc.pages}
+              Page {currentPage} of {totalPages}
             </span>
             <button
-              onClick={() => setCurrentPage((p) => Math.min(doc.pages, p + 1))}
-              disabled={currentPage >= doc.pages}
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage >= totalPages}
               aria-label="Next Page"
               className="p-1 rounded-md text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 disabled:opacity-40"
             >
@@ -158,9 +176,10 @@ export function PdfViewerModal({ source, initialPage = 1, highlightQuote, onClos
         <div className="flex-1 bg-slate-200 dark:bg-[#070D1E] overflow-auto flex items-center justify-center relative p-1">
           <iframe
             key={`${source}-${currentPage}`}
-            src={pdfPageUrl}
-            title={`${doc.title} Page ${currentPage}`}
+            src={iframeSrc}
+            title={`${title} Page ${currentPage}`}
             className="w-full h-full rounded-b-xl border-0 shadow-inner"
+            allow="autoplay"
             style={{
               transform: zoom !== 100 ? `scale(${zoom / 100})` : 'none',
               transformOrigin: 'top center',

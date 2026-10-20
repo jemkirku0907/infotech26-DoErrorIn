@@ -1,6 +1,6 @@
 export interface SourceChunk {
   id: string;
-  source: 'Source01.pdf' | 'Source02.pdf' | 'Source03.pdf' | 'Source04.pdf';
+  source: 'Source01.pdf' | 'Source02.pdf' | 'Source03.pdf' | 'Source04.pdf' | 'Source05.pdf';
   documentTitle: string;
   page: number;
   section: string;

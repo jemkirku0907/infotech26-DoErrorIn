@@ -16,12 +16,12 @@ export async function POST(req: NextRequest) {
     if (!session) {
       return NextResponse.json(
         {
-          answer: 'Access denied. You must be logged in with a valid @umak.edu.ph student account to use TAGA-asK AI.',
+          answer: 'Access denied. You must be logged in with a valid verified @umak.edu.ph account to use TAGA-asK AI.',
           in_sources: false,
           conflict: false,
           citations: [],
           verification_status: 'error',
-          error: 'Unauthorized: Valid UMak student login required.',
+          error: 'Unauthorized: Valid verified @umak.edu.ph account required.',
         } as ChatResponse,
         { status: 401 }
       );
@@ -112,14 +112,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 4. Retrieve Grounded Sources with Intent Routing
+    // 4. Retrieve Grounded Sources with Intent Routing (Prioritizes Student Handbook Source05)
     const retrievedChunks = searchSources(message, 4);
 
     // If no sufficiently relevant evidence found, explicitly abstain
     if (retrievedChunks.length === 0) {
       return NextResponse.json(
         {
-          answer: "I couldn't verify that information using the available official UMak sources (Source01.pdf–Source04.pdf).",
+          answer: "I couldn't find that in the official UMak sources. Please check with the concerned office.",
           in_sources: false,
           conflict: false,
           citations: [],

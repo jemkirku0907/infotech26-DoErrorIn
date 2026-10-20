@@ -9,7 +9,10 @@ const STOP_WORDS = new Set([
   'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the',
   'to', 'was', 'were', 'will', 'with', 'what', 'where', 'who', 'how',
   'does', 'do', 'can', 'i', 'my', 'you', 'your', 'please', 'tell', 'me',
-  'about', 'ano', 'saan', 'sino', 'paano', 'ba', 'ang', 'mga', 'sa', 'kay'
+  'about', 'ano', 'saan', 'sino', 'paano', 'ba', 'ang', 'mga', 'sa', 'kay',
+  'ng', 'maging', 'para', 'iyon', 'ito', 'ayon', 'or', 'before', 'given',
+  'one', 'another', 'if', 'having', 'which', 'ma', 'ilang', 'bago', 'student',
+  'handbook', 'umak', 'university', 'according'
 ]);
 
 export function tokenize(text: string): string[] {
@@ -20,7 +23,7 @@ export function tokenize(text: string): string[] {
     .filter(token => token.length > 1 && !STOP_WORDS.has(token));
 }
 
-export type QueryIntent = 'location' | 'offices' | 'academic' | 'scholarship' | 'general';
+export type QueryIntent = 'handbook' | 'location' | 'offices' | 'academic' | 'scholarship' | 'general';
 
 export interface ScoredChunk {
   chunk: SourceChunk;
@@ -29,6 +32,7 @@ export interface ScoredChunk {
 
 /**
  * Disambiguates user intent based on phrasing:
+ * - handbook: "handbook", "dress code", "uniform", "id policy", "offense", "sanction", "penalty", "attendance", "tardy", "probation", "admission", "enrollment", "transferee", "residency", "clearance" -> Source05.pdf (Primary)
  * - location: "where is", "located", "floor", "building", "wing", "room", "map" -> Source03.pdf
  * - offices: "who is the head", "office head", "director", "duties", "kpi", "responsible", "president" -> Source04.pdf
  * - academic: "gwa", "grade", "retention", "curriculum", "ccis", "computer science", "college of" -> Source02.pdf
@@ -37,7 +41,7 @@ export interface ScoredChunk {
 export function classifyIntent(query: string): QueryIntent {
   const q = query.toLowerCase();
 
-  // Location intent takes precedence for spatial queries ("where", "floor", "building", "wing")
+  // Location spatial queries ("where", "floor", "building", "wing")
   if (
     q.includes('where') ||
     q.includes('saan') ||
@@ -52,6 +56,59 @@ export function classifyIntent(query: string): QueryIntent {
     q.includes('papunta')
   ) {
     return 'location';
+  }
+
+  // Handbook-specific institutional rules & procedures (Priority)
+  if (
+    q.includes('handbook') ||
+    q.includes('dress code') ||
+    q.includes('uniform') ||
+    q.includes('grooming') ||
+    q.includes('haircut') ||
+    q.includes('id policy') ||
+    q.includes('wear id') ||
+    q.includes('offense') ||
+    q.includes('penalty') ||
+    q.includes('penalties') ||
+    q.includes('sanction') ||
+    q.includes('expulsion') ||
+    q.includes('suspension') ||
+    q.includes('reprimand') ||
+    q.includes('attendance') ||
+    q.includes('tardiness') ||
+    q.includes('tardy') ||
+    q.includes('absent') ||
+    q.includes('absence') ||
+    q.includes('probation') ||
+    q.includes('disqualification') ||
+    q.includes('dismissal') ||
+    q.includes('leave of absence') ||
+    q.includes('loa') ||
+    q.includes('clearance') ||
+    q.includes('admission requirement') ||
+    q.includes('admission procedure') ||
+    q.includes('freshman enrollment') ||
+    q.includes('freshmen enrollment') ||
+    q.includes('transferee') ||
+    q.includes('second courser') ||
+    q.includes('old student') ||
+    q.includes('cross-enrollee') ||
+    q.includes('cross enrollee') ||
+    q.includes('residency verification') ||
+    q.includes('makati resident') ||
+    q.includes('excom resolution') ||
+    q.includes('medical condition form') ||
+    q.includes('withdrawal of credentials') ||
+    q.includes('withdrawal of enrollment') ||
+    q.includes('scan-to-pay') ||
+    q.includes('scantopay') ||
+    q.includes('olea') ||
+    q.includes('supreme student council') ||
+    q.includes('csoa') ||
+    q.includes('seal') ||
+    q.includes('hymn')
+  ) {
+    return 'handbook';
   }
 
   // Office function / leadership
@@ -70,7 +127,7 @@ export function classifyIntent(query: string): QueryIntent {
     return 'offices';
   }
 
-  // Academic / CCIS
+  // Academic / CCIS specific
   if (
     q.includes('ccis') ||
     q.includes('computer science') ||
@@ -100,13 +157,11 @@ export function classifyIntent(query: string): QueryIntent {
 
 /**
  * Discovers if the query is strictly within supported domain scope.
- * Prevents non-UMak external questions (e.g. US President, external countries/entities)
- * from triggering false matches based on coincidental keyword overlap.
  */
 export function isQueryInScope(query: string): boolean {
   const q = query.toLowerCase().trim();
 
-  // 1. Explicit non-UMak external leaders & countries (e.g. US President, POTUS, etc.) with word boundaries
+  // 1. Explicit non-UMak external leaders & countries with word boundaries
   const externalLeadershipPatterns = [
     /\bunited states\b/i, /\bu\.s\.\b/i, /\busa\b/i, /\bus president\b/i, /\bpotus\b/i, /\bwhite house\b/i,
     /\bphilippines\b/i, /\bbongbong\b/i, /\bmarcos\b/i, /\bduterte\b/i, /\bbiden\b/i, /\btrump\b/i, /\bobama\b/i,
@@ -127,7 +182,7 @@ export function isQueryInScope(query: string): boolean {
     return false;
   }
 
-  // 3. Other universities with word boundaries (prevents 'must' matching 'ust' and 'submit' matching 'mit')
+  // 3. Other universities with word boundaries
   const otherInstitutions = [
     /\bateneo\b/i, /\bde la salle\b/i, /\bdlsu\b/i, /\bust\b/i,
     /\buniversity of the philippines\b/i, /\bup diliman\b/i,
@@ -166,6 +221,10 @@ export function isQueryInScope(query: string): boolean {
 
 /**
  * Intent-aware hybrid retrieval with metadata routing and relevance scoring.
+ * Policy:
+ * 1. Boost Student Handbook (Source05.pdf) by x1.3 as the primary source of truth.
+ * 2. If handbook and supporting source conflict, handbook prevails.
+ * 3. Use Source01-04 only to supplement.
  */
 export function searchSources(query: string, maxResults: number = 4): SourceChunk[] {
   if (!isQueryInScope(query)) {
@@ -187,8 +246,26 @@ export function searchSources(query: string, maxResults: number = 4): SourceChun
       score += 35;
     }
 
+    // 1b. Specific Topic Page Boosts for Handbook
+    if (qLower.includes('absence') || qLower.includes('absences') || qLower.includes('attendance')) {
+      if (chunk.page === 48 && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('disciplinary') || qLower.includes('due process') || qLower.includes('grievance')) {
+      if (chunk.page === 95 && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('dishonesty') || qLower.includes('cheating') || qLower.includes('plagiarism') || qLower.includes('pangongopya')) {
+      if (chunk.page === 88 && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('shifting') || qLower.includes('probation') || qLower.includes('retention')) {
+      if ((chunk.page === 54 || chunk.page === 52) && chunk.source === 'Source05.pdf') score += 80;
+    }
+
     // 2. Intent-based Source Routing Boost & Penalty
-    if (intent === 'location') {
+    if (intent === 'handbook') {
+      if (chunk.source === 'Source05.pdf') {
+        score += 55; // Heavy priority to Student Handbook
+      }
+    } else if (intent === 'location') {
       if (chunk.source === 'Source03.pdf') {
         score += 50; // Heavy priority to Campus Map for location questions
       } else if (chunk.source === 'Source01.pdf') {
@@ -226,17 +303,34 @@ export function searchSources(query: string, maxResults: number = 4): SourceChun
       score += matches * 3;
     }
 
+    // 4. Primary Source Boost: Student Handbook (Source05) score is boosted x1.3
+    if (chunk.source === 'Source05.pdf' && score > 0) {
+      score = Math.round(score * 1.3) + 5;
+    }
+
     return { chunk, score };
   });
 
-  // Filter with dynamic relevance threshold to prevent low-similarity hallucination
+  // Filter with dynamic relevance threshold
   const minThreshold = intent === 'location' ? 30 : 20;
 
-  return scored
-    .filter(item => item.score >= minThreshold)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, maxResults)
-    .map(item => item.chunk);
+  const validScored = scored.filter(item => item.score >= minThreshold);
+
+  // If handbook has high-scoring matches, ensure at least one handbook chunk is in the top context
+  const handbookMatches = validScored.filter(item => item.chunk.source === 'Source05.pdf');
+  const otherMatches = validScored.filter(item => item.chunk.source !== 'Source05.pdf');
+
+  let results: SourceChunk[] = [];
+  if (handbookMatches.length > 0 && intent === 'handbook') {
+    results = handbookMatches.sort((a, b) => b.score - a.score).slice(0, maxResults).map(i => i.chunk);
+  } else {
+    results = validScored
+      .sort((a, b) => b.score - a.score)
+      .slice(0, maxResults)
+      .map(item => item.chunk);
+  }
+
+  return results;
 }
 
 export function getChunkBySourceAndPage(source: string, page: number): SourceChunk[] {

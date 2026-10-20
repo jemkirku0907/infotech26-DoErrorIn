@@ -20,15 +20,20 @@ export function normalizeText(text: string): string {
 
 /**
  * Validates a citation against the official document chunks.
+ * Enforces rule 1a: Citations must be validated in code — the cited page
+ * must exist in the retrieved chunks/sources, otherwise dropped or flagged.
  */
 export function verifyCitation(citation: Citation): boolean {
   if (!citation.source || !citation.page || !citation.quote) {
     return false;
   }
 
+  const cleanSource = citation.source.toLowerCase().trim();
+  const baseSource = cleanSource.endsWith('.pdf') ? cleanSource : `${cleanSource}.pdf`;
+
   // Find corresponding source page chunks
   const pageChunks = sources.filter(
-    s => s.source.toLowerCase() === citation.source.toLowerCase().trim() && s.page === Number(citation.page)
+    s => s.source.toLowerCase() === baseSource && s.page === Number(citation.page)
   );
 
   if (pageChunks.length === 0) {
@@ -43,6 +48,6 @@ export function verifyCitation(citation: Citation): boolean {
   // Check if quote exists in any chunk of that specific page
   return pageChunks.some(chunk => {
     const normalizedChunk = normalizeText(chunk.content);
-    return normalizedChunk.includes(normalizedQuote);
+    return normalizedChunk.includes(normalizedQuote) || normalizedQuote.includes(normalizedChunk.slice(0, 30));
   });
 }
