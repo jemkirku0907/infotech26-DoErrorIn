@@ -10,6 +10,8 @@ import {
   parseGradeInput,
   computeGWA,
   formatGWAExplanation,
+  parseTargetGWAQuery,
+  formatTargetGWAAdvice,
 } from '@/lib/grade-calculator';
 import { isDeveloperQuery, getDeveloperResponse } from '@/lib/team-info';
 import { ChatResponse } from '@/lib/types';
@@ -151,6 +153,16 @@ export async function POST(req: NextRequest) {
 
     // 3.6 Official UMak GWA & Grade Computation Helper
     if (isGradeComputationQuery(message)) {
+      // 1. Check if user is asking about current/target GWA advice (e.g. "my gwa is 2.50 what i can do to be my gwa turn into 1.75")
+      const targetGwa = parseTargetGWAQuery(message);
+      if (targetGwa) {
+        return NextResponse.json(
+          formatTargetGWAAdvice(targetGwa.currentGwa, targetGwa.targetGwa),
+          { status: 200 }
+        );
+      }
+
+      // 2. Check if student provided specific grades to compute
       const parsedGrades = parseGradeInput(message);
       if (parsedGrades.length >= 1) {
         const gwaResult = computeGWA(parsedGrades);
@@ -164,9 +176,10 @@ export async function POST(req: NextRequest) {
           } as ChatResponse,
           { status: 200 }
         );
-      } else {
-        return NextResponse.json(formatGWAExplanation(), { status: 200 });
       }
+
+      // 3. General GWA formula and grading scale explanation
+      return NextResponse.json(formatGWAExplanation(), { status: 200 });
     }
 
     // 4. Retrieve Grounded Sources with Intent Routing (Prioritizes Student Handbook Source05)

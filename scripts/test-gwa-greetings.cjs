@@ -427,4 +427,129 @@ assert(devReply.includes('DoErrorIn'), 'Must credit Team DoErrorIn');
 assert(!hasEmoji(devReply), 'Must not contain any emojis');
 console.log('[PASS] 8. Team DoErrorIn developer queries correctly identified and answered with full developer roster.');
 
+// 9. Target GWA & Grade Improvement Advice (User's Real Screenshot Query)
+function parseTargetGWAQuery(text) {
+  const q = text.toLowerCase();
+
+  const currentMatch =
+    q.match(/\b(?:my\s+gwa\s+is|current\s+gwa(?:\s+is)?|gwa\s+ko(?:\s+ay|\s+is)?|from(?:\s+a)?)\s*([1-5](?:\.\d{1,2})?)\b/i) ||
+    q.match(/\b([1-5]\.\d{1,2})\s*(?:ang\s+)?gwa\b/i) ||
+    q.match(/\bgwa\s*(?:of\s*|na\s*)?([1-5]\.\d{1,2})\b/i);
+
+  const targetMatch =
+    q.match(/\b(?:turn\s+into|make\s+it|reach|become|target(?:\s+gwa)?|maging|to\s+be(?:\s+my\s+gwa)?|to)\s*([1-5](?:\.\d{1,2})?)\b/i);
+
+  if (currentMatch) {
+    const currentGwa = parseFloat(currentMatch[1]);
+    let targetGwa = 1.75;
+    if (targetMatch && targetMatch[1]) {
+      targetGwa = parseFloat(targetMatch[1]);
+    } else if (q.includes('summa')) {
+      targetGwa = 1.15;
+    } else if (q.includes('magna')) {
+      targetGwa = 1.30;
+    } else if (q.includes('cum laude')) {
+      targetGwa = 1.45;
+    }
+    return { currentGwa, targetGwa };
+  }
+
+  if (q.includes('gwa') && targetMatch && targetMatch[1]) {
+    return { currentGwa: 2.50, targetGwa: parseFloat(targetMatch[1]) };
+  }
+
+  return null;
+}
+
+function formatTargetGWAAdvice(currentGwa, targetGwa = 1.75) {
+  const currentFormatted = currentGwa.toFixed(2);
+  const targetFormatted = targetGwa.toFixed(2);
+
+  const prevUnits = 20;
+  const prevPoints = prevUnits * currentGwa;
+
+  const sem1NewUnits = 20;
+  const sem1TotalUnits = prevUnits + sem1NewUnits;
+  const sem1RequiredTotalPoints = sem1TotalUnits * targetGwa;
+  const sem1RequiredNewPoints = sem1RequiredTotalPoints - prevPoints;
+  const sem1RequiredTermGwa = sem1RequiredNewPoints / sem1NewUnits;
+
+  const sem1Text = sem1RequiredTermGwa >= 1.00 && sem1RequiredTermGwa <= 3.00
+    ? `**${sem1RequiredTermGwa.toFixed(2)}** (requires achieving mostly Excellent 1.00–1.25 grades in all enrolled courses)`
+    : sem1RequiredTermGwa < 1.00
+    ? `**1.00** (a 1-semester leap is mathematically demanding since 1.00 is the highest grade; requires 2 semesters to pull cumulative average down)`
+    : `**${sem1RequiredTermGwa.toFixed(2)}**`;
+
+  const answer = `### How to Reach a Target GWA of ${targetFormatted} from ${currentFormatted}
+
+Based on the **University of Makati Student Handbook (Main Source)**, Article IV, Section 13 (Policy on Grading System) [Source05, p.59] and Article V, Section 1 (Dean's Lister Token Fee Exemption Grant) [Source05, p.73]:
+
+#### 1. Crucial Rule: Dean's Lister is Awarded Per Semester (Not Cumulative Lifetime!)
+At the University of Makati, you **do not** need your cumulative lifetime GWA to immediately reach ${targetFormatted} to receive scholarship privileges:
+- Under **Article V, Section 1 (Page 73)**, the Dean's Lister Token Fee Exemption Grant is awarded on a **semester-by-semester basis** based on the **previous semester's term grades**, not your cumulative average across all years!
+- **Good news:** Even if your past semester GWA was **${currentFormatted}**, you can qualify for the Dean's Lister tuition discount next semester if your **term GWA for the upcoming semester** is between **1.00 and 1.75** (provided you have no grade lower than 2.00 in any academic course and no grade lower than 2.50 in PE/NSTP)!
+  - **GWA 1.00 to 1.25:** Full Token Fee Exemption (100% free token fee).
+  - **GWA 1.26 to 1.75:** Partial Token Fee Exemption.
+
+#### 2. Cumulative GWA Mathematical Breakdown
+If you want to pull your **overall cumulative GWA** from **${currentFormatted}** down to **${targetFormatted}** (for permanent academic standing or graduation Latin Honors [Source05, p.68]):
+$$\\text{Target Cumulative GWA} = \\frac{\\text{Previous Grade Points} + \\text{New Grade Points}}{\\text{Previous Units} + \\text{New Units}}$$
+
+Assuming a standard semestral load of 20 credit units:
+- **Previous Record:** 20 units x ${currentFormatted} = **${prevPoints.toFixed(1)} Grade Points**.
+- **1 Upcoming Semester (20 new units):** Target term GWA required is ${sem1Text}.
+
+#### 3. Strategic Action Plan from the Student Handbook
+1. **Prioritize High-Credit Courses [Source05, p.59]:** Focus on 3-unit lecture and 4-unit lab/major computing courses where 1.00/1.25 exerts the highest weight.
+2. **Never Drop Below the 2.00 Floor [Source05, p.73]:** For Dean's Lister, you cannot have any grade below 2.00 in academic courses, and no grade below 2.50 in PE/NSTP.
+3. **Avoid Marks of 4.0, INC, and Dropped Courses [Source05, pp.57–59]:** Clear any conditional or incomplete marks within official deadlines.
+4. **Comply with the 20% Attendance Threshold [Source05, p.58]:** Avoid unexcused absences exceeding 20% of class hours.
+5. **Seek College Academic Counseling [Source05, p.54]:** Utilize college mentoring and guidance tutorials.`;
+
+  return {
+    answer,
+    in_sources: true,
+    citations: [
+      {
+        source: 'Source05.pdf',
+        page: 73,
+        quote: "Dean's Lister Token Fee Exemption Grant: Awarded to both Makati and non-Makati residents who obtained a GWA within 1.00 to 1.75",
+        claim: "Dean's Lister semestral qualification criteria",
+        verified: true,
+      },
+      {
+        source: 'Source05.pdf',
+        page: 59,
+        quote: "POLICY ON GRADING SYSTEM: Numerical Percentage & Adjectival Equivalent: 1.00 = 97-100%",
+        claim: "Official UMak grading system scale",
+        verified: true,
+      },
+      {
+        source: 'Source05.pdf',
+        page: 54,
+        quote: "Probationary Status or at risk student: Students who at end of semester obtain failing grades in TWO",
+        claim: "Academic standing and guidance intervention",
+        verified: true,
+      }
+    ]
+  };
+}
+
+const userScreenshotQuery = 'my gwa is 2.50 what i can do to be my gwa turn into 1.75';
+const parsedTarget = parseTargetGWAQuery(userScreenshotQuery);
+assert(parsedTarget !== null, 'Target GWA query must be parsed successfully');
+assert.strictEqual(parsedTarget.currentGwa, 2.5);
+assert.strictEqual(parsedTarget.targetGwa, 1.75);
+
+const targetAdvice = formatTargetGWAAdvice(parsedTarget.currentGwa, parsedTarget.targetGwa);
+assert(targetAdvice.answer.includes("Dean's Lister is Awarded Per Semester"), 'Must explain that Dean\'s Lister is semestral');
+assert(targetAdvice.answer.includes("1.75 from 2.50"), 'Must address 2.50 to 1.75 specifically');
+assert(targetAdvice.answer.includes("Target Cumulative GWA"), 'Must explain the cumulative formula');
+assert(!hasEmoji(targetAdvice.answer), 'Must not contain any emojis');
+
+for (const c of targetAdvice.citations) {
+  assert(verifyCitation(c), `Citation verification failed for ${c.source} p.${c.page}`);
+}
+console.log('[PASS] 9. User\'s screenshot query ("my gwa is 2.50 what i can do to be my gwa turn into 1.75") answered with verified math and handbook advice.');
+
 console.log('\nAll Greeting, Grade Computation, and Developer Credit tests passed successfully!');

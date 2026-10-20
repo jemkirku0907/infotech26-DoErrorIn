@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Citation, ChatResponse, SourceChunk, FileAttachment, MapLocation } from './types';
 import { verifyCitation } from './validator';
+import { parseTargetGWAQuery, formatTargetGWAAdvice, formatGWAExplanation } from './grade-calculator';
 
 const SYSTEM_INSTRUCTION = `You are TAGA-asK AI, an AI knowledge assistant for University of Makati students.
 You must answer strictly and exclusively based on the retrieved evidence provided below from the official UMak documents:
@@ -202,7 +203,38 @@ export function formatFallbackAnswer(query: string, retrievedChunks: SourceChunk
   }
 
   const q = query.toLowerCase();
+
+  // 1. Target GWA and Grade Improvement Advice (e.g. "my gwa is 2.50 what i can do to be my gwa turn into 1.75")
+  const targetGwa = parseTargetGWAQuery(query);
+  if (targetGwa) {
+    return formatTargetGWAAdvice(targetGwa.currentGwa, targetGwa.targetGwa);
+  }
+
+  // 2. How to compute GWA explanation
+  if (q.includes('gwa') && (q.includes('compute') || q.includes('formula') || q.includes('calculate') || q.includes('paano') || q.includes('how'))) {
+    return formatGWAExplanation();
+  }
+
   const primary = retrievedChunks[0];
+
+  // 3. Official UMak Grading System Scale (Source05 Page 59)
+  if (primary.source === 'Source05.pdf' && primary.page === 59) {
+    return {
+      answer: `### Based on the Student Handbook (Main Source) - Policy on Grading System\n\nUnder Article IV, Section 13 [Source05, p.59], the official grading system of the University of Makati is:\n\n- **1.00:** 97–100% (Excellent)\n- **1.25:** 94–96% (Superior)\n- **1.50:** 91–93% (Superior)\n- **1.75:** 88–90% (Very Good)\n- **2.00:** 85–87% (Very Good)\n- **2.25:** 82–84% (Good)\n- **2.50:** 79–81% (Good)\n- **2.75:** 76–78% (Fair)\n- **3.00:** 75% (Fair / Passing)\n- **4.00:** 70–74% (Conditional Failure) — Grade of 4.0 must be removed by re-examination within five (5) days; passes becomes 3.0, fails becomes 5.0.\n- **5.00:** 69% and below (Failure)\n- **INC:** Incomplete — Must be removed or completed within one (1) year after incurred in a non-prerequisite course.\n- **OD:** Officially Dropped\n- **UD:** Unofficially Dropped\n\n*Note: For final decisions and official endorsements, please confirm with the concerned university office.*`,
+      in_sources: true,
+      conflict: false,
+      citations: [
+        {
+          source: primary.source,
+          page: primary.page,
+          quote: "POLICY ON GRADING SYSTEM: Numerical Percentage & Adjectival Equivalent: 1.00 = 97-100%",
+          claim: "Official UMak grading system scale and numerical equivalents",
+          verified: true,
+        }
+      ],
+      verification_status: "verified",
+    };
+  }
 
   // Handbook specific topics
   if (primary.source === 'Source05.pdf') {
@@ -309,6 +341,12 @@ export async function generateGroundedAnswer(
     return locationAnswer;
   }
 
+  // 1b. Precise target GWA calculation & advice
+  const targetGwa = parseTargetGWAQuery(query);
+  if (targetGwa) {
+    return formatTargetGWAAdvice(targetGwa.currentGwa, targetGwa.targetGwa);
+  }
+
   const apiKey = process.env.GOOGLE_AI_API_KEY;
 
   if (!apiKey) {
@@ -325,7 +363,7 @@ export async function generateGroundedAnswer(
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-flash-latest',
       systemInstruction: SYSTEM_INSTRUCTION,
       generationConfig: {
         responseMimeType: 'application/json',
