@@ -1,5 +1,5 @@
 {
-  "evaluatedAt": "2026-10-20T12:37:05.765Z",
+  "evaluatedAt": "2026-10-20T12:46:24.597Z",
   "totalQuestions": 60,
   "passed": 60,
   "failed": 0,
@@ -28,19 +28,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 35
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 53
           }
         ]
       }
@@ -61,19 +61,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 34
+            "page": 46
           },
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 68
           },
           {
             "source": "Source05.pdf",
-            "page": 118
+            "page": 51
           },
           {
             "source": "Source05.pdf",
-            "page": 35
+            "page": 47
           }
         ]
       }
@@ -94,19 +94,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 46
           },
           {
             "source": "Source05.pdf",
-            "page": 38
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 42
+            "page": 57
           }
         ]
       }
@@ -127,19 +127,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 46
           },
           {
             "source": "Source05.pdf",
-            "page": 38
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 39
+            "page": 48
           }
         ]
       }
@@ -148,39 +148,6 @@
       "id": "hb05",
       "category": "handbook",
       "question": "What are the requirements and maintaining grade threshold for transferees seeking admission to UMak?",
-      "inScope": true,
-      "testPassed": true,
-      "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
-      "actualOutcome": {
-        "in_sources": true,
-        "retrievedSources": [
-          "Source05.pdf"
-        ],
-        "citationsFound": [
-          {
-            "source": "Source05.pdf",
-            "page": 35
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 33
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 38
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 41
-          }
-        ]
-      }
-    },
-    {
-      "id": "hb06",
-      "category": "handbook",
-      "question": "What are the rules and permit requirements for cross-enrollees in the Student Handbook?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -193,27 +160,27 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 39
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 62
           },
           {
             "source": "Source05.pdf",
-            "page": 35
+            "page": 68
           },
           {
             "source": "Source05.pdf",
-            "page": 41
+            "page": 60
           }
         ]
       }
     },
     {
-      "id": "hb07",
+      "id": "hb06",
       "category": "handbook",
-      "question": "What documents must a second courser submit for admission under the Student Handbook?",
+      "question": "What are the rules and unit limits for graduating student academic overload in the handbook?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -226,19 +193,52 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 56
           },
           {
             "source": "Source05.pdf",
-            "page": 35
+            "page": 54
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 41
+            "page": 55
+          }
+        ]
+      }
+    },
+    {
+      "id": "hb07",
+      "category": "handbook",
+      "question": "What is the official procedure and deadline for dropping courses under Change of Matriculation (CMAT)?",
+      "inScope": true,
+      "testPassed": true,
+      "notes": "Retrieved grounded passages with matching source and page.",
+      "durationMs": 1,
+      "actualOutcome": {
+        "in_sources": true,
+        "retrievedSources": [
+          "Source05.pdf"
+        ],
+        "citationsFound": [
+          {
+            "source": "Source05.pdf",
+            "page": 59
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 57
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 61
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 45
           }
         ]
       }
@@ -259,19 +259,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 42
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 57
           },
           {
             "source": "Source05.pdf",
-            "page": 38
+            "page": 52
           }
         ]
       }
@@ -283,7 +283,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -292,19 +292,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 38
+            "page": 46
           },
           {
             "source": "Source05.pdf",
-            "page": 41
+            "page": 49
           },
           {
             "source": "Source05.pdf",
-            "page": 42
+            "page": 55
           }
         ]
       }
@@ -325,19 +325,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 48
+            "page": 58
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 45
           }
         ]
       }
@@ -346,39 +346,6 @@
       "id": "hb11",
       "category": "handbook",
       "question": "How are excused absences certified and validated under UMak attendance rules?",
-      "inScope": true,
-      "testPassed": true,
-      "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
-      "actualOutcome": {
-        "in_sources": true,
-        "retrievedSources": [
-          "Source05.pdf"
-        ],
-        "citationsFound": [
-          {
-            "source": "Source05.pdf",
-            "page": 48
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 36
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 41
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 37
-          }
-        ]
-      }
-    },
-    {
-      "id": "hb12",
-      "category": "handbook",
-      "question": "What is the official grading system scale of UMak as defined in the Student Handbook?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -391,19 +358,52 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 58
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 60
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 57
+          }
+        ]
+      }
+    },
+    {
+      "id": "hb12",
+      "category": "handbook",
+      "question": "What is the official grading system scale of UMak as defined in the Student Handbook?",
+      "inScope": true,
+      "testPassed": true,
+      "notes": "Retrieved grounded passages with matching source and page.",
+      "durationMs": 0,
+      "actualOutcome": {
+        "in_sources": true,
+        "retrievedSources": [
+          "Source05.pdf"
+        ],
+        "citationsFound": [
+          {
+            "source": "Source05.pdf",
+            "page": 59
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 78
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 45
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 53
           }
         ]
       }
@@ -424,19 +424,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 60
           },
           {
             "source": "Source05.pdf",
-            "page": 118
+            "page": 45
           }
         ]
       }
@@ -457,19 +457,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 54
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 79
           }
         ]
       }
@@ -481,7 +481,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -494,15 +494,15 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 55
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 58
           },
           {
             "source": "Source05.pdf",
-            "page": 48
+            "page": 78
           }
         ]
       }
@@ -514,7 +514,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -527,15 +527,15 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 84
           },
           {
             "source": "Source05.pdf",
-            "page": 12
+            "page": 55
           }
         ]
       }
@@ -547,6 +547,39 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
+      "durationMs": 0,
+      "actualOutcome": {
+        "in_sources": true,
+        "retrievedSources": [
+          "Source05.pdf"
+        ],
+        "citationsFound": [
+          {
+            "source": "Source05.pdf",
+            "page": 58
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 54
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 55
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 49
+          }
+        ]
+      }
+    },
+    {
+      "id": "hb18",
+      "category": "handbook",
+      "question": "What is the official procedure and deadline for dropping academic subjects?",
+      "inScope": true,
+      "testPassed": true,
+      "notes": "Retrieved grounded passages with matching source and page.",
       "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
@@ -556,7 +589,7 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 59
           },
           {
             "source": "Source05.pdf",
@@ -564,19 +597,19 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 35
+            "page": 55
           }
         ]
       }
     },
     {
-      "id": "hb18",
+      "id": "hb19",
       "category": "handbook",
-      "question": "What is the official procedure and deadline for dropping academic subjects?",
+      "question": "What is the policy and maximum allowable period for a Leave of Absence (LOA)?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -589,52 +622,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 54
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 37
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 35
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 36
-          }
-        ]
-      }
-    },
-    {
-      "id": "hb19",
-      "category": "handbook",
-      "question": "What is the policy and maximum allowable period for a Leave of Absence (LOA)?",
-      "inScope": true,
-      "testPassed": true,
-      "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
-      "actualOutcome": {
-        "in_sources": true,
-        "retrievedSources": [
-          "Source05.pdf"
-        ],
-        "citationsFound": [
-          {
-            "source": "Source05.pdf",
-            "page": 48
-          },
-          {
-            "source": "Source05.pdf",
             "page": 58
           },
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 56
           },
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 59
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 79
           }
         ]
       }
@@ -655,19 +655,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 79
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 85
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           }
         ]
       }
@@ -688,19 +688,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 80
           },
           {
             "source": "Source05.pdf",
-            "page": 12
+            "page": 85
           },
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 46
           }
         ]
       }
@@ -721,19 +721,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 79
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 45
           }
         ]
       }
@@ -754,19 +754,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 85
+            "page": 84
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           }
         ]
       }
@@ -787,19 +787,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 84
           },
           {
             "source": "Source05.pdf",
-            "page": 85
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 53
           }
         ]
       }
@@ -808,39 +808,6 @@
       "id": "hb25",
       "category": "handbook",
       "question": "What is the penalty for academic dishonesty, cheating, and plagiarism in the handbook?",
-      "inScope": true,
-      "testPassed": true,
-      "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
-      "actualOutcome": {
-        "in_sources": true,
-        "retrievedSources": [
-          "Source05.pdf"
-        ],
-        "citationsFound": [
-          {
-            "source": "Source05.pdf",
-            "page": 88
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 54
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 118
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 52
-          }
-        ]
-      }
-    },
-    {
-      "id": "hb26",
-      "category": "handbook",
-      "question": "What is the university policy on hazing and unauthorized financial collections?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -853,27 +820,27 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 12
+            "page": 84
           },
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 54
           },
           {
             "source": "Source05.pdf",
-            "page": 48
+            "page": 55
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 56
           }
         ]
       }
     },
     {
-      "id": "hb27",
+      "id": "hb26",
       "category": "handbook",
-      "question": "What due process rights are guaranteed to students facing disciplinary charges?",
+      "question": "What is the university policy on hazing and unauthorized financial collections?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -886,19 +853,52 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 95
+            "page": 84
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 79
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 47
+          }
+        ]
+      }
+    },
+    {
+      "id": "hb27",
+      "category": "handbook",
+      "question": "What due process rights are guaranteed to students facing disciplinary charges?",
+      "inScope": true,
+      "testPassed": true,
+      "notes": "Retrieved grounded passages with matching source and page.",
+      "durationMs": 0,
+      "actualOutcome": {
+        "in_sources": true,
+        "retrievedSources": [
+          "Source05.pdf"
+        ],
+        "citationsFound": [
+          {
+            "source": "Source05.pdf",
+            "page": 85
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 45
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 55
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 56
           }
         ]
       }
@@ -919,19 +919,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 95
+            "page": 85
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           }
         ]
       }
@@ -939,7 +939,7 @@
     {
       "id": "hb29",
       "category": "handbook",
-      "question": "What is the role and composition of the University Student Council (USC)?",
+      "question": "What are the GWA thresholds and criteria for Latin honors (Summa, Magna, Cum Laude) in the Student Handbook?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -952,19 +952,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 68
           },
           {
             "source": "Source05.pdf",
-            "page": 12
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 53
           }
         ]
       }
@@ -972,7 +972,7 @@
     {
       "id": "hb30",
       "category": "handbook",
-      "question": "What office oversees student organization accreditation and activities?",
+      "question": "What are the official fees for a new university ID versus a replacement ID according to the handbook?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -980,25 +980,24 @@
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
-          "Source05.pdf",
-          "Source04.pdf"
+          "Source05.pdf"
         ],
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 104
-          },
-          {
-            "source": "Source04.pdf",
-            "page": 10
+            "page": 80
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 47
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 85
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 46
           }
         ]
       }
@@ -1019,19 +1018,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 118
+            "page": 68
           },
           {
             "source": "Source05.pdf",
-            "page": 35
+            "page": 49
           },
           {
             "source": "Source05.pdf",
-            "page": 41
+            "page": 60
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 45
           }
         ]
       }
@@ -1052,19 +1051,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 46
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 38
+            "page": 78
           }
         ]
       }
@@ -1085,19 +1084,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 48
+            "page": 58
           },
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 57
           }
         ]
       }
@@ -1118,7 +1117,11 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 68
+            "page": 79
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 80
           },
           {
             "source": "Source05.pdf",
@@ -1126,11 +1129,7 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 104
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 33
+            "page": 46
           }
         ]
       }
@@ -1142,7 +1141,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1151,7 +1150,7 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 84
           },
           {
             "source": "Source05.pdf",
@@ -1159,11 +1158,11 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 118
+            "page": 56
           }
         ]
       }
@@ -1175,7 +1174,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1243,21 +1242,16 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
-          "Source03.pdf",
-          "Source04.pdf"
+          "Source03.pdf"
         ],
         "citationsFound": [
           {
             "source": "Source03.pdf",
             "page": 2
-          },
-          {
-            "source": "Source04.pdf",
-            "page": 8
           },
           {
             "source": "Source03.pdf",
@@ -1266,6 +1260,10 @@
           {
             "source": "Source03.pdf",
             "page": 1
+          },
+          {
+            "source": "Source03.pdf",
+            "page": 5
           }
         ]
       }
@@ -1277,7 +1275,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1315,8 +1313,7 @@
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
-          "Source03.pdf",
-          "Source04.pdf"
+          "Source03.pdf"
         ],
         "citationsFound": [
           {
@@ -1325,15 +1322,15 @@
           },
           {
             "source": "Source03.pdf",
-            "page": 3
-          },
-          {
-            "source": "Source04.pdf",
-            "page": 9
+            "page": 4
           },
           {
             "source": "Source03.pdf",
-            "page": 4
+            "page": 2
+          },
+          {
+            "source": "Source03.pdf",
+            "page": 5
           }
         ]
       }
@@ -1345,28 +1342,29 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
+          "Source05.pdf",
           "Source01.pdf"
         ],
         "citationsFound": [
           {
-            "source": "Source01.pdf",
-            "page": 2
-          },
-          {
-            "source": "Source01.pdf",
-            "page": 4
+            "source": "Source05.pdf",
+            "page": 49
           },
           {
             "source": "Source01.pdf",
             "page": 1
           },
           {
+            "source": "Source05.pdf",
+            "page": 53
+          },
+          {
             "source": "Source01.pdf",
-            "page": 3
+            "page": 2
           }
         ]
       }
@@ -1378,16 +1376,21 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
+          "Source05.pdf",
           "Source01.pdf"
         ],
         "citationsFound": [
           {
-            "source": "Source01.pdf",
-            "page": 7
+            "source": "Source05.pdf",
+            "page": 73
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 59
           },
           {
             "source": "Source01.pdf",
@@ -1396,10 +1399,6 @@
           {
             "source": "Source01.pdf",
             "page": 1
-          },
-          {
-            "source": "Source01.pdf",
-            "page": 3
           }
         ]
       }
@@ -1411,11 +1410,12 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
-          "Source01.pdf"
+          "Source01.pdf",
+          "Source05.pdf"
         ],
         "citationsFound": [
           {
@@ -1427,8 +1427,8 @@
             "page": 1
           },
           {
-            "source": "Source01.pdf",
-            "page": 5
+            "source": "Source05.pdf",
+            "page": 49
           },
           {
             "source": "Source01.pdf",
@@ -1450,7 +1450,7 @@
         "retrievedSources": [
           "Source02.pdf",
           "Source05.pdf",
-          "Source01.pdf"
+          "Source03.pdf"
         ],
         "citationsFound": [
           {
@@ -1463,10 +1463,10 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 33
+            "page": 73
           },
           {
-            "source": "Source01.pdf",
+            "source": "Source03.pdf",
             "page": 4
           }
         ]
@@ -1483,24 +1483,25 @@
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
+          "Source05.pdf",
           "Source01.pdf"
         ],
         "citationsFound": [
           {
+            "source": "Source05.pdf",
+            "page": 49
+          },
+          {
             "source": "Source01.pdf",
-            "page": 4
+            "page": 6
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 53
           },
           {
             "source": "Source01.pdf",
             "page": 1
-          },
-          {
-            "source": "Source01.pdf",
-            "page": 1
-          },
-          {
-            "source": "Source01.pdf",
-            "page": 2
           }
         ]
       }
@@ -1508,7 +1509,7 @@
     {
       "id": "co01",
       "category": "conflict_or_overlap",
-      "question": "If a college handbook or syllabus states a different retention rule from the UMak Student Handbook, which policy prevails?",
+      "question": "Can individual colleges impose additional retention requirements beyond the general academic standing rules in the Student Handbook?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -1525,15 +1526,15 @@
           },
           {
             "source": "Source05.pdf",
-            "page": 52
+            "page": 78
           },
           {
             "source": "Source05.pdf",
-            "page": 85
+            "page": 56
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 61
           }
         ]
       }
@@ -1542,39 +1543,6 @@
       "id": "co02",
       "category": "conflict_or_overlap",
       "question": "How does the Student Handbook general passing grade of 3.00 relate to CCIS major subject retention criteria?",
-      "inScope": true,
-      "testPassed": true,
-      "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
-      "actualOutcome": {
-        "in_sources": true,
-        "retrievedSources": [
-          "Source05.pdf"
-        ],
-        "citationsFound": [
-          {
-            "source": "Source05.pdf",
-            "page": 52
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 54
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 104
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 88
-          }
-        ]
-      }
-    },
-    {
-      "id": "co03",
-      "category": "conflict_or_overlap",
-      "question": "Where are scholarship discounts applied during the old student enrollment Scan-to-Pay process?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -1587,27 +1555,27 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 59
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 47
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 61
           },
           {
             "source": "Source05.pdf",
-            "page": 38
+            "page": 78
           }
         ]
       }
     },
     {
-      "id": "co04",
+      "id": "co03",
       "category": "conflict_or_overlap",
-      "question": "Which office initiates student disciplinary investigations according to the handbook and where is it located?",
+      "question": "Where are scholarship discounts applied during the old student enrollment Scan-to-Pay process?",
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
@@ -1620,19 +1588,52 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 95
+            "page": 45
           },
           {
             "source": "Source05.pdf",
-            "page": 104
+            "page": 46
           },
           {
             "source": "Source05.pdf",
-            "page": 88
+            "page": 53
           },
           {
             "source": "Source05.pdf",
-            "page": 36
+            "page": 48
+          }
+        ]
+      }
+    },
+    {
+      "id": "co04",
+      "category": "conflict_or_overlap",
+      "question": "Which office initiates student disciplinary investigations according to the handbook and where is it located?",
+      "inScope": true,
+      "testPassed": true,
+      "notes": "Retrieved grounded passages with matching source and page.",
+      "durationMs": 0,
+      "actualOutcome": {
+        "in_sources": true,
+        "retrievedSources": [
+          "Source05.pdf"
+        ],
+        "citationsFound": [
+          {
+            "source": "Source05.pdf",
+            "page": 85
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 78
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 53
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 45
           }
         ]
       }
@@ -1653,19 +1654,19 @@
         "citationsFound": [
           {
             "source": "Source05.pdf",
-            "page": 48
-          },
-          {
-            "source": "Source05.pdf",
-            "page": 104
-          },
-          {
-            "source": "Source05.pdf",
             "page": 58
           },
           {
             "source": "Source05.pdf",
-            "page": 37
+            "page": 53
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 78
+          },
+          {
+            "source": "Source05.pdf",
+            "page": 49
           }
         ]
       }
@@ -1692,7 +1693,7 @@
       "inScope": false,
       "testPassed": true,
       "notes": "Successfully detected out-of-scope/adversarial query and abstained without hallucination.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "abstention": true,
         "in_sources": false,

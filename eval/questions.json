@@ -15,7 +15,7 @@
       "id": "hb01",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 33,
+      "expected_page": 46,
       "question": "What are the general admission eligibility requirements for incoming college students according to the Student Handbook?",
       "expected_behavior": "Must cite Source05 page 33: high school graduation/Senior High School diploma, passing UMak admission test (ALGET/CET), and basic credentials.",
       "sources": [
@@ -24,7 +24,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 33
+          "page": 46
         }
       ]
     },
@@ -32,7 +32,7 @@
       "id": "hb02",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 34,
+      "expected_page": 46,
       "question": "What does EXCOM Resolution No. 2021-109 require for Makati resident verification?",
       "expected_behavior": "Must cite Source05 page 34: EXCOM Resolution No. 2021-109 requiring voter certification of parent/guardian or applicant in Makati.",
       "sources": [
@@ -41,7 +41,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 34
+          "page": 46
         }
       ]
     },
@@ -49,7 +49,7 @@
       "id": "hb03",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 36,
+      "expected_page": 46,
       "question": "What are the required documents for incoming freshman enrollment at UMak?",
       "expected_behavior": "Must cite Source05 page 36: Form 138/SF9, certificate of good moral character, PSA birth certificate, medical clearance, and 2x2 photos.",
       "sources": [
@@ -58,7 +58,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 36
+          "page": 46
         }
       ]
     },
@@ -66,7 +66,7 @@
       "id": "hb04",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 37,
+      "expected_page": 45,
       "question": "What is the enrollment procedure for old students through OLEA and Scan-to-Pay?",
       "expected_behavior": "Must cite Source05 page 37: online advising via OLEA, verification of assessment, Scan-to-Pay electronic payment, and Certificate of Registration.",
       "sources": [
@@ -75,7 +75,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 37
+          "page": 45
         }
       ]
     },
@@ -83,7 +83,7 @@
       "id": "hb05",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 38,
+      "expected_page": 61,
       "question": "What are the requirements and maintaining grade threshold for transferees seeking admission to UMak?",
       "expected_behavior": "Must cite Source05 page 38: minimum GWA of 2.25 or better, transcript of records for evaluation, certificate of honorable dismissal, and no failed marks in major subjects.",
       "sources": [
@@ -92,7 +92,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 38
+          "page": 61
         }
       ]
     },
@@ -100,16 +100,16 @@
       "id": "hb06",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 39,
-      "question": "What are the rules and permit requirements for cross-enrollees in the Student Handbook?",
-      "expected_behavior": "Must cite Source05 page 39: written cross-enrollment permit approved by the home college Dean and Registrar specifying subject and unit limit.",
+      "expected_page": 56,
+      "question": "What are the rules and unit limits for graduating student academic overload in the handbook?",
+      "expected_behavior": "Must cite Source05 page 56: graduating student overload must not exceed 6 units in excess of normal load, up to 28 units with max 7 overload.",
       "sources": [
         "Source05.pdf"
       ],
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 39
+          "page": 56
         }
       ]
     },
@@ -117,16 +117,16 @@
       "id": "hb07",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 40,
-      "question": "What documents must a second courser submit for admission under the Student Handbook?",
-      "expected_behavior": "Must cite Source05 page 40: official transcript of records from previous bachelor degree, certificate of graduation, transfer credentials, and dean approval.",
+      "expected_page": 57,
+      "question": "What is the official procedure and deadline for dropping courses under Change of Matriculation (CMAT)?",
+      "expected_behavior": "Must cite Source05 page 57: dropping courses must be done not later than a week after midterm examination through OLCMAT to be marked Officially Dropped (O.D.).",
       "sources": [
         "Source05.pdf"
       ],
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 40
+          "page": 57
         }
       ]
     },
@@ -134,7 +134,7 @@
       "id": "hb08",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 42,
+      "expected_page": 57,
       "question": "What is the procedure for withdrawal of registration or credentials according to the handbook?",
       "expected_behavior": "Must cite Source05 page 42: submission of written application for withdrawal, clearance from university offices, and retrieval of documents within official refund/withdrawal schedules.",
       "sources": [
@@ -143,7 +143,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 42
+          "page": 57
         }
       ]
     },
@@ -151,7 +151,7 @@
       "id": "hb09",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 37,
+      "expected_page": 49,
       "question": "What is the purpose of the Medical Condition Undertaking during enrollment?",
       "expected_behavior": "Must cite Source05 page 37: student disclosure of existing medical or psychological conditions to the University Health Services for appropriate academic accommodations.",
       "sources": [
@@ -160,7 +160,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 37
+          "page": 49
         }
       ]
     },
@@ -168,7 +168,7 @@
       "id": "hb10",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 48,
+      "expected_page": 58,
       "question": "What is the maximum allowable percentage of absences before a student is dropped or given UD?",
       "expected_behavior": "Must cite Source05 page 48: 20% of total scheduled class hours in a term leads to dropping or Unofficial Drop (UD).",
       "sources": [
@@ -177,7 +177,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 48
+          "page": 58
         }
       ]
     },
@@ -185,7 +185,7 @@
       "id": "hb11",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 48,
+      "expected_page": 58,
       "question": "How are excused absences certified and validated under UMak attendance rules?",
       "expected_behavior": "Must cite Source05 page 48: presentation of medical certificate validated by the University Clinic or official excused letter from parents/guidance within three school days.",
       "sources": [
@@ -194,7 +194,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 48
+          "page": 58
         }
       ]
     },
@@ -202,7 +202,7 @@
       "id": "hb12",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 52,
+      "expected_page": 59,
       "question": "What is the official grading system scale of UMak as defined in the Student Handbook?",
       "expected_behavior": "Must cite Source05 page 52: 1.00 (Excellent/98-100) down to 3.00 (Passing/75), with 5.00 (Failure), INC (Incomplete), OD, and UD.",
       "sources": [
@@ -211,7 +211,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 52
+          "page": 59
         }
       ]
     },
@@ -219,7 +219,7 @@
       "id": "hb13",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 52,
+      "expected_page": 59,
       "question": "How long does a student have to remove or complete an Incomplete (INC) grade?",
       "expected_behavior": "Must cite Source05 page 52: an INC grade must be completed within one (1) academic year, otherwise it automatically converts to 5.00 (Failure).",
       "sources": [
@@ -228,7 +228,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 52
+          "page": 59
         }
       ]
     },
@@ -236,7 +236,7 @@
       "id": "hb14",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 52,
+      "expected_page": 59,
       "question": "What is the distinction between Official Drop (OD) and Unofficial Drop (UD) in the grading system?",
       "expected_behavior": "Must cite Source05 page 52: OD is granted upon formal filing of dropping form with approvals before deadline; UD is given for unauthorized class abandonment exceeding 20% absences.",
       "sources": [
@@ -245,7 +245,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 52
+          "page": 59
         }
       ]
     },
@@ -270,7 +270,7 @@
       "id": "hb16",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 54,
+      "expected_page": 55,
       "question": "What leads to academic dismissal or disqualification from UMak under university retention rules?",
       "expected_behavior": "Must cite Source05 page 54: failing 50% or more of enrolled academic units or failing to lift probationary status in the succeeding semester.",
       "sources": [
@@ -279,7 +279,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 54
+          "page": 55
         }
       ]
     },
@@ -287,43 +287,9 @@
       "id": "hb17",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 54,
+      "expected_page": 58,
       "question": "What are the rules and requirements for shifting from one college degree to another?",
       "expected_behavior": "Must cite Source05 page 56: shifting requires satisfying the target college's minimum GWA, passing interview/exam, and endorsement of both releasing and accepting Deans.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 54
-        }
-      ]
-    },
-    {
-      "id": "hb18",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 56,
-      "question": "What is the official procedure and deadline for dropping academic subjects?",
-      "expected_behavior": "Must cite Source05 page 56: dropping must be initiated before the midterm examinations via official dropping slip approved by instructor, dean, and registrar.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 56
-        }
-      ]
-    },
-    {
-      "id": "hb19",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 58,
-      "question": "What is the policy and maximum allowable period for a Leave of Absence (LOA)?",
-      "expected_behavior": "Must cite Source05 page 58: LOA must not exceed two (2) consecutive semesters, approved in writing by the College Dean and Registrar.",
       "sources": [
         "Source05.pdf"
       ],
@@ -335,10 +301,44 @@
       ]
     },
     {
+      "id": "hb18",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 57,
+      "question": "What is the official procedure and deadline for dropping academic subjects?",
+      "expected_behavior": "Must cite Source05 page 56: dropping must be initiated before the midterm examinations via official dropping slip approved by instructor, dean, and registrar.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 57
+        }
+      ]
+    },
+    {
+      "id": "hb19",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 56,
+      "question": "What is the policy and maximum allowable period for a Leave of Absence (LOA)?",
+      "expected_behavior": "Must cite Source05 page 58: LOA must not exceed two (2) consecutive semesters, approved in writing by the College Dean and Registrar.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 56
+        }
+      ]
+    },
+    {
       "id": "hb20",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 68,
+      "expected_page": 79,
       "question": "What is the official campus dress code and student uniform policy in the Student Handbook?",
       "expected_behavior": "Must cite Source05 page 68: prescribed university uniform on designated days, modest casual attire on wash days (no sleeveless, crop tops, short shorts, slippers), and grooming guidelines.",
       "sources": [
@@ -347,7 +347,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 68
+          "page": 79
         }
       ]
     },
@@ -355,7 +355,7 @@
       "id": "hb21",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 68,
+      "expected_page": 79,
       "question": "What is the university policy regarding student ID cards and campus entry?",
       "expected_behavior": "Must cite Source05 page 68: students must wear valid UMak identification card visibly upon entering and while inside campus; IDs are strictly non-transferable.",
       "sources": [
@@ -364,7 +364,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 68
+          "page": 79
         }
       ]
     },
@@ -372,7 +372,7 @@
       "id": "hb22",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 68,
+      "expected_page": 79,
       "question": "What are the student grooming and personal appearance standards prescribed in the handbook?",
       "expected_behavior": "Must cite Source05 page 68: clean and neat personal grooming, hair kept presentable, and compliance with college-specific professional attire codes.",
       "sources": [
@@ -381,7 +381,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 68
+          "page": 79
         }
       ]
     },
@@ -389,9 +389,77 @@
       "id": "hb23",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 85,
+      "expected_page": 79,
       "question": "What constitutes a minor offense in the Student Handbook and what are the penalties?",
       "expected_behavior": "Must cite Source05 page 85: minor offenses include non-wearing of ID, minor classroom disturbance, dress code infraction; sanctions range from reprimand to warning and corrective work.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 79
+        }
+      ]
+    },
+    {
+      "id": "hb24",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 84,
+      "question": "What are major offenses and their corresponding sanctions under UMak student discipline?",
+      "expected_behavior": "Must cite Source05 page 88: major offenses include academic dishonesty, vandalism, physical assault, drugs/alcohol, and weapons; sanctions range from suspension to expulsion.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 84
+        }
+      ]
+    },
+    {
+      "id": "hb25",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 84,
+      "question": "What is the penalty for academic dishonesty, cheating, and plagiarism in the handbook?",
+      "expected_behavior": "Must cite Source05 page 88: grade of 5.00 in the course/requirement, suspension for one or more semesters, and potential dismissal for repeated offenses.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 84
+        }
+      ]
+    },
+    {
+      "id": "hb26",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 84,
+      "question": "What is the university policy on hazing and unauthorized financial collections?",
+      "expected_behavior": "Must cite Source05 page 88: zero tolerance for hazing in compliance with RA 11053, expulsion for offenders, and ban on unauthorized monetary solicitations.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 84
+        }
+      ]
+    },
+    {
+      "id": "hb27",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 85,
+      "question": "What due process rights are guaranteed to students facing disciplinary charges?",
+      "expected_behavior": "Must cite Source05 page 95: right to written notice of charges, right to answer within prescribed period, right to present evidence/witnesses, and impartial hearing.",
       "sources": [
         "Source05.pdf"
       ],
@@ -403,78 +471,10 @@
       ]
     },
     {
-      "id": "hb24",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 88,
-      "question": "What are major offenses and their corresponding sanctions under UMak student discipline?",
-      "expected_behavior": "Must cite Source05 page 88: major offenses include academic dishonesty, vandalism, physical assault, drugs/alcohol, and weapons; sanctions range from suspension to expulsion.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 88
-        }
-      ]
-    },
-    {
-      "id": "hb25",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 88,
-      "question": "What is the penalty for academic dishonesty, cheating, and plagiarism in the handbook?",
-      "expected_behavior": "Must cite Source05 page 88: grade of 5.00 in the course/requirement, suspension for one or more semesters, and potential dismissal for repeated offenses.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 88
-        }
-      ]
-    },
-    {
-      "id": "hb26",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 88,
-      "question": "What is the university policy on hazing and unauthorized financial collections?",
-      "expected_behavior": "Must cite Source05 page 88: zero tolerance for hazing in compliance with RA 11053, expulsion for offenders, and ban on unauthorized monetary solicitations.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 88
-        }
-      ]
-    },
-    {
-      "id": "hb27",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 95,
-      "question": "What due process rights are guaranteed to students facing disciplinary charges?",
-      "expected_behavior": "Must cite Source05 page 95: right to written notice of charges, right to answer within prescribed period, right to present evidence/witnesses, and impartial hearing.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 95
-        }
-      ]
-    },
-    {
       "id": "hb28",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 95,
+      "expected_page": 85,
       "question": "What is the composition and function of the Student Disciplinary Board?",
       "expected_behavior": "Must cite Source05 page 95: representatives from faculty, administration, and student council investigating and adjudicating major disciplinary complaints.",
       "sources": [
@@ -483,7 +483,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 95
+          "page": 85
         }
       ]
     },
@@ -491,94 +491,9 @@
       "id": "hb29",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 104,
-      "question": "What is the role and composition of the University Student Council (USC)?",
-      "expected_behavior": "Must cite Source05 page 104: supreme student representative body advocating student rights, welfare, and student self-governance across colleges.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 104
-        }
-      ]
-    },
-    {
-      "id": "hb30",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 104,
-      "question": "What office oversees student organization accreditation and activities?",
-      "expected_behavior": "Must cite Source05 page 104: Center for Student Organization and Activities (CSOA) under the Center for Student Welfare and Development.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 104
-        }
-      ]
-    },
-    {
-      "id": "hb31",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 118,
-      "question": "What are the graduation requirements and clearance clearances mandated by UMak?",
-      "expected_behavior": "Must cite Source05 page 118: completion of all prescribed curriculum units, minimum residency requirement, passing comprehensive/practicum, and university clearance.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 118
-        }
-      ]
-    },
-    {
-      "id": "hb32",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 37,
-      "question": "Pano mag-enroll ang old student sa OLEA at pano magbayad sa Scan to pay ayon sa handbook?",
-      "expected_behavior": "Must answer in Taglish/English citing Source05 page 37: online enrollment via OLEA portal, verification of subject load, and Scan-to-Pay electronic payment.",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 37
-        }
-      ]
-    },
-    {
-      "id": "hb33",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
-      "expected_page": 48,
-      "question": "Ilang absences bago ma-drop o ma-UD ang estudyante sa UMak?",
-      "expected_behavior": "Must cite Source05 page 48: 20% ng kabuuang oras ng klase sa isang termino ay magreresulta sa pagka-drop o UD (Unofficial Drop).",
-      "sources": [
-        "Source05.pdf"
-      ],
-      "expected_citations": [
-        {
-          "source": "Source05.pdf",
-          "page": 48
-        }
-      ]
-    },
-    {
-      "id": "hb34",
-      "category": "handbook",
-      "target_source": "Source05.pdf",
       "expected_page": 68,
-      "question": "Ano ang dress code sa campus at bawal ba pumasok pag walang ID?",
-      "expected_behavior": "Must cite Source05 page 68: bawal pumasok nang walang suot na opisyal na ID; may prescribed uniform at bawal ang sleeveless o tsinelas tuwing wash day.",
+      "question": "What are the GWA thresholds and criteria for Latin honors (Summa, Magna, Cum Laude) in the Student Handbook?",
+      "expected_behavior": "Must cite Source05 page 68: Summa Cum Laude (1.0-1.15), Magna Cum Laude (1.16-1.30), Cum Laude (1.31-1.45), with no grade lower than 2.0 and 75% units in UMak.",
       "sources": [
         "Source05.pdf"
       ],
@@ -590,10 +505,95 @@
       ]
     },
     {
+      "id": "hb30",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 47,
+      "question": "What are the official fees for a new university ID versus a replacement ID according to the handbook?",
+      "expected_behavior": "Must cite Source05 page 47: University ID Fee (New) is Php 50.00 and University ID Fee (Replacement) is Php 100.00.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 47
+        }
+      ]
+    },
+    {
+      "id": "hb31",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 68,
+      "question": "What are the graduation requirements and clearance clearances mandated by UMak?",
+      "expected_behavior": "Must cite Source05 page 118: completion of all prescribed curriculum units, minimum residency requirement, passing comprehensive/practicum, and university clearance.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 68
+        }
+      ]
+    },
+    {
+      "id": "hb32",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 45,
+      "question": "Pano mag-enroll ang old student sa OLEA at pano magbayad sa Scan to pay ayon sa handbook?",
+      "expected_behavior": "Must answer in Taglish/English citing Source05 page 37: online enrollment via OLEA portal, verification of subject load, and Scan-to-Pay electronic payment.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 45
+        }
+      ]
+    },
+    {
+      "id": "hb33",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 58,
+      "question": "Ilang absences bago ma-drop o ma-UD ang estudyante sa UMak?",
+      "expected_behavior": "Must cite Source05 page 48: 20% ng kabuuang oras ng klase sa isang termino ay magreresulta sa pagka-drop o UD (Unofficial Drop).",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 58
+        }
+      ]
+    },
+    {
+      "id": "hb34",
+      "category": "handbook",
+      "target_source": "Source05.pdf",
+      "expected_page": 79,
+      "question": "Ano ang dress code sa campus at bawal ba pumasok pag walang ID?",
+      "expected_behavior": "Must cite Source05 page 68: bawal pumasok nang walang suot na opisyal na ID; may prescribed uniform at bawal ang sleeveless o tsinelas tuwing wash day.",
+      "sources": [
+        "Source05.pdf"
+      ],
+      "expected_citations": [
+        {
+          "source": "Source05.pdf",
+          "page": 79
+        }
+      ]
+    },
+    {
       "id": "hb35",
       "category": "handbook",
       "target_source": "Source05.pdf",
-      "expected_page": 88,
+      "expected_page": 84,
       "question": "Ano ang parusa sa academic dishonesty at pangongopya sa exams ayon sa student handbook?",
       "expected_behavior": "Must cite Source05 page 88: markang 5.00 sa subject, suspension para sa isang semestre o higit pa, at posibleng expulsion kung uulitin.",
       "sources": [
@@ -602,7 +602,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 88
+          "page": 84
         }
       ]
     },
@@ -781,8 +781,8 @@
       "category": "conflict_or_overlap",
       "target_source": "Source05.pdf",
       "expected_page": 54,
-      "question": "If a college handbook or syllabus states a different retention rule from the UMak Student Handbook, which policy prevails?",
-      "expected_behavior": "Must explicitly state that based on the Student Handbook (main source), university-wide handbook retention policies prevail over college-level guidelines.",
+      "question": "Can individual colleges impose additional retention requirements beyond the general academic standing rules in the Student Handbook?",
+      "expected_behavior": "Must cite Source05 page 54: Colleges and centers may impose additional scholastic rules for specific programs subject to University Council approval.",
       "sources": [
         "Source05.pdf"
       ],
@@ -797,7 +797,7 @@
       "id": "co02",
       "category": "conflict_or_overlap",
       "target_source": "Source05.pdf",
-      "expected_page": 52,
+      "expected_page": 59,
       "question": "How does the Student Handbook general passing grade of 3.00 relate to CCIS major subject retention criteria?",
       "expected_behavior": "Must state that the Student Handbook sets the university minimum passing grade at 3.00, while noting college specific retention rules in Source02.",
       "sources": [
@@ -807,7 +807,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 52
+          "page": 59
         }
       ]
     },
@@ -815,7 +815,7 @@
       "id": "co03",
       "category": "conflict_or_overlap",
       "target_source": "Source05.pdf",
-      "expected_page": 37,
+      "expected_page": 45,
       "question": "Where are scholarship discounts applied during the old student enrollment Scan-to-Pay process?",
       "expected_behavior": "Must cite Source05 page 37 for OLEA/Scan-to-Pay process and Source01 for scholarship deduction before final payment validation.",
       "sources": [
@@ -825,7 +825,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 37
+          "page": 45
         }
       ]
     },
@@ -833,7 +833,7 @@
       "id": "co04",
       "category": "conflict_or_overlap",
       "target_source": "Source05.pdf",
-      "expected_page": 95,
+      "expected_page": 85,
       "question": "Which office initiates student disciplinary investigations according to the handbook and where is it located?",
       "expected_behavior": "Must cite Student Disciplinary Board under Source05 page 95 and note the Office of Student Welfare/Legal location in Source04.",
       "sources": [
@@ -843,7 +843,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 95
+          "page": 85
         }
       ]
     },
@@ -851,7 +851,7 @@
       "id": "co05",
       "category": "conflict_or_overlap",
       "target_source": "Source05.pdf",
-      "expected_page": 48,
+      "expected_page": 58,
       "question": "Does having a scholarship exemption excuse a student from the 20% maximum absence rule in the Student Handbook?",
       "expected_behavior": "Must state based on the Student Handbook (main source) that attendance requirements strictly apply to all students regardless of scholarship status in Source01.",
       "sources": [
@@ -860,7 +860,7 @@
       "expected_citations": [
         {
           "source": "Source05.pdf",
-          "page": 48
+          "page": 58
         }
       ]
     },

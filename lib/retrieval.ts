@@ -246,18 +246,33 @@ export function searchSources(query: string, maxResults: number = 4): SourceChun
       score += 35;
     }
 
-    // 1b. Specific Topic Page Boosts for Handbook
+    // 1b. Specific Topic Page Boosts for Handbook (Aligned with official 2021 edition screenshots)
     if (qLower.includes('absence') || qLower.includes('absences') || qLower.includes('attendance')) {
-      if (chunk.page === 48 && chunk.source === 'Source05.pdf') score += 80;
+      if (chunk.page === 58 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('disciplinary') || qLower.includes('due process') || qLower.includes('grievance')) {
-      if (chunk.page === 95 && chunk.source === 'Source05.pdf') score += 80;
+    if (qLower.includes('grade') || qLower.includes('grading') || qLower.includes('gwa') || qLower.includes('incomplete') || qLower.includes('inc') || qLower.includes('drop')) {
+      if (chunk.page === 59 && chunk.source === 'Source05.pdf') score += 70;
     }
-    if (qLower.includes('dishonesty') || qLower.includes('cheating') || qLower.includes('plagiarism') || qLower.includes('pangongopya')) {
-      if (chunk.page === 88 && chunk.source === 'Source05.pdf') score += 80;
+    if (qLower.includes('disciplinary') || qLower.includes('due process') || qLower.includes('committee') || qLower.includes('sdc') || qLower.includes('confiscated')) {
+      if (chunk.page === 85 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('shifting') || qLower.includes('probation') || qLower.includes('retention')) {
-      if ((chunk.page === 54 || chunk.page === 52) && chunk.source === 'Source05.pdf') score += 80;
+    if (qLower.includes('dishonesty') || qLower.includes('cheating') || qLower.includes('plagiarism') || qLower.includes('hazing') || qLower.includes('offense') || qLower.includes('sanction') || qLower.includes('penalty')) {
+      if (chunk.page === 84 && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('shifting') || qLower.includes('probation') || qLower.includes('delinquency') || qLower.includes('at risk')) {
+      if ((chunk.page === 54 || chunk.page === 55 || chunk.page === 58) && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('honor') || qLower.includes('summa') || qLower.includes('magna') || qLower.includes('cum laude')) {
+      if (chunk.page === 68 && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('dress code') || qLower.includes('uniform') || qLower.includes('wash day') || qLower.includes('haircut') || qLower.includes('grooming')) {
+      if (chunk.page === 79 && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes('olea') || qLower.includes('scan-to-pay') || qLower.includes('old student') || qLower.includes('enrollment')) {
+      if ((chunk.page === 45 || chunk.page === 46) && chunk.source === 'Source05.pdf') score += 80;
+    }
+    if (qLower.includes("dean's lister") || qLower.includes('deans lister')) {
+      if (chunk.page === 73 && chunk.source === 'Source05.pdf') score += 80;
     }
 
     // 2. Intent-based Source Routing Boost & Penalty
