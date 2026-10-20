@@ -2,6 +2,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Citation, ChatResponse, SourceChunk, FileAttachment, MapLocation } from './types';
 import { verifyCitation } from './validator';
 import { parseTargetGWAQuery, formatTargetGWAAdvice, formatGWAExplanation } from './grade-calculator';
+import { resolveComplexTaglishScenario } from './taglish-resolver';
 
 const SYSTEM_INSTRUCTION = `You are TAGA-asK AI, an AI knowledge assistant for University of Makati students.
 You must answer strictly and exclusively based on the retrieved evidence provided below from the official UMak documents:
@@ -23,6 +24,15 @@ SOURCE HIERARCHY & ANSWERING POLICY:
 CRITICAL FORMATTING RULES:
 - Never add generic preambles such as "Based on Source03.pdf (Page 1):" or "Based on the official campus map".
 - Answer the exact question first without copying the entire retrieved chunk.
+- TAGLISH & FILIPINO CONVERSATIONAL QUERIES:
+  - Understand colloquial Taglish and Filipino slang fluently (e.g., "singko", "bagsak", "kodigo", "wash day", "ma-kick out", "lipat kurso", "naiwan ang id", "tigil aral").
+  - Respond in the language that matches the user's inquiry (clear, respectful Filipino/Taglish or English) while preserving official university terminology and exact numbers.
+- COMPLEX MULTI-CONSTRAINT SITUATIONAL INQUIRIES:
+  - When the user asks a conditional or complex situational question (e.g. combining probation with unit load, wash day with prohibited clothing, absences with medical clearance):
+    1. Deliver a clear, direct answer / verdict first (e.g. whether probation applies, whether clothing is prohibited, whether enrollment is allowed).
+    2. Provide step-by-step guidance broken down with Markdown headings (### Section Title) and bold labels.
+    3. Cite specific Student Handbook sections and pages (e.g. [Source05, p.54]).
+    4. State concrete next steps (e.g. Dean's Office, Guidance, CSFD, Registrar).
 - SINGLE LOCATION QUERIES (e.g. "Where is the CIT?", "Where is the Registrar?"):
   - Provide ONLY that office's verified location in ONE direct sentence, strictly under 30 words.
   - Format: "The [Office Name] is located on the [Floor], [Wing (if applicable)], [Building]."
@@ -204,6 +214,12 @@ export function formatFallbackAnswer(query: string, retrievedChunks: SourceChunk
 
   const q = query.toLowerCase();
 
+  // 0. Complex Taglish scenarios (failing grades, wash day, dress code, absences, LOA, shifting, overload, etc.)
+  const taglishScenario = resolveComplexTaglishScenario(query);
+  if (taglishScenario) {
+    return taglishScenario;
+  }
+
   // 1. Target GWA and Grade Improvement Advice (e.g. "my gwa is 2.50 what i can do to be my gwa turn into 1.75")
   const targetGwa = parseTargetGWAQuery(query);
   if (targetGwa) {
@@ -345,6 +361,12 @@ export async function generateGroundedAnswer(
   const targetGwa = parseTargetGWAQuery(query);
   if (targetGwa) {
     return formatTargetGWAAdvice(targetGwa.currentGwa, targetGwa.targetGwa);
+  }
+
+  // 1c. Complex situational Taglish scenarios (probation, dress code, absences, shifting, LOA, overload, etc.)
+  const taglishScenario = resolveComplexTaglishScenario(query);
+  if (taglishScenario) {
+    return taglishScenario;
   }
 
   const apiKey = process.env.GOOGLE_AI_API_KEY;

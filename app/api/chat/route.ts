@@ -14,6 +14,7 @@ import {
   formatTargetGWAAdvice,
 } from '@/lib/grade-calculator';
 import { isDeveloperQuery, getDeveloperResponse } from '@/lib/team-info';
+import { resolveComplexTaglishScenario } from '@/lib/taglish-resolver';
 import { ChatResponse } from '@/lib/types';
 import { verifySession } from '@/lib/auth';
 
@@ -180,6 +181,12 @@ export async function POST(req: NextRequest) {
 
       // 3. General GWA formula and grading scale explanation
       return NextResponse.json(formatGWAExplanation(), { status: 200 });
+    }
+
+    // 3.7 Complex Situational Taglish Queries (No Emojis, Handbook-backed)
+    const complexTaglishResponse = resolveComplexTaglishScenario(message);
+    if (complexTaglishResponse) {
+      return NextResponse.json(complexTaglishResponse, { status: 200 });
     }
 
     // 4. Retrieve Grounded Sources with Intent Routing (Prioritizes Student Handbook Source05)

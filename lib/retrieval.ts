@@ -2,6 +2,7 @@ import sourcesData from '../data/sources.json';
 import { SourceChunk } from './types';
 import { isGreetingQuery, isGradeComputationQuery } from './grade-calculator';
 import { isDeveloperQuery } from './team-info';
+import { expandTaglishQuery } from './taglish-resolver';
 
 const sources: SourceChunk[] = sourcesData as SourceChunk[];
 
@@ -229,7 +230,8 @@ export function isQueryInScope(query: string): boolean {
     return true;
   }
 
-  const queryTokens = tokenize(query);
+  const expandedQuery = expandTaglishQuery(query);
+  const queryTokens = tokenize(expandedQuery);
   if (queryTokens.length === 0) return false;
 
   // Check if at least one meaningful token matches any document chunk
@@ -253,11 +255,13 @@ export function searchSources(query: string, maxResults: number = 4): SourceChun
     return [];
   }
 
-  const queryTokens = tokenize(query);
+  const expandedQuery = expandTaglishQuery(query);
+  const queryTokens = tokenize(expandedQuery);
   if (queryTokens.length === 0) return [];
 
   const intent = classifyIntent(query);
   const qLower = query.trim().toLowerCase();
+  const qExpLower = expandedQuery.trim().toLowerCase();
 
   const scored: ScoredChunk[] = sources.map(chunk => {
     let score = 0;
@@ -275,31 +279,31 @@ export function searchSources(query: string, maxResults: number = 4): SourceChun
       if (chunk.page === 68) score += 90;
       if (chunk.page === 54) score += 80;
     }
-    if (qLower.includes('absence') || qLower.includes('absences') || qLower.includes('attendance')) {
+    if (qExpLower.includes('absence') || qExpLower.includes('absences') || qExpLower.includes('attendance')) {
       if (chunk.page === 58 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('grade') || qLower.includes('grading') || qLower.includes('gwa') || qLower.includes('incomplete') || qLower.includes('inc') || qLower.includes('drop')) {
+    if (qExpLower.includes('grade') || qExpLower.includes('grading') || qExpLower.includes('gwa') || qExpLower.includes('incomplete') || qExpLower.includes('inc') || qExpLower.includes('drop')) {
       if (chunk.page === 59 && chunk.source === 'Source05.pdf') score += 70;
     }
-    if (qLower.includes('disciplinary') || qLower.includes('due process') || qLower.includes('committee') || qLower.includes('sdc') || qLower.includes('confiscated')) {
+    if (qExpLower.includes('disciplinary') || qExpLower.includes('due process') || qExpLower.includes('committee') || qExpLower.includes('sdc') || qExpLower.includes('confiscated')) {
       if (chunk.page === 85 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('dishonesty') || qLower.includes('cheating') || qLower.includes('plagiarism') || qLower.includes('hazing') || qLower.includes('offense') || qLower.includes('sanction') || qLower.includes('penalty')) {
+    if (qExpLower.includes('dishonesty') || qExpLower.includes('cheating') || qExpLower.includes('plagiarism') || qExpLower.includes('hazing') || qExpLower.includes('offense') || qExpLower.includes('sanction') || qExpLower.includes('penalty')) {
       if (chunk.page === 84 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('shifting') || qLower.includes('probation') || qLower.includes('delinquency') || qLower.includes('at risk')) {
+    if (qExpLower.includes('shifting') || qExpLower.includes('probation') || qExpLower.includes('delinquency') || qExpLower.includes('at risk')) {
       if ((chunk.page === 54 || chunk.page === 55 || chunk.page === 58) && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('honor') || qLower.includes('summa') || qLower.includes('magna') || qLower.includes('cum laude')) {
+    if (qExpLower.includes('honor') || qExpLower.includes('summa') || qExpLower.includes('magna') || qExpLower.includes('cum laude')) {
       if (chunk.page === 68 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('dress code') || qLower.includes('uniform') || qLower.includes('wash day') || qLower.includes('haircut') || qLower.includes('grooming')) {
+    if (qExpLower.includes('dress code') || qExpLower.includes('uniform') || qExpLower.includes('wash day') || qExpLower.includes('haircut') || qExpLower.includes('grooming')) {
       if (chunk.page === 79 && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes('olea') || qLower.includes('scan-to-pay') || qLower.includes('old student') || qLower.includes('enrollment')) {
+    if (qExpLower.includes('olea') || qExpLower.includes('scan-to-pay') || qExpLower.includes('old student') || qExpLower.includes('enrollment')) {
       if ((chunk.page === 45 || chunk.page === 46) && chunk.source === 'Source05.pdf') score += 80;
     }
-    if (qLower.includes("dean's lister") || qLower.includes('deans lister')) {
+    if (qExpLower.includes("dean's lister") || qExpLower.includes('deans lister')) {
       if (chunk.page === 73 && chunk.source === 'Source05.pdf') score += 80;
     }
 
