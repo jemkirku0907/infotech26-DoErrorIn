@@ -1,6 +1,7 @@
 import sourcesData from '../data/sources.json';
 import { SourceChunk } from './types';
 import { isGreetingQuery, isGradeComputationQuery } from './grade-calculator';
+import { isDeveloperQuery } from './team-info';
 
 const sources: SourceChunk[] = sourcesData as SourceChunk[];
 
@@ -220,6 +221,11 @@ export function isQueryInScope(query: string): boolean {
 
   // GWA & Grade computation requests are in scope
   if (isGradeComputationQuery(query)) {
+    return true;
+  }
+
+  // Developer credits & Team DoErrorIn inquiries are in scope
+  if (isDeveloperQuery(query)) {
     return true;
   }
 

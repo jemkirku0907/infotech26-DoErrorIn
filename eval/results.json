@@ -1,5 +1,5 @@
 {
-  "evaluatedAt": "2026-10-20T13:06:55.528Z",
+  "evaluatedAt": "2026-10-20T13:26:46.506Z",
   "totalQuestions": 60,
   "passed": 60,
   "failed": 0,
@@ -52,7 +52,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -85,7 +85,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -118,7 +118,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -151,7 +151,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -184,7 +184,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -283,7 +283,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -316,7 +316,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -481,7 +481,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -514,7 +514,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -613,7 +613,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -646,7 +646,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -943,7 +943,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -976,7 +976,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1009,7 +1009,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1042,7 +1042,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1075,7 +1075,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1108,7 +1108,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1174,7 +1174,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1208,7 +1208,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1275,7 +1275,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1342,7 +1342,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 0,
+      "durationMs": 1,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [
@@ -1376,7 +1376,7 @@
       "inScope": true,
       "testPassed": true,
       "notes": "Retrieved grounded passages with matching source and page.",
-      "durationMs": 1,
+      "durationMs": 0,
       "actualOutcome": {
         "in_sources": true,
         "retrievedSources": [

@@ -11,6 +11,7 @@ import {
   computeGWA,
   formatGWAExplanation,
 } from '@/lib/grade-calculator';
+import { isDeveloperQuery, getDeveloperResponse } from '@/lib/team-info';
 import { ChatResponse } from '@/lib/types';
 import { verifySession } from '@/lib/auth';
 
@@ -117,6 +118,20 @@ export async function POST(req: NextRequest) {
           error: 'Forbidden',
         } as ChatResponse,
         { status: 403 }
+      );
+    }
+
+    // 3.4 Team DoErrorIn Developer Information
+    if (isDeveloperQuery(message)) {
+      return NextResponse.json(
+        {
+          answer: getDeveloperResponse(),
+          in_sources: true,
+          conflict: false,
+          citations: [],
+          verification_status: 'verified',
+        } as ChatResponse,
+        { status: 200 }
       );
     }
 

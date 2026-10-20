@@ -356,4 +356,75 @@ assert.strictEqual(result3.academicStanding, 'Probationary Status');
 assert.strictEqual(result3.deansLister.eligible, false);
 console.log('[PASS] 7. Failing grades correctly trigger Academic Probation under Handbook Section 2.2.');
 
-console.log('\nAll Greeting and Grade Computation tests passed successfully!');
+// 8. Team DoErrorIn Developer Inquiries
+function isDeveloperQuery(text) {
+  const q = text.toLowerCase().trim();
+
+  if (
+    q.includes('president') ||
+    q.includes('dean') ||
+    q.includes('registrar') ||
+    q.includes('director') ||
+    q.includes('vice president')
+  ) {
+    return false;
+  }
+
+  const patterns = [
+    /\b(who\s+(developed|created|made|built|programmed|authored|coded|designed)\s+(you|this|taga-?ask|the app|the system|the chatbot|the bot))\b/i,
+    /\b(who\s+are\s+(the\s+)?(developers|creators|authors|makers|programmers|proponents|team\s+behind))\b/i,
+    /\b(sino|sinong)\s+(ang\s+)?(nag\s*develop|gumawa|nag\s*code|nag\s*create|nag\s*program|may\s*gawa)\b/i,
+    /\b(sino(-sino)?\s+(ang\s+)?(mga\s+)?(developer|developers|creator|creators|gumawa|authors?))\b/i,
+    /\b(team\s*doerrorin|doerror!n|doerrorin)\b/i,
+    /^(credits?|developers?|creators?|authors?|proponents?)[!.]*$/i,
+    /\b(sino\s+ang\s+team\s+doerrorin|sino\s+si\s+doerrorin)\b/i
+  ];
+
+  return patterns.some(p => p.test(q));
+}
+
+function getDeveloperResponse() {
+  return `### Developers of TAGA-asK AI
+
+TAGA-asK AI was developed by **Team DoErrorIn** from the University of Makati (UMak):
+
+1. **Utana, Jemkirk L.** | DoErrorIn
+2. **Bautista, John Michael** | DoErrorIn
+3. **Tan, Kirk Stanley** | DoErrorIn
+4. **Sison, Romaine** | DoErrorIn
+5. **Jalea, Jhon Loyd** | DoErrorIn
+
+TAGA-asK AI was engineered to serve as an official AI knowledge assistant for University of Makati students, providing verified answers grounded strictly in the official Student Handbook, campus map directory, scholarships, and academic policies.`;
+}
+
+const devQueries = [
+  'sino nag develop sayo?',
+  'who developed you?',
+  'who are the developers?',
+  'sino mga developers?',
+  'sinong gumawa ng taga-ask ai?',
+  'who created taga-ask ai?',
+  'team doerrorin',
+  'developers',
+  'credits'
+];
+
+for (const dq of devQueries) {
+  assert(isDeveloperQuery(dq), `Expected "${dq}" to be recognized as developer query`);
+}
+
+// Disambiguation: University leadership must not be treated as bot developer
+assert(!isDeveloperQuery('Who is the university president?'), 'University president must not be treated as developer query');
+assert(!isDeveloperQuery('Who is the dean of CCIS?'), 'College dean must not be treated as developer query');
+
+const devReply = getDeveloperResponse();
+assert(devReply.includes('Utana, Jemkirk L.'), 'Must credit Jemkirk Utana');
+assert(devReply.includes('Bautista, John Michael'), 'Must credit John Michael Bautista');
+assert(devReply.includes('Tan, Kirk Stanley'), 'Must credit Kirk Stanley Tan');
+assert(devReply.includes('Sison, Romaine'), 'Must credit Romaine Sison');
+assert(devReply.includes('Jalea, Jhon Loyd'), 'Must credit Jhon Loyd Jalea');
+assert(devReply.includes('DoErrorIn'), 'Must credit Team DoErrorIn');
+assert(!hasEmoji(devReply), 'Must not contain any emojis');
+console.log('[PASS] 8. Team DoErrorIn developer queries correctly identified and answered with full developer roster.');
+
+console.log('\nAll Greeting, Grade Computation, and Developer Credit tests passed successfully!');
